@@ -148,12 +148,35 @@ input[type="search"]::-ms-reveal {
 
 
 
+/* 컨텐츠 */
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 
 
 
+/* 로그인화면 */
+.content .login {
+
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    height: 100vh;
+}
 
 
+.sing_input {
+    background-color: #fff;
+    padding: 2.4rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 4.5rem;
+}
 
 
 
