@@ -23,6 +23,18 @@
 .st.or {color: #FF9B37; border-color: #FF9B37;}
 .st.pu {color: #AD6DFF; border-color: #AD6DFF;}
 
+
+
+/* 폰트 */
+.fs10 {font-size: 1.0rem;}
+.fs11 {font-size: 1.1rem;}
+.fs12 {font-size: 1.2rem;}
+.fs13 {font-size: 1.3rem;}
+
+
+
+
+
 /* 체크박스 */
 .checkbox {
   display: inline-flex;
