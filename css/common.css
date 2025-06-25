@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+
+
+
+/* color */
+
+:root {
+
+}
+
+/* 공통 */
+.sticker {
+    border-radius: 2px;
+    border: 1px solid #999;
+    padding: .2rem .4rem;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+.sticker.wh {color: #999; border-color: #ddd;}
+.sticker.bl {color: #57AEFF; border-color: #57AEFF;}
+.sticker.gr {color: #28C564; border-color: #28C564;}
+.sticker.or {color: #FF9B37; border-color: #FF9B37;}
+.sticker.pu {color: #AD6DFF; border-color: #AD6DFF;}
+
+/* 체크박스 */
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.checkbox__box {
+  width: 16px; height: 16px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: border-color .2s, background .2s;
+}
+.checkbox--checked .checkbox__box {
+  border-color: #e60012;
+  background: #e60012;
+}
+.checkbox__box::after {
+  content: '';
+  position: absolute;
+  top: 3px; left: 3px;
+  width: 6px; height: 6px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.checkbox--checked .checkbox__box::after {
+  opacity: 1;
+}
+
+/* 체크박스 html */
+/* 
+<label class="checkbox{% if checked %} checkbox--checked{% endif %}">
+  <input type="checkbox" class="checkbox__input" {% if checked %}checked{% endif %}/>
+  <span class="checkbox__box"></span>
+</label>
+ */
+
+
+
+
+ /* 라디오 */
+ .radio { display: inline-flex; align-items: center; cursor: pointer; }
+.radio__input { position: absolute; opacity: 0; pointer-events: none; }
+.radio__outer {
+  width: 16px; height: 16px;
+  border: 2px solid #999;
+  border-radius: 50%;
+  position: relative;
+  transition: border-color .2s;
+}
+.radio--checked .radio__outer {
+  border-color: #e60012;
+}
+.radio__inner {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px;
+  width: 6px; height: 6px;
+  background: #e60012;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.radio--checked .radio__inner {
+  opacity: 1;
+}
+
+/* 라디오 html */
+/*
+<label class="radio{% if checked %} radio--checked{% endif %}">
+  <input type="radio" name="choice" class="radio__input" {% if checked %}checked{% endif %}/>
+  <span class="radio__outer"><span class="radio__inner"></span></span>
+</label>
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+body {width: 100%;  display: flex; flex-direction: column; align-items: center;}
+.wrap {max-width: 390px;}
+
+
