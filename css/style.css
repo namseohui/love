@@ -151,6 +151,7 @@ input[type="search"]::-ms-reveal {
 /* 컨텐츠 */
 .content {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
