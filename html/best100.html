@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>베스트100</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../script/jquery-3.6.0.js"></script>
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  </head>
+
+
+  <body>
+    <div class="wrap">
+
+      <!-- 상단바 -->
+      <div class="topBar">
+        <div class="topBar_main">
+          <a href="../html/index.html"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
+          <img src="../img/icon_basket.svg" alt="" class="mainBasket">
+          <img src="../img/icon_menu.svg" alt="" class="mainMenu">
+        </div>
+        <div class="topBar_search">
+          <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required>
+          <button type="submit" class="search-btn" aria-label="검색"><img src="../img/icon_search.svg" alt=""></button>
+        </div>
+        <div class="topBar_nav">
+          <ul>
+            <li><a href="#">홈</a></li>
+            <li class="se"><a href="#">베스트100</a></li>
+            <li><a href="#">납품사례</a></li>
+            <li><a href="#">기획전</a></li>
+            <li><a href="#">초특가</a></li>
+            <li><a href="#">상품평</a></li>
+          </ul>
+
+          <button type="button" class="nav-toggle" aria-expanded="false">
+            <img src="../img/icon_arrow-down.svg" alt="메뉴 펼치기/접기">
+          </button>
+
+          <ul class="nav-line nav-line--secondary">
+            <li><a href="#">긴급제작</a></li>
+            <li><a href="#">신상품</a></li>
+            <li><a href="#">아이디어</a></li>
+            <li><a href="#">우수사안</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+      <!-- 내용 -->
+      <div class="imgArea">
+        <img src="../img/best_banner.png" alt="">
+      </div>
+
+      <!-- 카테고리_버튼 -->
+       <div class="cateBtnWrap py30 lineBot">
+        <div class="grid col5 gap10">
+          <div class="cateBtn">
+            <img src="../img/category_all.png" alt="">
+            <div class="text">전체</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_life.png" alt="">
+            <div class="text">가정생활</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_digital.png" alt="">
+            <div class="text">디지털·가전</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_office.png" alt="">
+            <div class="text">사무·문구</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_tumbler.png" alt="">
+            <div class="text">주방용품·<br>텀블러</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_health.png" alt="">
+            <div class="text">레저·건강·<br>차량용품</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_golf.png" alt="">
+            <div class="text">골프용품</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_beauty.png" alt="">
+            <div class="text">화장품·미용</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_event.png" alt="">
+            <div class="text">상패·휘장·<br>행사용품</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_info.png" alt="">
+            <div class="text">안내판·<br>사인물</div>
+          </div>
+        </div>
+        
+       </div>
+
+      <!-- 베스트 제품 -->
+       <div class="productWrap py30">
+        <div class="tagBtnWrap tagSwiper">
+        <div class="tagBtnContainer swiper-wrapper">
+          <button class="swiper-slide tagBtn">칼라인쇄</button>
+    <button class="swiper-slide tagBtn">소량구매</button>
+    <button class="swiper-slide tagBtn">국내제작</button>
+    <button class="swiper-slide tagBtn">주문제작</button>
+    <button class="swiper-slide tagBtn">무료배송</button>
+    <button class="swiper-slide tagBtn">인쇄무료</button>
+        </div>
+        </div>
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 하단바 -->
+      <div class="bottomBar">
+        <a href="#"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
+        <a href="#"><img src="../img/bottomBar02.svg" alt=""><img src="../img/bottomBar022.svg" alt=""></a>
+        <a href="#"><img src="../img/bottomBar03.svg" alt=""><img src="../img/bottomBar033.svg" alt=""></a>
+        <a href="#"><img src="../img/bottomBar04.svg" alt=""><img src="../img/bottomBar044.svg" alt=""></a>
+        <a href="#"><img src="../img/bottomBar05.svg" alt=""><img src="../img/bottomBar055.svg" alt=""></a>
+      </div>
+
+      <!-- 푸터 -->
+      <footer>
+        <img src="../img/footer_logo.png" alt="">
+        <div class="footerLink">
+          <a href="#">이용약관</a> · <a href="#">개인정보취급방침</a> · <a href="#">사업자정보확인</a>
+        </div>
+        <div class="footerInfo">
+          <p>인천광역시 남동구 호구포로 50(고잔동) 엘아이지식산업센터 202호~207호</p>
+          <p>대표자 : 심선기 ㅣ 대표번호 : 1688-8744</p>
+          <p>개인정보관리책임자 : 이종후</p>
+          <p>이메일 : gift@87sarang.com</p>
+          <p>일반전화 : 032-261-2900, 032-466-0344</p>
+          <p>사업자등록번호 : 131-86-22224</p>
+          <p>통신판매업신고 : 제2010-인천남동구-0334호</p>
+        </div>
+      </footer>
+    </div>
+
+    
+
+  </body>
+  <script src="../script/style.js"></script>
+  <script src="../script/common.js"></script>
+<script> // <!-- best_script -->
+  const cateBtns = document.querySelectorAll('.cateBtn');
+
+  cateBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // 상위로 이벤트 전파 막기
+      // 먼저 모두 제거
+      cateBtns.forEach(el => el.classList.remove('active'));
+      // 현재 클릭한 것만 추가
+      btn.classList.add('active');
+    });
+  });
+
+  // 문서(body 등) 아무 데나 클릭하면 active 해제
+  document.addEventListener('click', () => {
+    cateBtns.forEach(el => el.classList.remove('active'));
+  });
+
+  // tagBtn
+  const swiper = new Swiper('.tagSwiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 4,
+  freeMode: true,
+  grabCursor: true,
+});
+
+document.querySelectorAll('.tagBtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // 모든 버튼 active 클래스 제거
+    document.querySelectorAll('.tagBtn').forEach(b => b.classList.remove('active'));
+    
+    // 클릭한 버튼에만 active 추가
+    btn.classList.add('active');
+
+    // 가운데 정렬 스크롤 이동
+    const wrap = document.querySelector('.tagBtnWrap');
+    const btnRect = btn.getBoundingClientRect();
+    const wrapRect = wrap.getBoundingClientRect();
+    const btnCenter = btnRect.left + btnRect.width / 2;
+    const wrapCenter = wrapRect.left + wrapRect.width / 2;
+    const scrollLeft = wrap.scrollLeft + (btnCenter - wrapCenter);
+
+    wrap.scrollTo({
+      left: scrollLeft,
+      behavior: 'smooth',
+    });
+  });
+});
+
+</script>
+
+   <!-- best_style -->
+  <style>
+  /* grid */
+  .grid {display: grid; align-items: self-start; justify-content: center; text-align: center;}
+  .grid.col5 {grid-template-columns: repeat(5, 1fr);}
+  
+  /* grp */
+  .gap10 {gap:1rem;}
+  .gap15 {gap:1.5rem;}
+  .gap20 {gap:2rem;}
+
+  /* line_style */
+  .lineBot {border-bottom: 1.5px solid #ddd;}
+
+  /* padding */
+  .py30 {padding:3rem 0;}
+  .py40 {padding:4rem 0;}
+
+
+  /* ==== 베스트 100 css ==== */
+  /* cateBtnWrap */
+  .cateBtnWrap .grid .cateBtn img {
+    border:1px solid #ddd;
+    border-radius: 20%;
+  }
+  .cateBtnWrap .grid .cateBtn .text {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    color:var(--gray);
+  }
+  /* cateBtnWrap->active */
+  .cateBtnWrap .grid .cateBtn.active img, .cateBtnWrap .grid .cateBtn:hover img {  
+  border: 1px solid var(--red); 
+}
+.cateBtnWrap .grid .cateBtn:first-child.active img,.cateBtnWrap .grid .cateBtn:first-child:hover img {    
+  filter: invert(26%) sepia(85%) saturate(5102%) hue-rotate(346deg) brightness(91%) contrast(106%);
+}
+.cateBtnWrap .grid .cateBtn.active .text,.cateBtnWrap .grid .cateBtn:hover .text {
+  color:var(--red); 
+  font-weight: bold;
+}
+/* tagBtnWrap */
+.tagBtnWrap {
+  max-width: 390px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.tagBtnWrap::-webkit-scrollbar {
+  display: none;
+}
+
+.tagBtnContainer {
+  display: flex;
+  gap: 0.4rem;
+  width: max-content;
+  padding: 1rem 0;
+}
+
+.tagBtn {
+  font-size: 1.6rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.tagBtn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.swiper {
+  max-width: 100%;
+  padding: 1rem 0;
+}
+
+.swiper-slide {
+  width: auto !important; /* 버튼 너비에 맞춤 */
+}
+  </style>
+</html>
