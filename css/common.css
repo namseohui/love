@@ -9,7 +9,13 @@
  --red: #ED1B23;
  --gray: #999;
  --bl: #333;
+ --pink: #FF3366;
+ --line-gray:#ddd;
 }
+
+/* color */
+  .red {color: var(--red);}
+  .bl {color:var(--bl);}
 
 /* 공통 */
 .st {
@@ -24,6 +30,7 @@
 .st.gr {color: #28C564; border-color: #28C564;}
 .st.or {color: #FF9B37; border-color: #FF9B37;}
 .st.pu {color: #AD6DFF; border-color: #AD6DFF;}
+.st.bk {background:var(--bl); border-color:var(--bl); color:#fff;}
 
 
 
@@ -34,7 +41,37 @@
 .fs13 {font-size: 1.3rem;}
 .fs16 {font-size: 1.6rem;}
 
+/* font-weight */
+b {font-weight: bold;}
 
+/* margin */
+.mlAuto {margin-left: auto;}
+/* padding */
+.py30 {padding:3rem 0;}
+.py40 {padding:4rem 0;}
+
+/* grid */
+.grid {display: grid; align-items: self-start; justify-content: center; text-align: center;}
+.grid.col5 {grid-template-columns: repeat(5, 1fr);}
+/* flex */
+.flex {display: flex; align-items: center;}  
+.js-between {justify-content: space-between;}
+
+/* grp */  
+.gap4 {gap:.4rem;}
+.gap10 {gap:1rem;}
+.gap15 {gap:1.5rem;}
+.gap20 {gap:2rem;}
+
+/* img */
+.imgArea >* {margin:0 auto;}
+
+/* line_style */
+.lineBot {border-bottom: 1.5px solid var(--line-gray);}
+
+/* position */
+.rel {position: relative;}
+.ab {position: absolute;}
 
 /* 체크박스 */
 .checkbox {
