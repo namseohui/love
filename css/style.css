@@ -1,4 +1,7 @@
 
+
+
+
 /* 상단바 */
 .topBar {
     padding: 1.5rem 1.6rem 1rem 1.6rem;
@@ -162,12 +165,12 @@ input[type="search"]::-ms-reveal {
 
 /* 로그인화면 */
 .content .login {
-
-    background-color: #F5F5F5;
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 2rem;
-    height: 100vh;
+   box-sizing: border-box;
+   background-color: #F5F5F5;
+   display: flex;
+   flex-direction: column;
+   padding: 5rem 2rem 10rem 2rem;
+   height: calc(100vh - 200px);
 }
 
 
@@ -177,7 +180,87 @@ input[type="search"]::-ms-reveal {
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--gray);
 }
+
+.input_log {
+    margin-bottom: 2.4rem;
+}
+.MYP-06-radio {
+    display: inline-flex;      /* inline-block 대신 inline-flex */
+  align-items: center; 
+  margin-right: 2rem;
+  font-size: 1.4rem;
+}
+.MYP-06-radio input[type="radio"] {
+  /* 체크된 라디오는 이 색으로 채워지고, 테두리도 이 색으로 바뀝니다 */
+  accent-color: var(--red);
+  margin-right: .5rem;
+  font-size: 1.4rem;
+}
+
+
+.input-group input {
+    padding: 1.4rem;
+    font-size: 1.4rem;
+    width: 30rem;
+    border-radius: 1rem;
+    border: 1px solid #EDF1F3;
+    margin-bottom: 1.6rem;
+}
+
+.input-group input::placeholder {
+  color: #999;
+}
+
+
+.input-id {
+    font-size: 1.2rem;
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+      /* ★ 여기를 추가 ★ */
+  width: 100%;      /* 부모 폭을 꽉 채워서 flex 여유 공간 발생 */
+  box-sizing: border-box;
+  padding: 0 1rem;  /* 필요하면 좌우 여백도 줘 보세요 */
+  margin-bottom: 2.4rem;
+}
+.input-id-find {}
+.input-id label {
+    display: inline-flex;      /* inline-block 대신 inline-flex */
+    align-items: center;
+}
+.input-id label a {font-size: 1.2rem; color: #FD5E62;}
+
+.input-id input {margin-right: .8rem;}
+
+.sing_input .Logbtn {
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: 3rem;
+    width: 14.6rem;
+}
+.sing_input .Logbtn.in {
+    background-color: var(--red);
+    color: #fff;
+    
+}
+.sing_input .Logbtn.up {
+    background-color: #ddd;
+    color: #999;
+}
+.input-btn {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
 
 
 
