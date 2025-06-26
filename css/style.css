@@ -349,6 +349,7 @@ input[type="search"]::-ms-reveal {
 .tab_menu {
   display: flex;
   /* gap: 12px; */
+  align-items: center;
   color: #333;
   font-weight: normal;
 }
