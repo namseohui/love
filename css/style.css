@@ -267,6 +267,162 @@ input[type="search"]::-ms-reveal {
 
 
 
+/* 마이페이지 */
+/* 1. 상단 헤더 */
+.mypage_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mypage_header .highlight {
+  color: red;
+}
+
+.btn_setting {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* 2. 마이포인트 */
+.my_point {
+  background: #000;
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.point_label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.point_label img {
+  width: 18px;
+  height: 18px;
+}
+
+.point_value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.point_value .unit {
+  font-size: 14px;
+  color: red;
+  margin-left: 4px;
+}
+
+/* 3. 쇼핑MY 탭 */
+.shopping_my_tab {
+  display: flex;
+  justify-content: space-around;
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding: 12px 0;
+  margin-bottom: 20px;
+}
+
+.tab_item {
+  font-size: 14px;
+  color: #333;
+}
+
+/* 4. 기능 아이콘 메뉴 */
+.icon_menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.icon_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.icon_item img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+}
+
+.icon_item span {
+  font-size: 1.4rem;
+  color: #999;
+}
+
+/* 5. 배너 공통 */
+.banner {
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.banner_title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.banner_desc {
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* 보라색 배너 */
+.banner.purple {
+  background-color: #ae83ec;
+}
+
+/* 파란색 배너 */
+.banner.blue {
+  background-color: #0979f2;
+}
+
+.member_title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.member_desc {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 하단바 */
 .bottomBar {
