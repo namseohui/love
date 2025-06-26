@@ -131,15 +131,16 @@
     <!-- 날짜 선택 -->
     <div class="date_picker_wrap">
       <div class="date_input">
-        <input type="text" placeholder="YYYY/MM/DD">
-        <img src="../img/icon_calender.svg" alt="달력 아이콘" />
+        <input type="date" id="startDate">
+        <img src="../img/icon_calender.svg" alt="달력아이콘" onclick="document.getElementById('startDate').showPicker()">
       </div>
       <span class="dash">~</span>
       <div class="date_input">
-        <input type="text" placeholder="YYYY/MM/DD">
-        <img src="../img/icon_calender.svg" alt="달력 아이콘" />
+        <input type="date" id="endDate">
+        <img src="../img/icon_calender.svg" alt="달력아이콘" onclick="document.getElementById('endDate').showPicker()">
       </div>
     </div>
+
 
     <!-- 검색창 -->
     <div class="search_wrap">
@@ -148,6 +149,35 @@
         <img src="../img/icon_mag.svg" alt="검색" />
       </button>
     </div>
+
+    <!-- 주문섹션 -->
+    <div class="order_section">
+      
+      <hr class="divider">
+      <div class="order_block">
+        <p class="order_label">주문 안내</p>
+        <ul class="order_list">
+          <li><a href="#">주문내역</a></li>
+          <li><a href="#">인쇄시안 내역</a></li>
+        </ul>
+      </div>
+
+      <hr class="divider">
+
+      <div class="order_block">
+        <p class="order_label">고객센터</p>
+        <ul class="order_list">
+          <li><a href="#">자주찾는질문 (FAQ)</a></li>
+          <li><a href="#">개인정보변경</a></li>
+          <li><a href="#">1:1문의</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+
+
+    
 
   </div>
 
