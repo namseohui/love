@@ -68,14 +68,19 @@
       <img src="../img/mypage_mypoint.png" alt="포인트 아이콘" />
       <span>마이포인트</span>
     </div>
-    <div class="point_value">6,000<span class="unit">P</span></div>
+    <div class="point_value">6,000 <img src="../img/mypage_point.svg" alt="" class="unit"></div>
   </div>
 
   <!-- 3. 쇼핑MY 메뉴 -->
   <div class="shopping_my_tab">
-    <div class="tab_item">찜</div>
-    <div class="tab_item">구매후기</div>
-    <div class="tab_item">최근본상품</div>
+    <div class="tab_label">쇼핑MY</div>
+    <div class="tab_menu">
+      <a href="#">찜</a>
+      <span class="divider">|</span>
+      <a href="#">구매후기</a>
+      <span class="divider">|</span>
+      <a href="#">최근본상품</a>
+    </div>
   </div>
 
   <!-- 4. 주요 기능 아이콘들 -->
@@ -84,32 +89,69 @@
       <img src="../img/mypage01.svg" alt="주문내역" />
       <span>주문내역</span>
     </a>
+    <div class="icon_divider"></div>
     <a href="#" class="icon_item">
       <img src="../img/mypage02.svg" alt="인쇄시안" />
       <span>인쇄시안</span>
     </a>
+    <div class="icon_divider"></div>
     <a href="#" class="icon_item">
       <img src="../img/mypage03.svg" alt="포인트상품" />
       <span>포인트상품</span>
     </a>
+    <div class="icon_divider"></div>
     <a href="#" class="icon_item">
       <img src="../img/mypage04.svg" alt="이용안내" />
       <span>이용안내</span>
     </a>
   </div>
 
+
   <!-- 5. 배너 - 유사사례 -->
-  <div class="banner purple">
-    <p class="banner_title">내 업종과 유사한 실전 사례</p>
-    <p class="banner_desc">판매사장이 도와주는 실무 꿀팁!</p>
+  <div class="banner">
+    <img src="../img/mypage_banner01.png" alt="">
+    <img src="../img/mypage_banner02.png" alt="">
   </div>
 
-  <!-- 6. 배너 - 회원전용관 -->
-  <div class="banner blue">
-    <p class="member_title">Members</p>
-    <p class="member_desc">회원전용관</p>
-    <p class="banner_desc">회원만이 누릴 수 있는 특별한 혜택!</p>
+  <!-- 6. 최근주문내역조회 -->
+
+  <div class="order_filter">
+
+    <!-- 상단 제목 -->
+    <h2 class="title"><span class="red">최근</span> 주문내역 조회</h2>
+
+    <!-- 기간 선택 버튼 -->
+    <div class="date_range_buttons">
+      <button class="range_btn active">최대 2년</button>
+      <button class="range_btn">1개월</button>
+      <button class="range_btn">3개월</button>
+      <button class="range_btn">6개월</button>
+    </div>
+
+    <!-- 날짜 선택 -->
+    <div class="date_picker_wrap">
+      <div class="date_input">
+        <input type="text" placeholder="YYYY/MM/DD">
+        <img src="../img/icon_calender.svg" alt="달력 아이콘" />
+      </div>
+      <span class="dash">~</span>
+      <div class="date_input">
+        <input type="text" placeholder="YYYY/MM/DD">
+        <img src="../img/icon_calender.svg" alt="달력 아이콘" />
+      </div>
+    </div>
+
+    <!-- 검색창 -->
+    <div class="search_wrap">
+      <input type="text" placeholder="검색어를 입력해주세요">
+      <button class="search_btn">
+        <img src="../img/icon_mag.svg" alt="검색" />
+      </button>
+    </div>
+
   </div>
+
+
 
 </div>
 
