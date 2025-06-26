@@ -130,6 +130,6 @@
 
 
 body {width: 100%;  display: flex; flex-direction: column; align-items: center;}
-.wrap {max-width: 390px;}
+.wrap {max-width: 390px; width: 100%;}
 
 

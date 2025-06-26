@@ -269,6 +269,10 @@ input[type="search"]::-ms-reveal {
 
 /* 마이페이지 */
 /* 1. 상단 헤더 */
+
+.content_my {
+  padding: 2rem;
+}
 .mypage_header {
   display: flex;
   justify-content: space-between;
@@ -279,7 +283,7 @@ input[type="search"]::-ms-reveal {
 }
 
 .mypage_header .highlight {
-  color: red;
+  color: var(--red);
 }
 
 .btn_setting {
@@ -305,23 +309,26 @@ input[type="search"]::-ms-reveal {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: 1.6rem;
 }
 
 .point_label img {
-  width: 18px;
-  height: 18px;
+
 }
 
 .point_value {
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
 .point_value .unit {
-  font-size: 14px;
-  color: red;
+  font-size: 1rem;
+  color: #fff;
   margin-left: 4px;
+  font-weight: 400;
+padding: 1rem;
+border-radius: 100%;
+  background-color: var(--red);
 }
 
 /* 3. 쇼핑MY 탭 */
