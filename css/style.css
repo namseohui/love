@@ -27,6 +27,10 @@
 .slide-image-3 {background-image: url('../img/carousel-slide03.png'); }
 .slide-image-4 {background-image: url('../img/carousel-slide04.png'); }
 
+
+.carousel-thumb-track .carousel-thumb .thumb-image {
+
+}
 /* … */
 
 
@@ -58,7 +62,9 @@
 /* ─── 팝업 백그라운드 ─── */
 .carousel-popup {
   display: none;
-  position: fixed; top:0; left:0;
+  position: fixed;
+  z-index: 10;
+  top:0; left:0;
   width:100%; height:100%;
   background: rgba(0,0,0,0.5);
   justify-content: center; align-items: center;
@@ -90,6 +96,76 @@
   position: absolute; top:8px; right:8px;
   cursor: pointer; font-size:18px;
 }
+
+
+
+
+.cateBtnWrap h2.maintxt {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.cateBtnWrap h2.maintxt span {
+  color: #ed1b23;
+}
+
+
+
+
+
+
+/* 카테고리 메뉴 */
+.py30.cate {padding: 3rem 2rem 1rem 2rem !important;
+border-bottom: none !important;}
+.category-menu {
+  width: 100%;
+  background: #FFEFF0; /* 필요에 따라 배경색 조정 */
+  padding: 2rem;
+}
+
+.category-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.category-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f0f0f0; /* 이미지 로딩 전 배경색 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-label {
+  font-size: 1.2rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+
+
 
 
 
@@ -995,6 +1071,43 @@ input[type="search"]::-ms-reveal {
 
 
 
+/* 메인광고배너1 */
+.main_ad_banner-1 {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+}
+.main_ad_banner-1 img {
+  margin-bottom: 2rem;
+}
+.main_ad_banner-1 img:last-child {
+  margin-bottom: 0rem;
+}
+/* 메인광고배너2 */
+.main_ad_banner-1.banner-2 img {
+  margin-bottom: 1rem;
+}
+
+
+
+.productContainer.main {
+  padding: 2rem;
+}
+
+.productContainer.main .product-contens {padding: 2rem 0;}
+
+.productContainer.main .pd_title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.productContainer.main .pd_title b {margin-right: 5px;}
+.productContainer.main button {
+  font-size: 1.2rem;
+  color: #999;
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+}
 
 
 
@@ -1005,19 +1118,25 @@ input[type="search"]::-ms-reveal {
 
 
 
+/* 많이 찾는 브랜드 */
+.product-contens.fa {
+  grid-template-columns:  repeat(4, 1fr);
+}
+
+.product-contens.fa .product .imgArea img {
+  border: none;
+  border-radius: 0px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* 이벤트 판촉사랑 */
+.productContainer.main .event {
+  padding: 2rem 0;
+}
+.productContainer.main .event p {
+  font-size: 1.6rem;
+  margin-top: 15px;
+}
 
 
 

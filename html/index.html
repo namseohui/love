@@ -59,110 +59,401 @@
 
 
 
-      <!-- 슬라이더 컨테이너 -->
-      <div class="carousel">
-        <div class="carousel-track">
-          <!-- 슬라이드 추가 -->
-          <div class="carousel-slide" data-index="1">
-            <div class="slide-image slide-image-1"></div>
+        <!-- 슬라이더 컨테이너 -->
+        <div class="carousel">
+          <div class="carousel-track">
+            <!-- 슬라이드 추가 -->
+            <div class="carousel-slide" data-index="1">
+              <div class="slide-image slide-image-1"></div>
+            </div>
+
+            <!-- 슬라이드 추가 -->
+            <div class="carousel-slide" data-index="2">
+              <div class="slide-image slide-image-2"></div>
+            </div>
+
+            <!-- 슬라이드 추가 -->
+            <div class="carousel-slide" data-index="3">
+              <div class="slide-image slide-image-3"></div>
+            </div>
+
+            <!-- 슬라이드 추가 -->
+            <div class="carousel-slide" data-index="11">
+              <div class="slide-image slide-image-4"></div>
+            </div>
           </div>
 
-          <!-- 슬라이드 추가 -->
-          <div class="carousel-slide" data-index="2">
-            <div class="slide-image slide-image-2"></div>
-          </div>
-
-          <!-- 슬라이드 추가 -->
-          <div class="carousel-slide" data-index="3">
-            <div class="slide-image slide-image-3"></div>
-          </div>
-
-          <!-- 슬라이드 추가 -->
-          <div class="carousel-slide" data-index="11">
-            <div class="slide-image slide-image-4"></div>
+          <!-- 인디케이터 + 햄버거 메뉴 -->
+          <div class="carousel-nav">
+            <div class="carousel-counter"></div>
+            <div class="carousel-menu">
+              <div></div><div></div><div></div>
+            </div>
           </div>
         </div>
 
-        <!-- 인디케이터 + 햄버거 메뉴 -->
-        <div class="carousel-nav">
-          <div class="carousel-counter"></div>
-          <div class="carousel-menu">
-            <div></div><div></div><div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 팝업: 모든 썸네일 보기 -->
-      <div class="carousel-popup">
-        <div class="carousel-popup-content">
-          <div class="carousel-thumb-track">
-            <!-- 실제로는 11개 -->
-            <div class="carousel-thumb" data-index="1">
-              <div class="thumb-image" style="background-image:url('slide1.jpg')"></div>
+        <!-- 팝업: 모든 썸네일 보기 -->
+        <div class="carousel-popup">
+          <div class="carousel-popup-content">
+            <div class="carousel-thumb-track">
+              <!-- 실제로는 11개 -->
+              <div class="carousel-thumb" data-index="1">
+                <div class="thumb-image slide-image-1 "></div>
+              </div>
+              <div class="carousel-thumb" data-index="2">
+                <div class="thumb-image  slide-image-2"></div>
+              </div>
+              <div class="carousel-thumb" data-index="3">
+                <div class="thumb-image  slide-image-3"></div>
+              </div>
+              <!-- ... 생략 ... -->
+              <div class="carousel-thumb" data-index="11">
+                <div class="thumb-image  slide-image-4"></div>
+              </div>
             </div>
-            <div class="carousel-thumb" data-index="2">
-              <div class="thumb-image" style="background-image:url('slide2.jpg')"></div>
-            </div>
-            <div class="carousel-thumb" data-index="3">
-              <div class="thumb-image" style="background-image:url('slide3.jpg')"></div>
-            </div>
-            <!-- ... 생략 ... -->
-            <div class="carousel-thumb" data-index="11">
-              <div class="thumb-image" style="background-image:url('slide11.jpg')"></div>
-            </div>
-          </div>
-          <div class="carousel-popup-close">✕</div>
-        </div>
-      </div>
-
-      <!-- 카테고리 -->
-      <!-- 카테고리_버튼 -->
-      <div class="cateBtnWrap py30 lineBot">
-        <h2><span>카</span>테고리</h2>
-        <div class="grid col5 gap10">
-          <div class="cateBtn">
-            <img src="../img/category_life.png" alt="">
-            <div class="text">가정생활</div>
-          </div>
-          <div class="cateBtn">
-            <img src="../img/category_digital.png" alt="">
-            <div class="text">디지털·가전</div>
-          </div>
-          <div class="cateBtn">
-            <img src="../img/category_office.png" alt="">
-            <div class="text">사무·문구</div>
-          </div>
-          <div class="cateBtn">
-            <img src="../img/category_tumbler.png" alt="">
-            <div class="text">주방용품·<br>텀블러</div>
-          </div>
-          <div class="cateBtn">
-            <img src="../img/category_health.png" alt="">
-            <div class="text">레저·건강·<br>차량용품</div>
-          </div>
-          <div class="cateBtn">
-            <img src="../img/category_golf.png" alt="">
-            <div class="text">골프용품</div>
-          </div>
-          <div class="cateBtn">
-            <img src="../img/category_beauty.png" alt="">
-            <div class="text">화장품·미용</div>
-          </div>
-          <div class="cateBtn">
-            <img src="../img/category_event.png" alt="">
-            <div class="text">상패·휘장·<br>행사용품</div>
-          </div>
-          <div class="cateBtn">
-            <img src="../img/category_info.png" alt="">
-            <div class="text">안내판·<br>사인물</div>
+            <div class="carousel-popup-close">✕</div>
           </div>
         </div>
 
-      </div>
+        <!-- 카테고리 -->
+        <!-- 카테고리_버튼 -->
+        <div class="cateBtnWrap py30 lineBot cate">
+          <h2 class="maintxt"><span>카</span>테고리</h2>
+          <div class="grid col5 gap10">
+            <div class="cateBtn">
+              <img src="../img/category_life.png" alt="">
+              <div class="text">가정생활</div>
+            </div>
+            <div class="cateBtn">
+              <img src="../img/category_digital.png" alt="">
+              <div class="text">디지털·가전</div>
+            </div>
+            <div class="cateBtn">
+              <img src="../img/category_office.png" alt="">
+              <div class="text">사무·문구</div>
+            </div>
+            <div class="cateBtn">
+              <img src="../img/category_tumbler.png" alt="">
+              <div class="text">주방용품·<br>텀블러</div>
+            </div>
+            <div class="cateBtn">
+              <img src="../img/category_health.png" alt="">
+              <div class="text">레저·건강·<br>차량용품</div>
+            </div>
+            <div class="cateBtn">
+              <img src="../img/category_golf.png" alt="">
+              <div class="text">골프용품</div>
+            </div>
+            <div class="cateBtn">
+              <img src="../img/category_beauty.png" alt="">
+              <div class="text">화장품·미용</div>
+            </div>
+            <div class="cateBtn">
+              <img src="../img/category_event.png" alt="">
+              <div class="text">상패·휘장·<br>행사용품</div>
+            </div>
+            <div class="cateBtn">
+              <img src="../img/category_info.png" alt="">
+              <div class="text">안내판·<br>사인물</div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- 카테고리 메뉴 -->
+        <!-- 카테고리 메뉴 래퍼 -->
+        <div class="category-menu">
+          <ul class="category-list">
+            <li class="category-item">
+              <div class="category-icon">
+                <img src="../img/category-icon01.png" alt="베스트100">
+              </div>
+              <div class="category-label">베스트100</div>
+            </li>
+            <li class="category-item">
+              <div class="category-icon">
+                <img src="../img/category-icon02.png" alt="초특가 코너">
+              </div>
+              <div class="category-label">초특가코너</div>
+            </li>
+            <li class="category-item">
+              <div class="category-icon">
+                <img src="../img/category-icon03.png" alt="신상품">
+              </div>
+              <div class="category-label">신상품</div>
+            </li>
+            <li class="category-item">
+              <div class="category-icon">
+                <img src="../img/category-icon04.png" alt="우수디자인">
+              </div>
+              <div class="category-label">우수디자인</div>
+            </li>
+            <li class="category-item">
+              <div class="category-icon">
+                <img src="../img/category-icon05.png" alt="기획상품전">
+              </div>
+              <div class="category-label">기획상품전</div>
+            </li>
+          </ul>
+        </div>
 
 
 
+        <!-- 메인 광고 배너1 -->
+        <div class="main_ad_banner-1">
+          <img src="../img/ad_banner01.png" alt="">
+          <img src="../img/ad_banner02.png" alt="">
+        </div>
+
+
+
+        <!-- 베스트 아이템 -->
+        <!-- 베스트 상품 -->
+        <div class="productContainer main">
+          <div class="flex js-between">
+            <div class="pd_title fs16"><b class="red">BEST</b>ITEM</div>
+            <button>
+              더보기 >
+            </button>
+          </div>
+
+          <!-- 상품 리스트 -->
+          <div class="product-contens ">
+            
+            <div class="product">
+              <div class="imgArea"> <!--imgArea 옆에 rel을 추가하면 무료인쇄 스티커 생성-->
+                <img src="../img/product_img04.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>홍보용 물티슈 백색 100매</p>
+              </div>
+              <h5 class="red">103  <span>원</span></h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img05.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>[씨피엠] CPM 2in1 10W 도킹형 미니 보조배터리 5000mAh 1P</p>
+              </div>
+              <h5 class="red">3,950<span>원</span></h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img06.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>[주문제작] 칼라인쇄 종이쇼핑백 종이가방 종이백</p>
+              </div>
+              <h5 class="red">1<span>원</span></h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img01.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>A4 가죽 서류가방 서류 파일 파우치 1P</p>
+              </div>
+              <h5 class="red">2,450 <span>원</span></h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img02.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>[트윙고] 앨리스 보틀 2P <br></p>
+              </div>
+              <h5 class="red">가격문의</h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img03.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>냉감 반팔 시원한 쿨 아이스 여름 반팔티 1P</p>
+              </div>
+              <h5 class="red">3,840<span>원</span></h5>
+            </div>
+            
+          </div>
+        </div>
+
+
+
+        <!-- 메인 광고 배너2 -->
+        <div class="main_ad_banner-1 banner-2">
+          <img src="../img/ad_banner03.png" alt="">
+          <img src="../img/ad_banner04.png" alt="">
+        </div>
+
+
+
+
+        <!-- 뉴 아이템 -->
+        <!-- 뉴 상품 -->
+        <div class="productContainer main">
+          <div class="flex js-between">
+            <div class="pd_title fs16"><b class="red">NEW</b>ITEM</div>
+            <button>
+              더보기 >
+            </button>
+          </div>
+
+          <!-- 상품 리스트 -->
+          <div class="product-contens ">
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img01.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>A4 가죽 서류가방 서류 파일 파우치 1P</p>
+              </div>
+              <h5 class="red">2,450 <span>원</span></h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img02.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>[트윙고] 앨리스 보틀 2P <br></p>
+              </div>
+              <h5 class="red">가격문의</h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img03.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>냉감 반팔 시원한 쿨 아이스 여름 반팔티 1P</p>
+              </div>
+              <h5 class="red">3,840<span>원</span></h5>
+            </div>
+
+            
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img04.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>홍보용 물티슈 백색 100매</p>
+              </div>
+              <h5 class="red">103  <span>원</span></h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img05.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>[씨피엠] CPM 2in1 10W 도킹형 미니 보조배터리 5000mAh 1P</p>
+              </div>
+              <h5 class="red">3,950<span>원</span></h5>
+            </div>
+
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_img06.png" alt="">
+              </div>
+              <div class="textBox">
+                <p>[주문제작] 칼라인쇄 종이쇼핑백 종이가방 종이백</p>
+              </div>
+              <h5 class="red">1<span>원</span></h5>
+            </div>
+            
+          </div>
+        </div>
+
+
+        <!-- 많이 찾는 브랜드 -->
+        <!-- 많이찾는 브랜드 -->
+        <div class="productContainer main">
+          <div class="flex js-between">
+            <div class="pd_title fs16"><b class="red">많이</b>찾는 브랜드</div>
+            <button>
+              더보기 >
+            </button>
+          </div>
+
+          <!-- 상품 리스트 -->
+          <div class="product-contens fa">
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_fa_img01.png" alt="">
+              </div>
+            </div>
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_fa_img02.png" alt="">
+              </div>
+            </div>
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_fa_img03.png" alt="">
+              </div>
+            </div>
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_fa_img04.png" alt="">
+              </div>
+            </div>
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_fa_img05.png" alt="">
+              </div>
+            </div>
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_fa_img06.png" alt="">
+              </div>
+            </div>
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_fa_img07.png" alt="">
+              </div>
+            </div>
+            <div class="product">
+              <div class="imgArea">
+                <img src="../img/product_fa_img08.png" alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
         
+
+        <!-- 이벤트 판촉사랑 -->
+        <!--  -->
+        <div class="productContainer main">
+          <div class="flex js-between">
+            <div class="pd_title fs16"><b class="red">EVENT</b>판촉사랑</div>
+            <button>
+              더보기 >
+            </button>
+          </div>
+
+          <!-- 이벤트 판촉사랑 배너 -->
+          <div class="event">
+            <img src="../img/main_event_banner.png" alt="">
+            <p><b>가정의 달 이벤트</b> 05.01~05.31</p>
+          </div>
+        </div>
+        
+
+
+
+        <!-- 고객센터 안내 -->
+        <div></div>
+
+
+          
 
 
       </div>
