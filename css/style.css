@@ -72,6 +72,7 @@ input[type="search"]::-ms-reveal {
     letter-spacing: -1.2px;
     text-align: center;
     padding: 1rem 0;
+    font-size: 1.3rem;
 }
 .topBar_nav ul li.se {width: 5.7rem;}
 /* 1차 메뉴 active 스타일 */
