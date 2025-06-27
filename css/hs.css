@@ -17,6 +17,7 @@ h5 {font-size: 1.6rem; font-weight: bold;}
 
 /* ==== 베스트 100 css ==== */
   /* cateBtnWrap */
+  .py30 {padding:3rem 2rem;}
   .cateBtnWrap .grid .cateBtn img {
     border:1px solid var(--line-gray);
     border-radius: 20%;

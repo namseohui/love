@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hs.css">
     <script src="../script/jquery-3.6.0.js"></script>
 
   </head>
@@ -29,7 +30,7 @@
         </div>
         <div class="topBar_nav">
           <ul>
-            <li><a href="#">홈</a></li>
+            <li class="active"><a href="#">홈</a></li>
             <li class="se"><a href="#">베스트100</a></li>
             <li><a href="#">납품사례</a></li>
             <li><a href="#">기획전</a></li>
@@ -54,13 +55,119 @@
 
 
       <!-- 내용 -->
-      <div class=""></div>
+      <div class="content">
 
 
 
+      <!-- 슬라이더 컨테이너 -->
+      <div class="carousel">
+        <div class="carousel-track">
+          <!-- 슬라이드 추가 -->
+          <div class="carousel-slide" data-index="1">
+            <div class="slide-image slide-image-1"></div>
+          </div>
+
+          <!-- 슬라이드 추가 -->
+          <div class="carousel-slide" data-index="2">
+            <div class="slide-image slide-image-2"></div>
+          </div>
+
+          <!-- 슬라이드 추가 -->
+          <div class="carousel-slide" data-index="3">
+            <div class="slide-image slide-image-3"></div>
+          </div>
+
+          <!-- 슬라이드 추가 -->
+          <div class="carousel-slide" data-index="11">
+            <div class="slide-image slide-image-4"></div>
+          </div>
+        </div>
+
+        <!-- 인디케이터 + 햄버거 메뉴 -->
+        <div class="carousel-nav">
+          <div class="carousel-counter"></div>
+          <div class="carousel-menu">
+            <div></div><div></div><div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 팝업: 모든 썸네일 보기 -->
+      <div class="carousel-popup">
+        <div class="carousel-popup-content">
+          <div class="carousel-thumb-track">
+            <!-- 실제로는 11개 -->
+            <div class="carousel-thumb" data-index="1">
+              <div class="thumb-image" style="background-image:url('slide1.jpg')"></div>
+            </div>
+            <div class="carousel-thumb" data-index="2">
+              <div class="thumb-image" style="background-image:url('slide2.jpg')"></div>
+            </div>
+            <div class="carousel-thumb" data-index="3">
+              <div class="thumb-image" style="background-image:url('slide3.jpg')"></div>
+            </div>
+            <!-- ... 생략 ... -->
+            <div class="carousel-thumb" data-index="11">
+              <div class="thumb-image" style="background-image:url('slide11.jpg')"></div>
+            </div>
+          </div>
+          <div class="carousel-popup-close">✕</div>
+        </div>
+      </div>
+
+      <!-- 카테고리 -->
+      <!-- 카테고리_버튼 -->
+      <div class="cateBtnWrap py30 lineBot">
+        <h2><span>카</span>테고리</h2>
+        <div class="grid col5 gap10">
+          <div class="cateBtn">
+            <img src="../img/category_life.png" alt="">
+            <div class="text">가정생활</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_digital.png" alt="">
+            <div class="text">디지털·가전</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_office.png" alt="">
+            <div class="text">사무·문구</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_tumbler.png" alt="">
+            <div class="text">주방용품·<br>텀블러</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_health.png" alt="">
+            <div class="text">레저·건강·<br>차량용품</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_golf.png" alt="">
+            <div class="text">골프용품</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_beauty.png" alt="">
+            <div class="text">화장품·미용</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_event.png" alt="">
+            <div class="text">상패·휘장·<br>행사용품</div>
+          </div>
+          <div class="cateBtn">
+            <img src="../img/category_info.png" alt="">
+            <div class="text">안내판·<br>사인물</div>
+          </div>
+        </div>
+
+      </div>
 
 
 
+        
+
+
+      </div>
+      <!-- 컨텐츠 끝 -->
+      
 
 
 
