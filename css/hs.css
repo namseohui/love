@@ -2,7 +2,7 @@
   h5 {font-size: 1.6rem; font-weight: bold;}
   .p-code {color:var(--pink); font-size: 1rem; font-weight: 300;}
   
-  /* ==== 베스트 100 css ==== */
+/* ==== 베스트 100 css ==== */
   /* cateBtnWrap */
   .cateBtnWrap .grid .cateBtn img {
     border:1px solid var(--line-gray);
@@ -120,7 +120,74 @@
 .product-contens.expanded .product .imgArea.rel::before {width: 11%; height: 13%; transform: translateX(10%) translateY(0);}
 .product-contens.expanded .product .imgArea.rel::after {width: 26px; height: auto; font-size: 1.4rem; right: 11%; transform: translateX(11%) translateY(2%);}
 .product-contens.expanded .product .textBox {font-size: 1.8rem; font-weight: bold;}
-.product-contens.expanded .product .textBox p {height: calc(1.2rem * 3 * 1.2);}
+.product-contens.expanded .product .textBox p {-webkit-line-clamp: 1; height: calc(1.2rem * 3 * .7);}
 .product-contens.expanded .product .textBox .p-code {font-size: 1.4rem;}
 .product-contens.expanded .product .textBox .p-code .st {display: inline-block; line-height: 100%;}
 .product-contens.expanded .product h5 {font-size: 2rem;}
+
+
+/* ==== 납품사례 css ==== */
+.searchWrap.flex {align-items: stretch;}
+.searchWrap .topBar_search input {border-color:var(--line-gray); border-radius: .8rem;}
+.sch_btn {background: var(--gray); color:#fff; white-space: nowrap;
+font-size: 1.6rem; padding: .8rem 1.5rem; border-radius: .8rem;}
+
+/* business-view */
+/* .business-view {position:fixed; left: 0; background:var(--red); color:#fff;writing-mode: vertical-lr; font-size: 1.2rem; font-weight: bold; border-radius: 0 .4rem .4rem 0; padding: .5rem;} */
+.business-view {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  background: var(--red);
+  color: #fff;
+  writing-mode: vertical-lr;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0 .4rem .4rem 0;
+  padding: .5rem;
+  z-index: 10;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: min-content !important;
+  box-sizing: border-box;
+}
+
+.slide-panel {
+  position: absolute; /* wrap 기준으로 고정됨 */
+  top: 0;
+  left: -100vw; /* 왼쪽으로 숨겨진 상태 */
+  width: 390px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  z-index: 20;
+  transition: left 0.3s ease-in-out;
+}
+
+.slide-panel.open {
+  left: 0;
+}
+
+.close-btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background: #eee;
+  border: none;
+  cursor: pointer;
+}
+/* 상품 이미지 슬라이드 */
+.pd_Swiper.imgArea {width:123px;} 
+.pd_Swiper.imgArea.rel::before,.product .imgArea.rel::after {z-index: 3;}
+/* 상품카테고리 */
+.productCate , .product .date { display: none;}
+.productCate {font-size: 1.2rem; font-weight: normal; line-height: 100%;}
+.productCate .ye {background:#FFFF00; }
+/* 납품사례 더보기버튼 */
+.caseBtn {text-align: center; background: var(--bl); color: #fff; font-size: 1.6rem; width: 100%; display: none; justify-content: center; align-items: center; padding:.6rem 2rem; border-radius: 50px;}
+
+/* 하나씩 보일 때 이미지 스타일 변경 */
+.product-contens.expanded .productCate ,.product-contens.expanded .product .date {display: block;}
+.product-contens.expanded .caseBtn {display:flex;}
+.product-contens.expanded .pd_Swiper.imgArea {width:390px;} 
