@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>상품평</title>
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/hs.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="../script/jquery-3.6.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+</head>
+
+
+<body>
+  <div class="wrap">
+    <!-- 상단바 -->
+    <div class="topBar">
+      <div class="topBar_main">
+        <a href="../html/index.html"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
+        <img src="../img/icon_basket.svg" alt="" class="mainBasket">
+        <img src="../img/icon_menu.svg" alt="" class="mainMenu">
+      </div>
+      <div class="topBar_search">
+        <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required>
+        <button type="submit" class="search-btn" aria-span="검색"><img src="../img/icon_search.svg" alt=""></button>
+      </div>
+      <div class="topBar_nav">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li class="se"><a href="#">베스트100</a></li>
+          <li><a href="#">납품사례</a></li>
+          <li><a href="#">기획전</a></li>
+          <li><a href="#">초특가</a></li>
+          <li><a href="#">상품평</a></li>
+        </ul>
+
+        <button type="button" class="nav-toggle" aria-expanded="false">
+          <img src="../img/icon_arrow-down.svg" alt="메뉴 펼치기/접기">
+        </button>
+
+        <ul class="nav-line nav-line--secondary">
+          <li><a href="#">긴급제작</a></li>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">아이디어</a></li>
+          <li><a href="#">우수사안</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 내용 -->
+    <div class="imgArea">
+      <img src="../img/review_banner.png" alt="">
+    </div>
+
+    <!-- riview -->
+    <div class="riview-Wrap py40">
+      <!-- 타이틀 -->
+      <div class="re-title">상품<span class="red">평</span> </div>
+
+      <!-- 검색 -->
+      <div class="searchWrap flex gap4">
+        <div class="select-box">
+          <select id="" onchange="handleSelectChange()">
+            <option value="선택">선택</option>
+            <option value="010">010</option>
+            <option value="011">011</option>
+            <option value="019">019</option>
+          </select>
+          <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+        </div>
+        <div class="topBar_search">
+          <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required="">
+          <button type="submit" class="search-btn" aria-span="검색"><img src="../img/icon_search_g.svg" alt=""></button>
+        </div>
+        <button class="sch_btn">검색</button>
+      </div>
+
+      <!-- 탭 -->
+      <article class="maintab-wrap">
+        <ul class="maintab">
+          <li class="active"><a href="#">전체</a></li>
+          <li class=""><a href="#">포토<br>상품평</a></li>
+          <li class=""><a href="#">일반<br>상품평</a></li>
+          <li class=""><a href="#">우수<br>상품평</a></li>
+        </ul>
+
+        <div class="tabcontents">
+          <div class="tabcon active">
+            <!-- 리뷰1 -->
+            <div class="reviewBox active-review">
+              <div class="re-info">
+                <img src="../img/review_product_img01.png" alt="" class="img">
+                <div class="textBox">
+                  <p>뉴클래식레더 A5 메모패드 (날개형)+볼펜세트 (215*160mm)</p>
+                  <div class="rating flex gap4 rel">
+                    <p class="side_line">상품평 <span class="bl">20</span></p>
+                    <div class="starBox">
+                      <div class="star">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                      </div>
+                      <span>(4.8)</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="toggleReviewBtn">
+                  <img src="../img/icon_arrow-down.svg" alt="리뷰보기"class="arrow-icon">
+                </button>
+              </div>
+              <!-- 리뷰 -->
+              <div class="review ">
+                <div class="top flex js-between">
+                  <div class="left">
+                    <div class="star">
+                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="rating flex gap4 rel">
+                      <p class="side_line">swu50**</p>
+                      <p>2025.06.11</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <i class="ri-thumb-up-line"></i>
+                    <span>0</span>
+                  </div>
+                </div>
+
+                <div class="re-text collapsed">
+                  <b>빠르고 정확한 배송 감사합니다!</b>
+                  <p class="textArea">
+                    김현임 주임님께서 상담 및 배송 진행 도와주셨습니다. 내부 사정으로 급하게 주문을 드렸던 상황인데, 일정 확인해주시고 정말 빠르게 진행해주셨습니다. ㅠㅠ 이렇게 빠르게 처리가 된
+                    것은 제가 예외적인 상황이었겠으나 중간에 연휴도 끼고 바쁘셨을텐데 기념품도 깔끔하고 정확하게 처리해주셔서 정말 감사할 따름입니다. ^^ 앞으로도 주문 제작할 일이 있으면
+                    판촉사랑에서 진행하도록 하겠습니다. 정말 감사합니다!
+                  </p>
+                </div>
+
+                <div class="bottom flex js-between fs14">
+                  <button class="remoreBtn">더보기 <img src="../img/review_more_arrow.svg" alt="" class="more-arrow"></button>
+                  <a href="#" class=" fs14">신고</a>
+                </div>
+              </div>
+              <!-- 답글 -->
+              <div class="reply hidden">
+                <div class="flex js-between">
+                  <h5 class="red flex"><img src="../img/reply_icon.svg" alt=""> <span>판촉사랑</span></h5>
+                  <div class="rating flex gap4 rel">
+                      <p class="side_line"><b>담당자</b> 안미혜 주임</p>
+                      <p>2025.06.09</p>
+                    </div>
+                </div>
+                <p class="textArea">
+                  감사합니다^^
+                  안녕하세요 고객님~정성 가득한 상품평 진심으로 감사드립니다~고객님께서 만족하셨다는 말씀만큼 뿌듯한 게 없습니다~늘 만족드릴 수 있도록 노력하겠습니다 더위가 시작되고 있습니다 건강 유의하세요~감사합니다^^
+                </p>
+              </div>
+            </div>
+
+            <!-- 리뷰2 -->
+            <div class="reviewBox active">
+              <div class="re-info">
+                <img src="../img/review_product_img02.png" alt="" class="img">
+                <div class="textBox">
+                  <p>[AHC] 내추럴 퍼펙션 더블쉴드 선스틱 14g 1P</p>
+                  <div class="rating flex gap4 rel">
+                    <p class="side_line">상품평 <span class="bl">20</span></p>
+                    <div class="starBox">
+                      <div class="star">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                      </div>
+                      <span>(4.8)</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="toggleReviewBtn">
+                  <img src="../img/icon_arrow-down.svg" alt="리뷰보기"class="arrow-icon">
+                </button>
+              </div>
+              <!-- 리뷰 -->
+              <div class="review ">
+                <div class="top flex js-between">
+                  <div class="left">
+                    <div class="star">
+                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="rating flex gap4 rel">
+                      <p class="side_line">k1439**</p>
+                      <p>2025.06.09</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <i class="ri-thumb-up-line"></i>
+                    <span>0</span>
+                  </div>
+                </div>
+                <div class="re-text collapsed">
+                  <b>여름 행사의 탁월한 선택!</b>
+                  <p class="textArea">
+                    안녕하세요~
+                    이번 여름 행사에 맞춰 선스틱을 진행했습니다.
+                    브랜드 인지도 + 합리적 가격 + 스티커 제작 및 부착 까지 막힘 없는 진행 해주셨습니다.
+                    주관자도 참여자도 만족하는 굿즈로 생각됩니다.
+                    좋은 상품 적기에 준비해주셔서 감사합니다.^^
+                  </p>
+                </div>
+
+                <div class="bottom flex js-between fs14">
+                  <button class="remoreBtn">더보기 <img src="../img/review_more_arrow.svg" alt="" class="more-arrow"></button>
+                  <a href="#" class=" fs14">신고</a>
+                </div>
+              </div>
+              <!-- 답글 -->
+              <div class="reply ">
+                <div class="flex js-between">
+                  <h5 class="red flex"><img src="../img/reply_icon.svg" alt=""> <span>판촉사랑</span></h5>
+                  <div class="rating flex gap4 rel">
+                      <p class="side_line"><b>담당자</b> 안미혜 주임</p>
+                      <p>2025.06.09</p>
+                    </div>
+                </div>
+                <p class="textArea">
+                  감사합니다^^<br>
+                  안녕하세요 고객님~정성 가득한 상품평 진심으로 감사드립니다~<br>
+                  고객님께서 만족하셨다는 말씀만큼 뿌듯한 게 없습니다~ <br>
+                  늘 만족드릴 수 있도록 노력하겠습니다 <br>
+                  더위가 시작되고 있습니다 건강 유의하세요~감사합니다^^
+                </p>
+              </div>
+            </div>
+            <!-- 리뷰3 -->
+            <div class="reviewBox">
+              <div class="re-info">
+                <img src="../img/review_product_img03.png" alt="" class="img">
+                <div class="textBox">
+                  <p>파스텔 7종 손톱깎이</p>
+                  <div class="rating flex gap4 rel">
+                    <p class="side_line">상품평 <span class="bl">3</span></p>
+                    <div class="starBox">
+                      <div class="star">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                      </div>
+                      <span>(4.7)</span>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="toggleReviewBtn">
+                  <img src="../img/icon_arrow-down.svg" alt="리뷰보기"class="arrow-icon">
+                </button>
+              </div>
+              <!-- 리뷰 -->
+              <div class="review hidden">
+                <div class="top flex js-between">
+                  <div class="left">
+                    <div class="star">
+                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                      <i class="ri-star-fill"></i>
+                    </div>
+                    <div class="rating flex gap4 rel">
+                      <p class="side_line">swu50**</p>
+                      <p>2025.06.11</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <i class="ri-thumb-up-line"></i>
+                    <span>0</span>
+                  </div>
+                </div>
+
+                <div class="re-text collapsed">
+                  <b>빠르고 정확한 배송 감사합니다!</b>
+                  <p class="textArea">
+                    김현임 주임님께서 상담 및 배송 진행 도와주셨습니다. 내부 사정으로 급하게 주문을 드렸던 상황인데, 일정 확인해주시고 정말 빠르게 진행해주셨습니다. ㅠㅠ 이렇게 빠르게 처리가 된
+                    것은 제가 예외적인 상황이었겠으나 중간에 연휴도 끼고 바쁘셨을텐데 기념품도 깔끔하고 정확하게 처리해주셔서 정말 감사할 따름입니다. ^^ 앞으로도 주문 제작할 일이 있으면
+                    판촉사랑에서 진행하도록 하겠습니다. 정말 감사합니다!
+                  </p>
+                </div>
+
+                <div class="bottom flex js-between fs14">
+                  <button class="remoreBtn">더보기 <img src="../img/review_more_arrow.svg" alt="" class="more-arrow"></button>
+                  <a href="#" class=" fs14">신고</a>
+                </div>
+              </div>
+              <!-- 답글 -->
+              <div class="reply hidden">
+                <div class="flex js-between">
+                  <h5 class="red flex"><img src="../img/reply_icon.svg" alt=""> <span>판촉사랑</span></h5>
+                  <div class="rating flex gap4 rel">
+                      <p class="side_line"><b>담당자</b> 안미혜 주임</p>
+                      <p>2025.06.09</p>
+                    </div>
+                </div>
+                <p class="textArea">
+                  감사합니다^^
+                  안녕하세요 고객님~정성 가득한 상품평 진심으로 감사드립니다~고객님께서 만족하셨다는 말씀만큼 뿌듯한 게 없습니다~늘 만족드릴 수 있도록 노력하겠습니다 더위가 시작되고 있습니다 건강 유의하세요~감사합니다^^
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tabcon">포토상품평</div>
+          <div class="tabcon">일반상품평</div>
+          <div class="tabcon">우수상품평</div>
+        </div>
+      </article>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 하단바 -->
+    <div class="bottomBar">
+      <a href="#"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar02.svg" alt=""><img src="../img/bottomBar022.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar03.svg" alt=""><img src="../img/bottomBar033.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar04.svg" alt=""><img src="../img/bottomBar044.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar05.svg" alt=""><img src="../img/bottomBar055.svg" alt=""></a>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      <img src="../img/footer_logo.png" alt="">
+      <div class="footerLink">
+        <a href="#">이용약관</a> · <a href="#">개인정보취급방침</a> · <a href="#">사업자정보확인</a>
+      </div>
+      <div class="footerInfo">
+        <p>인천광역시 남동구 호구포로 50(고잔동) 엘아이지식산업센터 202호~207호</p>
+        <p>대표자 : 심선기 ㅣ 대표번호 : 1688-8744</p>
+        <p>개인정보관리책임자 : 이종후</p>
+        <p>이메일 : gift@87sarang.com</p>
+        <p>일반전화 : 032-261-2900, 032-466-0344</p>
+        <p>사업자등록번호 : 131-86-22224</p>
+        <p>통신판매업신고 : 제2010-인천남동구-0334호</p>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="../script/style.js"></script>
+<script src="../script/common.js"></script>
+<script>
+//  ====  Main Tab ==== 
+  $('.maintab-wrap').each(function () {
+    const mainTab = $(this).children('.maintab');
+    const mainTabBtn = mainTab.children('li');
+    const tabConBox = $(this).children('.tabcontents').children('.tabcon');
+
+    // mainTab.addClass('activeTab')
+
+    mainTabBtn.on('click focusin', function () {
+      console.log($(this));
+
+      //변수 할당
+      let current = mainTabBtn.index($(this));
+
+      //Tab Reset
+      mainTabBtn.removeClass('active');
+      tabConBox.removeClass('active');
+
+      //Click Tab, Tab Con Active
+      $(this).addClass('active');
+      tabConBox.eq(current).addClass('active');
+    });
+  });
+
+// ==== 리뷰 펼치기 / 접기 버튼  ==== 
+document.querySelectorAll('.toggleReviewBtn').forEach(button => {
+  button.addEventListener('click', () => {
+    const reviewBox = button.closest('.reviewBox');
+    const review = reviewBox.querySelector('.review');
+    const reply = reviewBox.querySelector('.reply');
+    const arrowIcon = button.querySelector('.arrow-icon');
+    const reText = review.querySelector('.re-text');
+    const moreArrow = review.querySelector('.more-arrow');
+
+    const isHidden = review.classList.contains('hidden');
+
+    // 토글 review, reply 표시
+    review.classList.toggle('hidden', !isHidden);
+    arrowIcon.classList.toggle('rotate', isHidden);
+
+    if (isHidden) {
+      reText.classList.add('collapsed');
+      reply.classList.add('hidden');
+      moreArrow.classList.remove('rotate');
+      reviewBox.classList.add('active');
+    } else {
+      reText.classList.add('collapsed');
+      reply.classList.add('hidden');
+      moreArrow.classList.remove('rotate');
+      reviewBox.classList.remove('active');
+    }
+  });
+});
+
+// 더보기 버튼 클릭 시 텍스트/답글 토글 + 화살표 회전
+document.querySelectorAll('.remoreBtn').forEach(button => {
+  button.addEventListener('click', () => {
+    const review = button.closest('.review');
+    const reText = review.querySelector('.re-text');
+    const reply = review.nextElementSibling;
+    const arrow = button.querySelector('.more-arrow');
+
+    const isCollapsed = reText.classList.contains('collapsed');
+
+    if (isCollapsed) {
+      reText.classList.remove('collapsed');
+      reply.classList.remove('hidden');
+      arrow.classList.add('rotate');
+    } else {
+      reText.classList.add('collapsed');
+      reply.classList.add('hidden');
+      arrow.classList.remove('rotate');
+    }
+  });
+});
+document.querySelectorAll('.reviewBox.active, .reviewBox.active-review').forEach(reviewBox => {
+  const review = reviewBox.querySelector('.review');
+  const reply = reviewBox.querySelector('.reply');
+  const arrowIcon = reviewBox.querySelector('.arrow-icon');
+
+  review.classList.remove('hidden');
+  reply.classList.remove('hidden');
+  arrowIcon?.classList.add('rotate');
+});
+</script>
+
+</html>
