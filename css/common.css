@@ -46,6 +46,7 @@ b {font-weight: bold;}
 
 /* margin */
 .mlAuto {margin-left: auto;}
+.mb30 {margin-bottom: 3rem;}
 /* padding */
 .py30 {padding:3rem 0;}
 .py40 {padding:4rem 0;}

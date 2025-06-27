@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>납품사례</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hs.css">
+    <script src="../script/jquery-3.6.0.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+  </head>
+
+
+<body >
+  <div class="wrap rel" id="wrap">
+
+    <!-- 납품사례 업종보기 버튼 -->
+    <a href="http://" target="_blank" class="business-view" id="businessView">
+      <span>업종보기</span>
+      <img src="../img/more_arrow_W.svg" alt="">
+    </a>
+    <!-- 슬라이딩 패널 -->
+    <div class="slide-panel" id="slidePanel">
+      <button class="close-btn" id="closePanel">닫기</button>
+      <div class="panel-content">
+        <!-- 여기에 원하는 콘텐츠 추가 -->
+        <p>업종 목록 또는 기타 정보 표시</p>
+      </div>
+    </div>
+
+    <!-- 상단바 -->
+    <div class="topBar">
+      <div class="topBar_main">
+        <a href="../html/index.html"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
+        <img src="../img/icon_basket.svg" alt="" class="mainBasket">
+        <img src="../img/icon_menu.svg" alt="" class="mainMenu">
+      </div>
+      <div class="topBar_search">
+        <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required>
+        <button type="submit" class="search-btn" aria-span="검색"><img src="../img/icon_search.svg" alt=""></button>
+      </div>
+      <div class="topBar_nav">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li class="se"><a href="#">베스트100</a></li>
+          <li><a href="#">납품사례</a></li>
+          <li><a href="#">기획전</a></li>
+          <li><a href="#">초특가</a></li>
+          <li><a href="#">상품평</a></li>
+        </ul>
+
+        <button type="button" class="nav-toggle" aria-expanded="false">
+          <img src="../img/icon_arrow-down.svg" alt="메뉴 펼치기/접기">
+        </button>
+
+        <ul class="nav-line nav-line--secondary">
+          <li><a href="#">긴급제작</a></li>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">아이디어</a></li>
+          <li><a href="#">우수사안</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 납품사례 검색 -->
+    <div class="searchWrap flex gap4">
+      <div class="topBar_search">
+        <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required="">
+        <button type="submit" class="search-btn" aria-span="검색"><img src="../img/icon_search_g.svg" alt=""></button>
+      </div>
+      <button class="sch_btn">검색</button>
+    </div>
+
+    <!-- 제품리스트 -->
+    <div class="productWrap py20">
+      <!-- 상품 -->
+      <div class="productContainer">
+        <div class="flex js-between">
+          <div class="pd_title fs16">전체 <b class="red">100</b>개</div>
+          <button id="toggleBtn">
+            <img src="../img/product_icon_single.svg" alt="아이콘">
+          </button>
+        </div>
+
+        <!-- 상품 리스트 -->
+        <div class="product-contens expanded mb30">
+          <div class="product">
+            <div class="swiper pd_Swiper imgArea rel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../img/product_img07.png" alt="이미지1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../img/product_img07_2.png" alt="이미지2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../img/product_img07_3.png" alt="이미지3">
+                </div>
+              </div>
+              <!-- 페이지네이션 (선택) -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st gr">컬러인쇄</span>
+              <span class="date fs12 mlAuto"><b>등록일</b> 2025-06-11</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 11660428
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>오아 UV 콘택트 드림 하드 렌즈 세척기 1P</p>
+              <div class="productCate flex gap4">
+                <span>중·고등학교</span>  
+                <span>></span>              
+                <span class="ye">중학교</span>
+              </div>
+            </div>
+            <h5 class="red">24,800  <span>원~</span></h5>
+            <a href="http://" target="_blank" class="caseBtn">동일 납품사례 더보기 <img src="../img/more_arrow_W.svg" alt=""></a>
+          </div>
+
+          <div class="product">
+            <div class="swiper pd_Swiper imgArea rel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../img/product_img08.png" alt="이미지1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../img/product_img08_2.png" alt="이미지2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../img/product_img08_3.png" alt="이미지3">
+                </div>
+              </div>
+              <!-- 페이지네이션 (선택) -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st or">레이저인쇄</span>
+              <span class="date fs12 mlAuto"><b>등록일</b> 2025-06-11</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 24390114
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>마인 핸들 이중진공 텀블러 600ml 1P <br></p>
+              <div class="productCate flex gap4">
+                <span>중·고등학교</span>  
+                <span>></span>              
+                <span class="ye">중학교</span>
+              </div>
+            </div>
+            <h5 class="red">6,030<span>원~</span></h5>
+            <a href="http://" target="_blank" class="caseBtn">동일 납품사례 더보기 <img src="../img/more_arrow_W.svg" alt=""></a>
+          </div>
+
+          <div class="product">
+            <div class="swiper pd_Swiper imgArea rel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../img/product_img09.png" alt="이미지1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../img/product_img09_2.png" alt="이미지2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../img/product_img09_3.png" alt="이미지3">
+                </div>
+              </div>
+              <!-- 페이지네이션 (선택) -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st pu">실크인쇄</span>
+              <span class="date fs12 mlAuto"><b>등록일</b> 2025-06-11</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 09630121
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>무명 Mumyung 우드핸들 자동 장우산 16K 1P</p>
+              <div class="productCate flex gap4">
+                <span>교회/종교</span>  
+                <span>></span>              
+                <span class="ye">기독교/교회</span>
+              </div>
+            </div>
+            <h5 class="red">6,800 <span>원</span></h5>
+            <a href="http://" target="_blank" class="caseBtn">동일 납품사례 더보기 <img src="../img/more_arrow_W.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 하단바 -->
+    <div class="bottomBar">
+      <a href="#"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar02.svg" alt=""><img src="../img/bottomBar022.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar03.svg" alt=""><img src="../img/bottomBar033.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar04.svg" alt=""><img src="../img/bottomBar044.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar05.svg" alt=""><img src="../img/bottomBar055.svg" alt=""></a>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      <img src="../img/footer_logo.png" alt="">
+      <div class="footerLink">
+        <a href="#">이용약관</a> · <a href="#">개인정보취급방침</a> · <a href="#">사업자정보확인</a>
+      </div>
+      <div class="footerInfo">
+        <p>인천광역시 남동구 호구포로 50(고잔동) 엘아이지식산업센터 202호~207호</p>
+        <p>대표자 : 심선기 ㅣ 대표번호 : 1688-8744</p>
+        <p>개인정보관리책임자 : 이종후</p>
+        <p>이메일 : gift@87sarang.com</p>
+        <p>일반전화 : 032-261-2900, 032-466-0344</p>
+        <p>사업자등록번호 : 131-86-22224</p>
+        <p>통신판매업신고 : 제2010-인천남동구-0334호</p>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="../script/style.js"></script>
+<script src="../script/common.js"></script>
+</html>
