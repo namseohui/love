@@ -13,10 +13,7 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-
   </head>
-
 
 <body >
   <div class="wrap rel" id="wrap">
@@ -28,7 +25,11 @@
     </a>
     <!-- 슬라이딩 패널 -->
     <div class="slide-panel" id="slidePanel">
-      <button class="close-btn" id="closePanel">닫기</button>
+      <div class="flex js-between">
+        <div class="re-title"><span class="red">업</span>종보기 </div>
+        <button class="close-btn" id="closePanel">접기<img src="../img/business-view_left_arrow.svg" alt=""></button>
+      </div>
+      
       <div class="panel-content">
         <!-- 여기에 원하는 콘텐츠 추가 -->
         <p>업종 목록 또는 기타 정보 표시</p>
