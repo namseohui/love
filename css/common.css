@@ -15,7 +15,7 @@
 
 /* color */
   .red {color: var(--red);}
-  .bl {color:var(--bl);}
+  .bl {color:var(--bl) !important;}
 
 /* 공통 */
 .st {
@@ -40,7 +40,9 @@
 .fs11 {font-size: 1.1rem;}
 .fs12 {font-size: 1.2rem;}
 .fs13 {font-size: 1.3rem;}
+.fs14 {font-size: 1.4rem;}
 .fs16 {font-size: 1.6rem;}
+.fs20 {font-size: 2rem;}
 
 /* font-weight */
 b {font-weight: bold;}
