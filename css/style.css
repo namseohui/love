@@ -1129,8 +1129,14 @@ input[type="search"]::-ms-reveal {
 }
 
 
-
-
+/* 이벤트 판촉사랑 */
+.productContainer.main .event {
+  padding: 2rem 0;
+}
+.productContainer.main .event p {
+  font-size: 1.6rem;
+  margin-top: 15px;
+}
 
 
 
