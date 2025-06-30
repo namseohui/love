@@ -127,7 +127,7 @@ h5 {font-size: 1.6rem; font-weight: bold;}
 }
 /* 하나씩 보일 때 이미지 스타일 변경 */
 .product-contens.expanded {grid-template-columns: repeat(1, 1fr); gap: 3rem;}
-.product-contens.expanded .product .flex .st {font-size: 1.2rem;}
+.product-contens.expanded .product .st {font-size: 1.2rem; width:auto;}
 .product-contens.expanded .product .rank {font-size: 1.8rem;}
 .product-contens.expanded .product .rank .ranking {width:50px; }
 .product-contens.expanded .product .imgArea img {border-radius: 0%;}
