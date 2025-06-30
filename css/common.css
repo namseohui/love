@@ -25,6 +25,7 @@
     padding: 2px;
     font-size: 1rem;
     text-align: center;
+    white-space: nowrap;
 }
 .st.wh {color: #999; border-color: #ddd;}
 .st.bl {color: #57AEFF; border-color: #57AEFF;}
