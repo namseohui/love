@@ -46,6 +46,7 @@ h5 {font-size: 1.6rem; font-weight: bold;}
 .cateBtnWrap .grid .cateBtn:first-child.active img,.cateBtnWrap .grid .cateBtn:first-child:hover img {    
   filter: invert(26%) sepia(85%) saturate(5102%) hue-rotate(346deg) brightness(91%) contrast(106%);
 }
+.indeximgff {filter: none !important;}
 .cateBtnWrap .grid .cateBtn.active .text,.cateBtnWrap .grid .cateBtn:hover .text {
   color:var(--red); 
   font-weight: bold;
