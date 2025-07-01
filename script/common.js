@@ -170,6 +170,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // 업종보기 > 클릭
+// document.addEventListener('DOMContentLoaded', () => {
+//   const businessView = document.getElementById('businessView');
+//   const slidePanel = document.getElementById('slidePanel');
+//   const closePanel = document.getElementById('closePanel');
+
+//   businessView.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     slidePanel.classList.add('open');
+//     businessView.style.display = 'none';
+//   });
+
+//   closePanel.addEventListener('click', () => {
+//     slidePanel.classList.remove('open');
+//     businessView.style.display = 'flex';
+//   });
+// });
 document.addEventListener('DOMContentLoaded', () => {
   const businessView = document.getElementById('businessView');
   const slidePanel = document.getElementById('slidePanel');
@@ -179,13 +195,58 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     slidePanel.classList.add('open');
     businessView.style.display = 'none';
+    document.body.classList.add('no-scroll'); // body의 스크롤 막기
   });
 
   closePanel.addEventListener('click', () => {
     slidePanel.classList.remove('open');
     businessView.style.display = 'flex';
+    document.body.classList.remove('no-scroll'); // body의 스크롤 복원
   });
 });
+
+// 좌측 카테고리 클릭 시
+  function showCategory(id) {
+    // 기존 menu-item에서 active 제거
+    document.querySelectorAll('.menu-item').forEach(item => {
+      item.classList.remove('active');
+    });
+    // 현재 클릭된 menu-item에 active 추가
+    event.currentTarget.classList.add('active');
+
+    // 모든 submenu 비활성화
+    document.querySelectorAll('.submenu').forEach(menu => {
+      menu.classList.remove('active');
+    });
+    // 선택된 submenu 활성화
+    const subMenu = document.getElementById(id);
+    if (subMenu) subMenu.classList.add('active');
+  }
+
+  // 하위 메뉴 토글
+  function toggleSubMenu(id) {
+    const subSub = document.getElementById(id);
+    const arrow = document.getElementById('arrow-' + id);
+
+    // 이미 열린 sub-submenu가 있으면 모두 닫기
+    document.querySelectorAll('.sub-submenu').forEach(menu => {
+      if (menu !== subSub) {
+        menu.classList.remove('active');
+        const relatedArrow = menu.previousElementSibling.querySelector('.panel-arrow');
+        if (relatedArrow) relatedArrow.classList.remove('active'); // 화살표 원위치
+      }
+    });
+
+    // 현재 클릭한 sub-submenu 토글
+    if (subSub.classList.contains('active')) {
+      subSub.classList.remove('active');
+      arrow.classList.remove('active'); // 화살표 원위치
+    } else {
+      subSub.classList.add('active');
+      arrow.classList.add('active'); // 화살표 회전
+    }
+  }
+
 
 
 // ==== 납품사례 이미지 슬라이드 ====
