@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>납품사례</title>
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/hs.css">
-    <script src="../script/jquery-3.6.0.js"></script>
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  </head>
 
-<body >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>납품사례</title>
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/hs.css">
+  <script src="../script/jquery-3.6.0.js"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body>
   <div class="wrap rel" id="wrap">
 
     <!-- 납품사례 업종보기 버튼 -->
@@ -23,16 +25,310 @@
       <span>업종보기</span>
       <img src="../img/more_arrow_W.svg" alt="">
     </a>
-    <!-- 슬라이딩 패널 -->
+    <!--납품사례 슬라이딩 패널 -->
     <div class="slide-panel" id="slidePanel">
       <div class="flex js-between">
         <div class="re-title"><span class="red">업</span>종보기 </div>
         <button class="close-btn" id="closePanel">접기<img src="../img/business-view_left_arrow.svg" alt=""></button>
       </div>
-      
+
+      <!-- 슬라이드 패널 컨텐츠 -->
       <div class="panel-content">
-        <!-- 여기에 원하는 콘텐츠 추가 -->
-        <p>업종 목록 또는 기타 정보 표시</p>
+        <!-- 좌측 카테고리 -->
+        <div class="sidebar">
+          <div class="menu-item" onclick="showCategory('education')"><img src="../img/menu-item_img01.svg" alt="">교육
+          </div>
+          <div class="menu-item" onclick="showCategory('welfare')"><img src="../img/menu-item_img02.svg" alt="">보건/복지
+          </div>
+          <div class="menu-item" onclick="showCategory('government')"><img src="../img/menu-item_img03.svg" alt="">기관 및
+            정부</div>
+          <div class="menu-item" onclick="showCategory('organization')"><img src="../img/menu-item_img04.svg" alt="">조직
+            및 단체</div>
+          <div class="menu-item" onclick="showCategory('industry')"><img src="../img/menu-item_img05.svg" alt="">기업 및 산업
+          </div>
+          <div class="menu-item" onclick="showCategory('health')"><img src="../img/menu-item_img06.svg" alt="">의료 및 건강
+          </div>
+          <div class="menu-item" onclick="showCategory('culture')"><img src="../img/menu-item_img07.svg" alt="">문화/예술/취미
+          </div>
+          <div class="menu-item" onclick="showCategory('tourism')"><img src="../img/menu-item_img08.svg" alt="">관광 및 여가
+          </div>
+          <div class="menu-item" onclick="showCategory('smallbiz')"><img src="../img/menu-item_img09.svg" alt="">소상공인 및
+            서비스</div>
+        </div>
+
+        <!-- 우측 콘텐츠 영역 -->
+        <div class="subcontent">
+
+          <!-- 교육 카테고리 서브 메뉴 -->
+          <div id="education" class="submenu">
+            <a href="#" class="submenu-item">
+              교육 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+
+            <div class="submenu-item" onclick="toggleSubMenu('edu-institutions')">
+              교육지원청/wee센터/도서관 <span class="panel-arrow" id="arrow-edu-institutions">&#10095;</span>
+            </div>
+            <div id="edu-institutions" class="sub-submenu">
+              <div class="sub-submenu-item">교육지원청/wee센터/도서관</div>
+              <div class="sub-submenu-item">교육청/교육지원청</div>
+              <div class="sub-submenu-item">wee센터</div>
+              <div class="sub-submenu-item">도서관</div>
+              <div class="sub-submenu-item">진로교육지원/진로직업체험센터</div>
+              <div class="sub-submenu-item">평생학습관</div>
+              <div class="sub-submenu-item">꿈의학교/꿈의대학</div>
+              <div class="sub-submenu-item">기타 교육관련기관</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('university')">
+              대학교/대학원 <span class="panel-arrow" id="arrow-university">&#10095;</span>
+            </div>
+            <div id="university" class="sub-submenu">
+              <div class="sub-submenu-item">대학교</div>
+              <div class="sub-submenu-item">대학원</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('secondary')">
+              중/고등학교 <span class="panel-arrow" id="arrow-secondary">&#10095;</span>
+            </div>
+            <div id="secondary" class="sub-submenu">
+              <div class="sub-submenu-item">중학교</div>
+              <div class="sub-submenu-item">고등학교</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('elementary')">
+              초등학교 <span class="panel-arrow" id="arrow-elementary">&#10095;</span>
+            </div>
+            <div id="elementary" class="sub-submenu">
+              <div class="sub-submenu-item">초등학교</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('academy')">
+              학원 <span class="panel-arrow" id="arrow-academy">&#10095;</span>
+            </div>
+            <div id="academy" class="sub-submenu">
+              <div class="sub-submenu-item">어학원</div>
+              <div class="sub-submenu-item">예체능 학원</div>
+              <div class="sub-submenu-item">인강</div>
+            </div>
+          </div>
+
+          <!-- 보건/복지 카테고리 서브 메뉴 -->
+          <div id="welfare" class="submenu">
+            <a href="#" class="submenu-item">
+              보건/복지 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+            <div class="submenu-item" onclick="toggleSubMenu('healthcare')">
+              보건소 / 정신건강 / 보건복지관련 <span class="panel-arrow" id="arrow-healthcare">&#10095;</span>
+            </div>
+            <div id="healthcare" class="sub-submenu">
+              <div class="sub-submenu-item">보건소</div>
+              <div class="sub-submenu-item">정신건강</div>
+              <div class="sub-submenu-item">보건복지관련</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('welfare-org')">
+              복지관 / 복지관련 기관 <span class="panel-arrow" id="arrow-welfare-org">&#10095;</span>
+            </div>
+            <div id="welfare-org" class="sub-submenu">
+              <div class="sub-submenu-item">복지관</div>
+              <div class="sub-submenu-item">사회복지시설</div>
+              <div class="sub-submenu-item">자원봉사센터</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('welfare-other')">
+              봉사 / 자선단체 / 사회복지기금 <span class="panel-arrow" id="arrow-welfare-other">&#10095;</span>
+            </div>
+            <div id="welfare-other" class="sub-submenu">
+              <div class="sub-submenu-item">봉사단체</div>
+              <div class="sub-submenu-item">자선단체</div>
+              <div class="sub-submenu-item">사회복지기금</div>
+            </div>
+          </div>
+          <!-- 기관 및 정부 카테고리 서브 메뉴 -->
+          <div id="government" class="submenu">
+            <a href="#" class="submenu-item">
+              기관 및 정부 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+            <div class="submenu-item" onclick="toggleSubMenu('local-gov')">
+              시도군청 / 구청 / 행정복지센터 <span class="panel-arrow" id="arrow-local-gov">&#10095;</span>
+            </div>
+            <div id="local-gov" class="sub-submenu">
+              <div class="sub-submenu-item">시청</div>
+              <div class="sub-submenu-item">구청</div>
+              <div class="sub-submenu-item">행정복지센터</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('public-org')">
+              정부기관, 관공서 <span class="panel-arrow" id="arrow-public-org">&#10095;</span>
+            </div>
+            <div id="public-org" class="sub-submenu">
+              <div class="sub-submenu-item">정부기관</div>
+              <div class="sub-submenu-item">관공서</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('police-fire')">
+              경찰청 / 경찰서 / 소방서 <span class="panel-arrow" id="arrow-police-fire">&#10095;</span>
+            </div>
+            <div id="police-fire" class="sub-submenu">
+              <div class="sub-submenu-item">경찰청</div>
+              <div class="sub-submenu-item">경찰서</div>
+              <div class="sub-submenu-item">소방서</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('military')">
+              군부대 / 병무청 / 국방부 <span class="panel-arrow" id="arrow-military">&#10095;</span>
+            </div>
+            <div id="military" class="sub-submenu">
+              <div class="sub-submenu-item">군부대</div>
+              <div class="sub-submenu-item">병무청</div>
+              <div class="sub-submenu-item">국방부</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('gov-corporation')">
+              공단 / 공사 <span class="panel-arrow" id="arrow-gov-corporation">&#10095;</span>
+            </div>
+            <div id="gov-corporation" class="sub-submenu">
+              <div class="sub-submenu-item">공단</div>
+              <div class="sub-submenu-item">공사</div>
+            </div>
+          </div>
+          <!-- 조직 및 단체 카테고리 서브 메뉴 -->
+          <div id="organization" class="submenu">
+            <a href="#" class="submenu-item">
+              조직 및 단체 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+            <div class="submenu-item" onclick="toggleSubMenu('associations')">
+              협회 / 재단 / 조합 / 단체 <span class="panel-arrow" id="arrow-associations">&#10095;</span>
+            </div>
+            <div id="associations" class="sub-submenu">
+              <div class="sub-submenu-item">협회</div>
+              <div class="sub-submenu-item">재단</div>
+              <div class="sub-submenu-item">조합</div>
+              <div class="sub-submenu-item">단체</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('labor')">
+              노동조합 / 노동관련 <span class="panel-arrow" id="arrow-labor">&#10095;</span>
+            </div>
+            <div id="labor" class="sub-submenu">
+              <div class="sub-submenu-item">노동조합</div>
+              <div class="sub-submenu-item">노동관련 법률</div>
+            </div>
+          </div>
+
+          <!-- 기업 및 산업 카테고리 서브 메뉴 -->
+          <div id="industry" class="submenu">
+            <a href="#" class="submenu-item">
+              기업 및 산업 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+            <div class="submenu-item" onclick="toggleSubMenu('business')">
+              일반기업 / 회사 <span class="panel-arrow" id="arrow-business">&#10095;</span>
+            </div>
+            <div id="business" class="sub-submenu">
+              <div class="sub-submenu-item">일반기업</div>
+              <div class="sub-submenu-item">대기업</div>
+              <div class="sub-submenu-item">중견기업</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('manufacturing')">
+              제조 / 생산기업 <span class="panel-arrow" id="arrow-manufacturing">&#10095;</span>
+            </div>
+            <div id="manufacturing" class="sub-submenu">
+              <div class="sub-submenu-item">제조업체</div>
+              <div class="sub-submenu-item">생산업체</div>
+            </div>
+          </div>
+
+          <!-- 의료 및 건강 카테고리 서브 메뉴 -->
+          <div id="health" class="submenu">
+            <a href="#" class="submenu-item">
+              의료 및 건강 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+            <div class="submenu-item" onclick="toggleSubMenu('hospital')">
+              병원/의료기관 <span class="panel-arrow" id="arrow-hospital">&#10095;</span>
+            </div>
+            <div id="hospital" class="sub-submenu">
+              <div class="sub-submenu-item">병원</div>
+              <div class="sub-submenu-item">의료기관</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('pharma')">
+              제약/의료기기/바이오 <span class="panel-arrow" id="arrow-pharma">&#10095;</span>
+            </div>
+            <div id="pharma" class="sub-submenu">
+              <div class="sub-submenu-item">제약</div>
+              <div class="sub-submenu-item">의료기기</div>
+              <div class="sub-submenu-item">바이오</div>
+            </div>
+          </div>
+
+          <!-- 문화/예술/취미 카테고리 서브 메뉴 -->
+          <div id="culture" class="submenu">
+            <a href="#" class="submenu-item">
+              문화/예술/취미 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+            <div class="submenu-item" onclick="toggleSubMenu('arts')">
+              합창단/예술단/공연 <span class="panel-arrow" id="arrow-arts">&#10095;</span>
+            </div>
+            <div id="arts" class="sub-submenu">
+              <div class="sub-submenu-item">합창단</div>
+              <div class="sub-submenu-item">예술단</div>
+              <div class="sub-submenu-item">공연</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('hobby')">
+              취미/여가활동 <span class="panel-arrow" id="arrow-hobby">&#10095;</span>
+            </div>
+            <div id="hobby" class="sub-submenu">
+              <div class="sub-submenu-item">취미</div>
+              <div class="sub-submenu-item">여가활동</div>
+            </div>
+          </div>
+
+          <!-- 관광 및 여가 카테고리 서브 메뉴 -->
+          <div id="tourism" class="submenu">
+            <a href="#" class="submenu-item">
+              관광 및 여가 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+            <div class="submenu-item" onclick="toggleSubMenu('tourist-attractions')">
+              관광지/명소 <span class="panel-arrow" id="arrow-tourist-attractions">&#10095;</span>
+            </div>
+            <div id="tourist-attractions" class="sub-submenu">
+              <div class="sub-submenu-item">관광지</div>
+              <div class="sub-submenu-item">명소</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('travel-services')">
+              여행서비스/숙박 <span class="panel-arrow" id="arrow-travel-services">&#10095;</span>
+            </div>
+            <div id="travel-services" class="sub-submenu">
+              <div class="sub-submenu-item">여행사</div>
+              <div class="sub-submenu-item">숙박시설</div>
+            </div>
+          </div>
+
+          <!-- 소상공인 및 서비스 카테고리 서브 메뉴 -->
+          <div id="smallbiz" class="submenu">
+            <a href="#" class="submenu-item">
+              소상공인 전체보기 <span class="panel-arrow">&#10095;</span>
+            </a>
+            <div class="submenu-item" onclick="toggleSubMenu('smallbiz-services')">
+              소상공인 서비스 <span class="panel-arrow" id="arrow-smallbiz-services">&#10095;</span>
+            </div>
+            <div id="smallbiz-services" class="sub-submenu">
+              <div class="sub-submenu-item">소상공인 지원</div>
+              <div class="sub-submenu-item">서비스업</div>
+            </div>
+
+            <div class="submenu-item" onclick="toggleSubMenu('local-business')">
+              지역 비즈니스 <span class="panel-arrow" id="arrow-local-business">&#10095;</span>
+            </div>
+            <div id="local-business" class="sub-submenu">
+              <div class="sub-submenu-item">지역 상점</div>
+              <div class="sub-submenu-item">소규모 비즈니스</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -69,7 +365,7 @@
         </ul>
       </div>
     </div>
-    
+
     <!-- 납품사례 검색 -->
     <div class="searchWrap flex gap4">
       <div class="topBar_search">
@@ -120,12 +416,12 @@
               </span>
               <p>오아 UV 콘택트 드림 하드 렌즈 세척기 1P</p>
               <div class="productCate flex gap4">
-                <span>중·고등학교</span>  
-                <span>></span>              
+                <span>중·고등학교</span>
+                <span>></span>
                 <span class="ye">중학교</span>
               </div>
             </div>
-            <h5 class="red">24,800  <span>원~</span></h5>
+            <h5 class="red">24,800 <span>원~</span></h5>
             <a href="http://" target="_blank" class="caseBtn">동일 납품사례 더보기 <img src="../img/more_arrow_W.svg" alt=""></a>
           </div>
 
@@ -157,8 +453,8 @@
               </span>
               <p>마인 핸들 이중진공 텀블러 600ml 1P <br></p>
               <div class="productCate flex gap4">
-                <span>중·고등학교</span>  
-                <span>></span>              
+                <span>중·고등학교</span>
+                <span>></span>
                 <span class="ye">중학교</span>
               </div>
             </div>
@@ -194,8 +490,8 @@
               </span>
               <p>무명 Mumyung 우드핸들 자동 장우산 16K 1P</p>
               <div class="productCate flex gap4">
-                <span>교회/종교</span>  
-                <span>></span>              
+                <span>교회/종교</span>
+                <span>></span>
                 <span class="ye">기독교/교회</span>
               </div>
             </div>
