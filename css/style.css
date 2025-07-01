@@ -1143,6 +1143,141 @@ input[type="search"]::-ms-reveal {
 
 
 
+/* ── 고객센터 카드 ── */
+.customer-centerWrap {
+  padding: 0 2rem;
+}
+
+.customer-center {
+  background: #F9F8F7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 40px;
+  font-family: inherit;
+}
+
+/* 상단 헤더 */
+.cs-header { margin-bottom: 16px; }
+.cs-header .sunday {
+  font-size: 1.6rem;
+  color: #999;
+}
+.cs-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 10px;
+}
+.cs-phone {
+  color: var(--red);
+}
+
+/* 운영시간 리스트 */
+.cs-hours {
+  font-size: 1.6rem;
+  display: flex;
+}
+.cs-hours .tit {font-weight: bold; margin-right: 10px;}
+.cs-hours .box {
+  display: flex;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.cs-hours .box h2 {
+  width: 50px;
+}
+
+.cs-hours .box h2 span {
+  display: inline-block;            /* inline → inline-block 으로 변경 */
+
+  white-space: nowrap;              /* 한 줄로 유지 */
+  text-align: justify;              /* 양쪽 정렬 */
+  text-align-last: justify;         /* 마지막(그리고 유일한) 줄도 정렬 */
+  -webkit-text-align-last: justify; /* 사파리 지원용 */
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* 버튼 */
+.cs-button {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 계좌 안내 */
+.account-info { }
+.account-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.account-owner {
+  display: inline-block;
+  font-size: 1.6rem;
+}
+.account-owner span {
+  color: #999;
+}
+.account-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+}
+.account-list li {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.account-list li:last-child {
+  margin-bottom: 0;
+}
+.account-list .number {
+  color: var(--red);
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -185,4 +185,47 @@ document.addEventListener('DOMContentLoaded', () => {
       moveTo(idx);
     }
   });
+
+
+
+
+
+  // 고객센터 글씨 벌리기
+  document.querySelectorAll('.cs-hours .box h2 span').forEach(el => {
+    const targetWidth = 40;  // 원하는 고정 폭 (px)
+    // 캔버스 측정용
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    // 원본 폰트를 그대로 가져오기
+    const style = getComputedStyle(el);
+    ctx.font = style.font;
+    // 실제 텍스트 너비 측정
+    const text = el.textContent.trim();
+    const textWidth = ctx.measureText(text).width;
+    // 글자 사이 공간 계산
+    const gaps = text.length - 1;
+    if (gaps > 0) {
+      const space = (targetWidth - textWidth) / gaps;
+      el.style.display = 'inline-block';
+      el.style.width = targetWidth + 'px';
+      el.style.letterSpacing = space + 'px';
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
