@@ -2,6 +2,18 @@
 h5 {font-size: 1.6rem; font-weight: bold;}
 .p-code {color:var(--pink); font-size: 1rem; font-weight: 300;}
 .textArea {font-size: 1.5rem; font-weight: 300; line-height: 150%;     word-break: keep-all;}
+.normal-title {font-size: 2rem; font-weight: bold;}
+
+.boxStyle {
+    background: #f5f5f5;
+    padding:1rem;
+    overflow-y: auto;
+    max-height: 70px;
+    font-size:1.2rem;
+    color:var(--gray);
+    line-height: 150%;
+    border-bottom: 1px solid var(--line-gray);
+}
 
 /* after_style */
 .side_line:after {
@@ -334,6 +346,7 @@ body.no-scroll {
     letter-spacing: -0.03rem;
     color:var(--gray);
     width: 100%;
+    line-height: 120%;
   }
   
   .select-box i {
@@ -461,4 +474,47 @@ body.no-scroll {
 }
 .arrow-icon.rotate,.more-arrow.rotate {
   transform: rotate(180deg);
+}
+
+/* ==== 주문정보 css ==== */
+.orderWrap {padding: 0 2rem;}
+.order-Box {position:relative; padding:1.5rem 0; border-bottom: 1px solid var(--line-gray);}
+.order-Box::before,.order-Box::after{
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    width:2rem;
+    height: 1px;
+    background:var(--line-gray);
+}
+.order-Box::before{
+    left: -20px;
+}
+.order-Box::after{
+    right: -20px;
+}
+.order-Box .order-inBox.St {padding:1rem; border:1px solid var(--line-gray); background:#f5f5f5;}
+.order-Box .MYP-06-radio {font-size: 1.4rem; margin:0;}
+.order-Box .MYP-06-radio span {font-size: 1.2rem;}
+.order-Box .input-group .MYP-06-radio input {width:auto;}
+.order-Box .input-group {display:flex; align-items: center; font-size: 1.4rem; gap: 1rem;}
+.order-Box .input-group > label {min-width: 70px;}
+.order-Box .input-group input {margin:0; padding:.8rem 1rem; width: 100%; border: 1px solid var(--line-gray);}
+.order-Box .input-group .flex {width:100%; height: -webkit-fill-available;}
+.order-Box .input-group .flex .select-box {max-width: 100%; width:100px; height: 100%;background: #fff;}
+.order-Box .input-group .flex-input > * {width:100%; max-width: 100%; }
+.order-Box .input-group .flex-input .select-box {width:100%;}
+.order-Box .input-group .flex-input p {width: fit-content; }
+.order-Box >*, .order-Box .order-inBox >* {margin-bottom: 1rem;}
+.order-Box >*:last-child, .order-Box .order-inBox >*:last-child {margin-bottom: 0;}
+
+.postBtn {
+    max-width: 80px;
+    white-space: nowrap;
+    background:var(--line-gray);
+    color:var(--gray);
+    padding:.8rem 1rem;
+    height: inherit;
+    border-radius: .8rem;
+    font-size: 1.4rem;
 }

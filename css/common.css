@@ -28,7 +28,7 @@
     white-space: nowrap;
 }
 .st.wh {color: #999; border-color: #ddd;}
-.st.bl {color: #57AEFF; border-color: #57AEFF;}
+.st.bl {color: #57AEFF!important; border-color: #57AEFF;}
 .st.gr {color: #28C564; border-color: #28C564;}
 .st.or {color: #FF9B37; border-color: #FF9B37;}
 .st.pu {color: #AD6DFF; border-color: #AD6DFF;}
@@ -51,6 +51,7 @@ b {font-weight: bold;}
 /* margin */
 .mlAuto {margin-left: auto;}
 .mb30 {margin-bottom: 3rem;}
+.mb60 {margin-bottom: 6rem;}
 /* padding */
 .py30 {padding:3rem 0;}
 .py40 {padding:4rem 0;}
@@ -60,7 +61,10 @@ b {font-weight: bold;}
 .grid.col5 {grid-template-columns: repeat(5, 1fr);}
 /* flex */
 .flex {display: flex; align-items: center;}  
+.flex.col {flex-flow: column;}
+.js-start {justify-content: flex-start;}
 .js-between {justify-content: space-between;}
+.align-start {align-items: flex-start;}
 
 /* grp */  
 .gap4 {gap:.4rem;}

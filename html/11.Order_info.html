@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>주문정보 입력</title>
+
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/hs.css">
+  <script src="../script/jquery-3.6.0.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+  <div class="wrap">
+    <!-- 상단바 -->
+    <div class="topBar">
+      <div class="topBar_main">
+        <a href="../html/index.html"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
+        <img src="../img/icon_basket.svg" alt="" class="mainBasket">
+        <img src="../img/icon_menu.svg" alt="" class="mainMenu">
+      </div>
+      <div class="topBar_search">
+        <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required>
+        <button type="submit" class="search-btn" aria-span="검색"><img src="../img/icon_search.svg" alt=""></button>
+      </div>
+      <div class="topBar_nav">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li class="se"><a href="#">베스트100</a></li>
+          <li><a href="#">납품사례</a></li>
+          <li><a href="#">기획전</a></li>
+          <li><a href="#">초특가</a></li>
+          <li><a href="#">상품평</a></li>
+        </ul>
+
+        <button type="button" class="nav-toggle" aria-expanded="false">
+          <img src="../img/icon_arrow-down.svg" alt="메뉴 펼치기/접기">
+        </button>
+
+        <ul class="nav-line nav-line--secondary">
+          <li><a href="#">긴급제작</a></li>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">아이디어</a></li>
+          <li><a href="#">우수사안</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 컨텐츠 -->
+    <div class="orderWrap mb60">
+      <div class="order-Box">
+        <h2 class="normal-title">비회원 주문 동의 <span class="red">*</span></h2>
+        <div class="boxStyle">
+          - 수집항목 : 이름, 핸드폰 번호 <br>
+          - 수집/이용목적 : 서비스 제공 및 계약의 이행, 구매 및 대금 결제, 물품배송 또는 청구시 발송, 불만처리 등 회원 관리 등을 위한 목적
+        </div>
+        <div class="flex">
+          <label class="MYP-06-radio gap4">
+            <input type="radio" name="option" value="option1"><span class="red">(필수)</span> 해당내용을 확인했으며 이에 동의 합니다.
+          </label>
+        </div>
+      </div>
+      <div class="order-Box">
+        <h2 class="normal-title">주문자 정보 <span class="red">*</span></h2>
+
+        <div class="order-inBox">
+          <div class="input-group">
+            <label for="player-id">주문자명</label>
+            <input type="text" id="player-id" name="player-id" placeholder="" required="">
+          </div>
+          <div class="input-group">
+            <label for="player-id">휴대폰</label>
+            <div class="flex gap10">
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">추가연락처</label>
+            <div class="flex gap10">
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">이메일</label>
+            <div class="flex-input flex gap10">
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+              <p>@</p>
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">이메일</option>
+                  <option value="gmail.com">gmail.com</option>
+                  <option value="naver.com">naver.com</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-Box">
+        <h2 class="normal-title">수취인 정보 <span class="red">*</span></h2>
+
+        <div class="order-inBox St">
+          <div class="input-group">
+            <label for="player-id">배송정보</label>
+            <div class="flex js-start">
+              <label class="MYP-06-radio gap4">
+                <input type="radio" name="option" value="option1">주문자 정보와 동일
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">수취인 성명</label>
+            <input type="text" id="player-id" name="player-id" placeholder="" required="">
+          </div>
+          <div class="input-group">
+            <label for="player-id">배송주소</label>
+            <div class="flex-input flex col gap10">
+              <div class="flex gap10">
+                <input type="text" id="player-id" name="player-id" placeholder="" required="">
+                <button class="postBtn">우편번호</button>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+              <input type="text" id="player-id" name="player-id" placeholder="상세주소 입력" required="">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">휴대폰</label>
+            <div class="flex gap10">
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">추가연락처</label>
+            <div class="flex gap10">
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="order-Box">
+        <h2 class="normal-title">인쇄제작 <span class="red">*</span></h2>
+
+      </div>
+      
+      <div class="order-Box">
+        <h2 class="normal-title">주문정보 재확인 <span class="red">*</span></h2>
+        <div class="flex">
+          <label class="MYP-06-radio gap4">
+            <input type="radio" name="option" value="option1"><span class="red">(필수)</span> 확인했으며 결제 진행에 동의합니다.
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단바 -->
+    <div class="bottomBar">
+      <a href="#"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar02.svg" alt=""><img src="../img/bottomBar022.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar03.svg" alt=""><img src="../img/bottomBar033.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar04.svg" alt=""><img src="../img/bottomBar044.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar05.svg" alt=""><img src="../img/bottomBar055.svg" alt=""></a>
+    </div>
+
+    <!-- 푸터 -->
+    <!-- <footer>
+      <img src="../img/footer_logo.png" alt="">
+      <div class="footerLink">
+        <a href="#">이용약관</a> · <a href="#">개인정보취급방침</a> · <a href="#">사업자정보확인</a>
+      </div>
+      <div class="footerInfo">
+        <p>인천광역시 남동구 호구포로 50(고잔동) 엘아이지식산업센터 202호~207호</p>
+        <p>대표자 : 심선기 ㅣ 대표번호 : 1688-8744</p>
+        <p>개인정보관리책임자 : 이종후</p>
+        <p>이메일 : gift@87sarang.com</p>
+        <p>일반전화 : 032-261-2900, 032-466-0344</p>
+        <p>사업자등록번호 : 131-86-22224</p>
+        <p>통신판매업신고 : 제2010-인천남동구-0334호</p>
+      </div>
+    </footer> -->
+  </div>
+</body>
+<script src="../script/style.js"></script>
+<script src="../script/common.js"></script>
+</html>
