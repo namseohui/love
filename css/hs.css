@@ -330,6 +330,7 @@ body.no-scroll {
 .product-contens.expanded .pd_Swiper.imgArea {width:100%; max-width:350px;} 
 
 /* ==== 상품평 css ==== */
+.riview-Wrap.py40 {padding: 4rem 2rem;}
 .riview-Wrap >* {margin-bottom: 2rem;}
 .riview-Wrap >*:last-child {margin-bottom: 0;}
 .re-title {font-size: 2rem; font-weight: bold; text-align: center;}
