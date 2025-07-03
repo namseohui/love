@@ -255,4 +255,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
+
+     // ─── 기존 토글, 슬라이더 등 코드 그대로… ──────────────────────────
+
+  // ─── 메뉴 사이드바 열기/닫기 ──────────────────────────
+  const sidebarWrap = document.querySelector('.menuSideBarWrap');
+  const sidebar     = document.querySelector('.menuSideBar');
+  const openBtn     = document.querySelector('.mainMenu');      // 햄버거 아이콘
+  const closeBtn    = document.querySelector('.sidebar-title01 img.close');
+
+  // 사이드바를 숨긴 상태로 초기화
+  sidebarWrap.style.display = 'none';
+  sidebar.classList.add('sidebar-closed');  // 닫힌 상태 클래스
+
+  openBtn.addEventListener('click', e => {
+    e.preventDefault();
+    // 래퍼 보이기
+    sidebarWrap.style.display = 'block';
+    // 잠시 지연시켜서 CSS 애니메이션이 동작하도록
+    requestAnimationFrame(() => {
+      sidebar.classList.remove('sidebar-closed');
+      sidebar.classList.add('sidebar-open');
+    });
+  });
+
+  closeBtn.addEventListener('click', e => {
+    e.preventDefault();
+    // 애니메이션용 클래스 토글
+    sidebar.classList.remove('sidebar-open');
+    sidebar.classList.add('sidebar-closed');
+    // 애니메이션이 끝나면 래퍼 숨기기
+    sidebar.addEventListener('transitionend', function handler() {
+      sidebarWrap.style.display = 'none';
+      sidebar.removeEventListener('transitionend', handler);
+    });
+  });
+
+  // ─── 나머지 기존 코드 계속… ──────────────────────────
+
+
+
+
+
 }); 
