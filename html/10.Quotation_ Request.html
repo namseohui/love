@@ -56,9 +56,15 @@
 
     <!-- 컨텐츠 -->
     <div class="orderWrap mb60">
-      <div class="order-Box">
+      <div class="order-Box request-Box">
+        <p class="request-text">회원로그인시, <br>정보내역이 <b>자동입력</b>됩니다</p>
+        <div class="btnflex-box flex gap10">
+          <button class="paynowBtn">로그인</button>
+          <button class="paynowBtn sing">회원가입</button>
+        </div>
+      </div>
+      <div class="order-Box request-Box">
         <!-- <h2 class="normal-title">주문자 정보 <span class="red">*</span></h2> -->
-
         <div class="order-inBox boxStyle02">
           <div class="input-group col">
             <label for="player-id">업체명<span class="red">*</span></label>
@@ -85,78 +91,44 @@
           </div>
         </div>
       </div>
-      <!-- 수취인 정보 -->
-      <div class="order-Box">
-        <h2 class="normal-title">수취인 정보 <span class="red">*</span></h2>
-
-        <div class="order-inBox St">
-          <div class="input-group">
-            <label for="player-id">배송정보</label>
-            <div class="flex js-start">
-              <label class="MYP-06-radio gap4">
-                <input type="radio" name="option" value="option1">주문자 정보와 동일
-              </label>
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="player-id">수취인 성명</label>
-            <input type="text" id="player-id" name="player-id" placeholder="" required="">
-          </div>
-          <div class="input-group">
-            <label for="player-id">배송주소</label>
-            <div class="flex-input flex col gap10">
-              <div class="flex gap10">
-                <input type="text" id="player-id" name="player-id" placeholder="" required="">
-                <button class="postBtn">우편번호</button>
+      <!-- 상품정보 -->
+      <div class="order-Box request-Box">
+        <h2 class="normal-title">상품정보</h2>
+        <div class="reviewBox active-review">
+          <div class="re-info">
+            <img src="../img/review_product_img01.png" alt="" class="img">
+            <div class="textBox">
+              <p>오아 UV 콘택트 드림 하드 렌즈 세척기 1P</p>
+              <div class="rating flex gap4 rel">
+                <p class="side_line">상품코드 <span class="bl">12170021</span></p>
+                <p class="side_line">구매수량 <span class="bl"><b>1</b>개</span></p>
               </div>
-              <input type="text" id="player-id" name="player-id" placeholder="" required="">
-              <input type="text" id="player-id" name="player-id" placeholder="상세주소 입력" required="">
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="player-id">휴대폰</label>
-            <div class="flex gap10">
-              <div class="select-box">
-                <select id="" onchange="handleSelectChange()">
-                  <option value="선택">선택</option>
-                  <option value="010">010</option>
-                  <option value="011">011</option>
-                </select>
-                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
-              </div>
-              <input type="text" id="player-id" name="player-id" placeholder="" required="">
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="player-id">추가연락처</label>
-            <div class="flex gap10">
-              <div class="select-box">
-                <select id="" onchange="handleSelectChange()">
-                  <option value="선택">선택</option>
-                  <option value="010">010</option>
-                  <option value="011">011</option>
-                </select>
-                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
-              </div>
-              <input type="text" id="player-id" name="player-id" placeholder="" required="">
             </div>
           </div>
         </div>
       </div>
       <!-- 개인정보 수집동의 -->
-      <div class="order-Box">
+      <div class="order-Box request-Box">
         <h2 class="normal-title">개인정보 수집동의</h2>
         <div class="boxStyle">
-          <p>* 판촉사랑개인정보취급방침</p>
+          <p class="textArea"><b>* 판촉사랑개인정보취급방침</b></p>
           <span>개인정보관리책임자 <br>
             판촉사랑은 정보통신부 시행 개인정보보호지침 제22조 1항에 의거 관리책임자를 아래와 같이 지정합니다. <br>
             판촉사랑은 정보통신부 시행 개인정보보호지침 제22조 1항에 의거 관리책임자를 아래와 같이 지정합니다.
-</span>
+          </span>
         </div>
-        <div class="flex">
-          <label class="MYP-06-radio gap4">
-            <input type="radio" name="option" value="option1"><span class="red">(필수)</span> 해당내용을 확인했으며 이에 동의 합니다.
+        <div class="flex js-between">
+          <p class="textArea">위 내용에 <br>동의하시면 동의함을 선택하십시오</p>
+          <label class="MYP-06-radio gap10 gy">
+            <input type="radio" name="option" value="option1" checked>동의
+            
+            <input type="radio" name="option" value="option1">비동의
           </label>
+        </div>
+        <div class="btnflex-box flex gap10">
+          <button class="paynowBtn save">저장</button>
+          <button class="paynowBtn">상담요청</button>
+          <button class="paynowBtn close">닫기</button>
         </div>
       </div>
     </div>
@@ -188,6 +160,7 @@
     </footer> -->
   </div>
 </body>
-<script  type="text/javascript" src="../script/style.js"></script>
-<script  type="text/javascript" src="../script/common.js"></script>
+<script type="text/javascript" src="../script/style.js"></script>
+<script type="text/javascript" src="../script/common.js"></script>
+
 </html>
