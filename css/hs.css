@@ -553,12 +553,10 @@ body.no-scroll {
     height: 1px;
     background:var(--line-gray);
 }
-.order-Box::before{
-    left: -20px;
-}
-.order-Box::after{
-    right: -20px;
-}
+.order-Box::before{left: -20px;}
+.order-Box::after{right: -20px;}
+.order-Box.request-Box {border:0; position:inherit;}
+
 .order-Box .order-inBox.St,.payment-detail {padding:1rem; border:1px solid var(--line-gray); background:#f5f5f5;}
 .order-Box .MYP-06-radio {font-size: 1.4rem; margin:0;}
 .order-Box .MYP-06-radio span {font-size: 1.2rem;}
@@ -574,9 +572,9 @@ body.no-scroll {
 .order-Box .input-group .flex-input > * {width:100%; max-width: 100%; }
 .order-Box .input-group .flex-input .select-box {width:100%;}
 .order-Box .input-group .flex-input p {width: fit-content; }
-.order-Box >*, .order-Box .order-inBox >*,.payment-detail >* {margin-bottom: 1rem;}
+.order-Box >*, .order-Box .order-inBox >*,.payment-detail >* ,.request-Box>*{margin-bottom: 1rem;}
 .order-Box.St2 >* {margin-bottom: 2rem;}
-.order-Box >*:last-child, .order-Box.St2 >*:last-child, .order-Box .order-inBox >*:last-child, .payment-detail >*:last-child {margin-bottom: 0;}
+.order-Box >*:last-child, .order-Box.St2 >*:last-child, .order-Box .order-inBox >*:last-child, .payment-detail >*:last-child , .payment-detail >*:last-child {margin-bottom: 0;}
 .input-group.col, .payment-detail .input-group.col {flex-flow: column; align-items: flex-start;}
 
 .postBtn {
@@ -726,4 +724,17 @@ input[type="checkbox"]:checked {
 .payment-infoWrap .normal-title {color:var(--red);}
 .payment-infoWrap .normal-title span {color:var(--bl); font-size: 1.2rem; font-weight: normal;}
 
-.paynowBtn {background:var(--red); color:#fff; font-size: 1.6rem; font-weight: 600; padding: 1.2rem; border-radius: 50px; width:100%; text-align: center;}
+/* ==== 견적서요청 ==== */
+.paynowBtn {background:var(--red); color:#fff; font-size: 1.6rem; font-weight: 500; padding: 1.2rem; border-radius: 50px; width:100%; text-align: center;}
+.paynowBtn.save {color:var(--gray); background:#f5f5f5;}
+.paynowBtn.close {border: 1px solid var(--line-gray); background:inherit; color:var(--gray);}
+.paynowBtn.sing {border: 1px solid var(--gray); background:inherit; color:var(--gray);}
+.btnflex-box >*:nth-child(3) {
+  max-width:85px;
+}
+.request-Box .boxStyle {max-height: 120%;}
+.request-text {font-size: 1.6rem; line-height: 140%; text-align: center;}
+
+/* ==== 카테고리 ==== */
+.maintab-wrap.categoryTab .maintab {margin:0;}
+.maintab-wrap.categoryTab .tabcontents .tabcon {padding:0;}
