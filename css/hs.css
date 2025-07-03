@@ -508,7 +508,10 @@ body.no-scroll {
 .order-Box .input-group .MYP-06-radio input {width:auto;}
 .order-Box .input-group {display:flex; align-items: center; font-size: 1.4rem; gap: 1rem;}
 .order-Box .input-group > label {min-width: 70px;}
-.order-Box .input-group input {margin:0; padding:.8rem 1rem; width: 100%; border: 1px solid var(--line-gray);}
+.order-Box .input-group input[type="text"] {margin:0; padding:.8rem 1rem; width: 100%; border: 1px solid var(--line-gray);}
+.order-Box .input-group input[type="radio"] {margin:0; border-color:var(--line-gray);}
+.order-Box .input-group input[type="checkbox"] {width:14px; margin-bottom: 0; padding:inherit}
+.order-Box .input-group .checkSet {font-size: 1.4rem;}
 .order-Box .input-group .flex {width:100%; height: -webkit-fill-available;}
 .order-Box .input-group .flex .select-box {max-width: 100%; width:100px; height: 100%;background: #fff;}
 .order-Box .input-group .flex-input > * {width:100%; max-width: 100%; }

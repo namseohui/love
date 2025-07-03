@@ -23,7 +23,7 @@
     <!-- 상단바 -->
     <div class="topBar">
       <div class="topBar_main">
-        <a href="../html/index.html"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
+        <a href="../html/index.html" class="mainLink"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
         <img src="../img/icon_basket.svg" alt="" class="mainBasket">
         <img src="../img/icon_menu.svg" alt="" class="mainMenu">
       </div>
@@ -78,9 +78,10 @@
           </div>
           <div class="input-group col">
             <label for="player-id">원단위절사<span class="red">*</span></label>
-            <label class="MYP-06-radio gap4">
-            <input type="radio" name="option" value="option1"><span class="red">(필수)</span> 해당내용을 확인했으며 이에 동의 합니다.
-          </label>
+            <div class="checkSet">
+              <input type="checkbox" checked="">
+              <p>견적서 합계금액의 원단위를 절사합니다.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -187,6 +188,6 @@
     </footer> -->
   </div>
 </body>
-<script src="../script/style.js"></script>
+<script  type="text/javascript" src="../script/style.js"></script>
 <script  type="text/javascript" src="../script/common.js"></script>
 </html>
