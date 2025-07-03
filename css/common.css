@@ -58,6 +58,8 @@ b {font-weight: bold;}
 .py30 {padding:3rem 0;}
 .py40 {padding:4rem 0;}
 
+.px20 {padding:0 2rem;}
+
 /* grid */
 .grid {display: grid; align-items: self-start; justify-content: center; text-align: center;}
 .grid.col5 {grid-template-columns: repeat(5, 1fr);}

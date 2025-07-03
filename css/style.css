@@ -320,7 +320,11 @@ input[type="search"]::-ms-reveal {
 }
 
 /* 메뉴 항목 */
+<<<<<<< HEAD
+.menuSideBarWrap .menu-item {
+=======
 /* .sidemenu-item {
+>>>>>>> e734cd57196febc84337842b8776466fca6d639d
   border-left: 4px solid transparent;
 } */
  .sidemenu-item {
@@ -328,9 +332,15 @@ input[type="search"]::-ms-reveal {
  }
 
 /* 활성 메뉴(열림 or 링크 선택) */
+<<<<<<< HEAD
+.menuSideBarWrap .menu-item.active {
+  border-left-color: #e60023; /* 왼쪽 빨간 바 */
+}
+=======
 /* .sidemenu-item.active {
   border-left-color: #e60023;
 } */
+>>>>>>> e734cd57196febc84337842b8776466fca6d639d
 
 /* 버튼/링크 공통 스타일 */
 .menu-link {
