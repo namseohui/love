@@ -262,37 +262,45 @@ document.addEventListener('DOMContentLoaded', () => {
      // ─── 기존 토글, 슬라이더 등 코드 그대로… ──────────────────────────
 
   // ─── 메뉴 사이드바 열기/닫기 ──────────────────────────
-  const sidebarWrap = document.querySelector('.menuSideBarWrap');
-  const sidebar     = document.querySelector('.menuSideBar');
-  const openBtn     = document.querySelector('.mainMenu');      // 햄버거 아이콘
-  const closeBtn    = document.querySelector('.sidebar-title01 img.close');
-
-  // 사이드바를 숨긴 상태로 초기화
-  sidebarWrap.style.display = 'none';
-  sidebar.classList.add('sidebar-closed');  // 닫힌 상태 클래스
-
-  openBtn.addEventListener('click', e => {
-    e.preventDefault();
-    // 래퍼 보이기
-    sidebarWrap.style.display = 'block';
-    // 잠시 지연시켜서 CSS 애니메이션이 동작하도록
-    requestAnimationFrame(() => {
-      sidebar.classList.remove('sidebar-closed');
-      sidebar.classList.add('sidebar-open');
-    });
-  });
-
-  closeBtn.addEventListener('click', e => {
-    e.preventDefault();
-    // 애니메이션용 클래스 토글
-    sidebar.classList.remove('sidebar-open');
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidebarWrap = document.querySelector('.menuSideBarWrap');
+    const sidebar     = document.querySelector('.menuSideBar');
+    const openBtn     = document.querySelector('.menuLink');
+    const closeBtn    = sidebar?.querySelector('.sidebar-title01 img.close');
+  
+    // 만약 하나라도 없으면 아무것도 안 함
+    if (!sidebarWrap || !sidebar || !openBtn || !closeBtn) return;
+  
+    // CSS 에서 display:none; 을 이미 설정했다면, JS 에선 클래스 토글만 하면 됩니다.
     sidebar.classList.add('sidebar-closed');
-    // 애니메이션이 끝나면 래퍼 숨기기
-    sidebar.addEventListener('transitionend', function handler() {
-      sidebarWrap.style.display = 'none';
-      sidebar.removeEventListener('transitionend', handler);
+  
+    // 열기
+    openBtn.addEventListener('click', e => {
+      e.preventDefault();
+      sidebarWrap.style.display = 'block';
+      requestAnimationFrame(() => {
+        sidebar.classList.replace('sidebar-closed', 'sidebar-open');
+      });
+    });
+  
+    // 닫기
+    closeBtn.addEventListener('click', e => {
+      e.preventDefault();
+      sidebar.classList.replace('sidebar-open', 'sidebar-closed');
+      sidebar.addEventListener('transitionend', function handler(ev) {
+        if (ev.propertyName === 'transform') {
+          sidebarWrap.style.display = 'none';
+          sidebar.removeEventListener('transitionend', handler);
+        }
+      });
+    });
+  
+    // (선택) 래퍼 클릭해도 닫기
+    sidebarWrap.addEventListener('click', e => {
+      if (e.target === sidebarWrap) closeBtn.click();
     });
   });
+  
 
   // ─── 나머지 기존 코드 계속… ──────────────────────────
 
