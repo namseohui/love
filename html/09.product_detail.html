@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>초특가</title>
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/hs.css">
-    <script src="../script/jquery-3.6.0.js"></script>
-    <!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>초특가</title>
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/hs.css">
+  <script src="../script/jquery-3.6.0.js"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
 </head>
@@ -26,20 +24,20 @@
 <body>
   <div class="wrap">
 
-    
-    
-      <!-- 상단바 -->
-      <div class="topBar">
-        <div class="topBar_main">
-          <a href="../html/index.html" class="mainLink"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
-          <a href="#" class="basketLink"><img src="../img/icon_basket.svg" alt="" class="mainBasket"></a>
-          <a href="#" class="menuLink"><img src="../img/icon_menu.svg" alt="" class="mainMenu"></a>
-        </div>
-        <div class="topBar_search">
-          <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required>
-          <button type="submit" class="search-btn" aria-label="검색"><img src="../img/icon_search.svg" alt=""></button>
-        </div>
-        <!-- <div class="topBar_nav">
+
+
+    <!-- 상단바 -->
+    <div class="topBar">
+      <div class="topBar_main">
+        <a href="../html/index.html" class="mainLink"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
+        <a href="#" class="basketLink"><img src="../img/icon_basket.svg" alt="" class="mainBasket"></a>
+        <a href="#" class="menuLink"><img src="../img/icon_menu.svg" alt="" class="mainMenu"></a>
+      </div>
+      <div class="topBar_search">
+        <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required>
+        <button type="submit" class="search-btn" aria-label="검색"><img src="../img/icon_search.svg" alt=""></button>
+      </div>
+      <!-- <div class="topBar_nav">
           <ul>
             <li class="active"><a href="#">홈</a></li>
             <li class="se"><a href="#">베스트100</a></li>
@@ -61,69 +59,93 @@
           </ul>
         </div> -->
 
-      </div>
+    </div>
 
-      <!-- 메뉴 사이드바 -->
-      <div class="menuSideBarWrap">
-        <div class="menuSideBar">
-          <div class="sidebar-title">
-            <div class="sidebar-title01">
-              <h2>전체메뉴</h2>
-              <a href="#"><img src="../img/bottomBar03.svg" alt=""></a>
-              <img src="../img/icon_X.svg" alt="" class="close">
-            </div>
-            <div class="sidebar-title02">
-              <button class="log">로그인</button>
-              <button class="in">회원가입</button>
-            </div>
-            <div class="sidebar-title03"></div>
+    <!-- 메뉴 사이드바 -->
+    <div class="menuSideBarWrap">
+      <div class="menuSideBar">
+        <div class="sidebar-title">
+          <div class="sidebar-title01">
+            <h2>전체메뉴</h2>
+            <a href="#"><img src="../img/bottomBar03.svg" alt=""></a>
+            <img src="../img/icon_X.svg" alt="" class="close">
           </div>
-          <nav class="sidebar-menu">
-            <ul>
-              <li class="sidemenu-item has-submenu">
-                <button class="menu-link">견적·시안 <span class="arrow"></span></button>
-                <ul class="submenu">
-                  <li class="submenu-item"><a href="#">견적확인</a></li>
-                  <li class="submenu-item"><a href="#">시안확인</a></li>
-                </ul>
-              </li>
-              <li class="sidemenu-item has-submenu">
-                <button class="menu-link">상품메뉴 <span class="arrow"></span></button>
-                <ul class="submenu">
-                  <li class="submenu-item"><a href="#">상품1</a></li>
-                  <li class="submenu-item"><a href="#">상품2</a></li>
-                </ul>
-              </li>
-              <li class="sidemenu-item has-submenu">
-                <button class="menu-link">이벤트 <span class="arrow"></span></button>
-                <ul class="submenu">
-                  <li class="submenu-item"><a href="#">이벤트1</a></li>
-                  <li class="submenu-item"><a href="#">이벤트2</a></li>
-                </ul>
-              </li>
-              <li class="sidemenu-item has-submenu">
-                <button class="menu-link">회원서비스 메뉴 <span class="arrow"></span></button>
-                <ul class="submenu">
-                  <li class="submenu-item"><a href="#">회원서비스 메뉴1</a></li>
-                  <li class="submenu-item"><a href="#">회원서비스 메뉴2</a></li>
-                </ul>
-              </li>
-              <li class="sidemenu-item has-submenu">
-                <button class="menu-link">회원메뉴 <span class="arrow"></span></button>
-                <ul class="submenu">
-                  <li class="submenu-item"><a href="#">회원메뉴1</a></li>
-                  <li class="submenu-item"><a href="#">회원메뉴2</a></li>
-                  <li class="submenu-item"><a href="#">회원메뉴3</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+          <div class="sidebar-title02">
+            <button class="log">로그인</button>
+            <button class="in">회원가입</button>
+          </div>
+          <div class="sidebar-title03"></div>
         </div>
+        <nav class="sidebar-menu">
+          <ul>
+            <li class="sidemenu-item has-submenu">
+              <button class="menu-link">견적·시안 <span class="arrow"></span></button>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="#">견적확인</a></li>
+                <li class="submenu-item"><a href="#">시안확인</a></li>
+              </ul>
+            </li>
+            <li class="sidemenu-item has-submenu">
+              <button class="menu-link">상품메뉴 <span class="arrow"></span></button>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="#">상품1</a></li>
+                <li class="submenu-item"><a href="#">상품2</a></li>
+              </ul>
+            </li>
+            <li class="sidemenu-item has-submenu">
+              <button class="menu-link">이벤트 <span class="arrow"></span></button>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="#">이벤트1</a></li>
+                <li class="submenu-item"><a href="#">이벤트2</a></li>
+              </ul>
+            </li>
+            <li class="sidemenu-item has-submenu">
+              <button class="menu-link">회원서비스 메뉴 <span class="arrow"></span></button>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="#">회원서비스 메뉴1</a></li>
+                <li class="submenu-item"><a href="#">회원서비스 메뉴2</a></li>
+              </ul>
+            </li>
+            <li class="sidemenu-item has-submenu">
+              <button class="menu-link">회원메뉴 <span class="arrow"></span></button>
+              <ul class="submenu">
+                <li class="submenu-item"><a href="#">회원메뉴1</a></li>
+                <li class="submenu-item"><a href="#">회원메뉴2</a></li>
+                <li class="submenu-item"><a href="#">회원메뉴3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <!-- 메뉴 사이드바 끝 -->
+    </div>
+    <!-- 메뉴 사이드바 끝 -->
+
+    <table>
+      <thead>
+        <tr>
+          <th>지표</th>
+          <th>5개</th>
+          <th>5개</th>
+          <th>5개</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>일반가</td>
+          <td>33,100</td>
+          <td>33,100</td>
+          <td>33,100</td>
+        </tr>
+        <tr>
+          <td>할인가</td>
+          <td>32,107</td>
+          <td>32,107</td>
+          <td>32,107</td>
+        </tr>
+      </tbody>
+    </table>
 
 
-    
     <!-- 내용 -->
 
 
@@ -132,7 +154,7 @@
 
 
 
-    
+
 
 
 
