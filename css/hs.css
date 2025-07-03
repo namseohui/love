@@ -14,6 +14,10 @@ h5 {font-size: 1.6rem; font-weight: bold;}
     line-height: 150%;
     border-bottom: 1px solid var(--line-gray);
 }
+.boxStyle02 {
+    padding:1rem;
+    border: 1px solid var(--line-gray);
+}
 
 /* after_style */
 .side_line:after {
@@ -154,7 +158,7 @@ h5 {font-size: 1.6rem; font-weight: bold;}
 
 
 /* ==== 납품사례 css ==== */
-.searchWrap.flex {align-items: stretch;}
+.searchWrap.flex {align-items: stretch; padding:0 2rem;}
 .searchWrap .topBar_search input {border-color:var(--line-gray); border-radius: .8rem;}
 .sch_btn {background: var(--gray); color:#fff; white-space: nowrap;
 font-size: 1.6rem; padding: .8rem 1.5rem; border-radius: .8rem;}
@@ -183,16 +187,18 @@ font-size: 1.6rem; padding: .8rem 1.5rem; border-radius: .8rem;}
 .slide-panel {
   position: absolute;
   top: 138px;
-  left: -100vw; /* 왼쪽으로 숨겨진 상태 */
+  left: -110vw;   
   width: 390px;
   height: calc(100vh - 138px);
   background: #fff;
   z-index: 20;
-  transition: left 0.3s ease-in-out;
-  padding-top: 20px;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  padding-top: 10px;
   overflow: hidden;
 }
 .slide-panel.open {
+  opacity: 1;
   left: 0;
 }
 /* 슬라이딩 패널의 컨텐츠 영역만 스크롤 가능하도록 설정 */
@@ -220,8 +226,8 @@ body.no-scroll {
 
 /* 슬라이드 패널 컨텐츠 */
 .panel-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns:  1fr 2fr;
     height: 100vh;
   }
 
@@ -244,8 +250,8 @@ body.no-scroll {
     gap: .4rem;    
     transition: all .5s;
   }
-  .menu-item:hover,
-  .menu-item.active {
+  .sidebar .menu-item:hover,
+  .sidebar .menu-item.active {
     background-color: #fff;
     color: var(--bl);
     font-weight: bold;
@@ -260,6 +266,7 @@ body.no-scroll {
   .submenu.active,
   .sub-submenu.active {
     display: block;
+    max-height: fit-content;
   }
   .sub-submenu.active {
     border-bottom: 1px solid var(--line-gray);  }
@@ -308,7 +315,7 @@ body.no-scroll {
   }
 
 /* 상품 이미지 슬라이드 */
-.pd_Swiper.imgArea {width:123px;} 
+.pd_Swiper.imgArea {width:105px;} 
 .pd_Swiper.imgArea.rel::before,.product .imgArea.rel::after {z-index: 3;}
 /* 상품카테고리 */
 .productCate , .product .date { display: none;}
@@ -320,7 +327,7 @@ body.no-scroll {
 /* 하나씩 보일 때 이미지 스타일 변경 */
 .product-contens.expanded .productCate ,.product-contens.expanded .product .date {display: block;}
 .product-contens.expanded .caseBtn {display:flex;}
-.product-contens.expanded .pd_Swiper.imgArea {width:390px;} 
+.product-contens.expanded .pd_Swiper.imgArea {width:100%; max-width:350px;} 
 
 /* ==== 상품평 css ==== */
 .riview-Wrap >* {margin-bottom: 2rem;}
@@ -509,6 +516,7 @@ body.no-scroll {
 .order-Box >*, .order-Box .order-inBox >*,.payment-detail >* {margin-bottom: 1rem;}
 .order-Box.St2 >* {margin-bottom: 2rem;}
 .order-Box >*:last-child, .order-Box.St2 >*:last-child, .order-Box .order-inBox >*:last-child, .payment-detail >*:last-child {margin-bottom: 0;}
+.input-group.col, .payment-detail .input-group.col {flex-flow: column; align-items: flex-start;}
 
 .postBtn {
     max-width: 80px;
@@ -590,7 +598,6 @@ input[type="checkbox"]:checked {
 }
 .payment-detail .input-group > label {min-width: 50px;}
 .payment-detail .input-group input  {font-size: 1.2rem;}
-.payment-detail .input-group.col {flex-flow: column; align-items: flex-start;}
 .payment-detail .input-day input {max-width:65px;}
 .payment-detail .select-box {background: #fff; max-width: 100%;}
 .payment-detail .MYP-06-radio {white-space: nowrap;}

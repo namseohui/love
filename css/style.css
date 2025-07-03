@@ -273,12 +273,12 @@ input[type="search"]::-ms-reveal {
 }
 
 /* 메뉴 항목 */
-.menu-item {
+.menuSideBarWrap .menu-item {
   border-left: 4px solid transparent;
 }
 
 /* 활성 메뉴(열림 or 링크 선택) */
-.menu-item.active {
+.menuSideBarWrap .menu-item.active {
   border-left-color: #e60023; /* 왼쪽 빨간 바 */
 }
 

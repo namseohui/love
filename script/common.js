@@ -170,22 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // 업종보기 > 클릭
-// document.addEventListener('DOMContentLoaded', () => {
-//   const businessView = document.getElementById('businessView');
-//   const slidePanel = document.getElementById('slidePanel');
-//   const closePanel = document.getElementById('closePanel');
-
-//   businessView.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     slidePanel.classList.add('open');
-//     businessView.style.display = 'none';
-//   });
-
-//   closePanel.addEventListener('click', () => {
-//     slidePanel.classList.remove('open');
-//     businessView.style.display = 'flex';
-//   });
-// });
 document.addEventListener('DOMContentLoaded', () => {
   const businessView = document.getElementById('businessView');
   const slidePanel = document.getElementById('slidePanel');
@@ -246,8 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
       arrow.classList.add('active'); // 화살표 회전
     }
   }
-
-
 
 // ==== 납품사례 이미지 슬라이드 ====
 const swipers = document.querySelectorAll('.pd_Swiper');
