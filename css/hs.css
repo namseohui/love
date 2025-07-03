@@ -38,6 +38,16 @@ h5 {font-size: 1.6rem; font-weight: bold;}
     border:1px solid var(--line-gray);
     border-radius: 20%;
   }
+  .cateBtnWrap.purepose {padding: 20px;}
+  .cateBtnWrap.purepose .grid .cateBtn img {
+    border: none;
+    height: 25px;
+  }
+  .cateBtnWrap.purepose .grid .cateBtn {
+    border:1px solid var(--line-gray);
+    border-radius: 15px;
+  }
+  
   .cateBtnWrap .grid .cateBtn .text {
     padding: 1rem 0;
     font-size: 1.2rem;
@@ -47,14 +57,46 @@ h5 {font-size: 1.6rem; font-weight: bold;}
   .cateBtnWrap .grid .cateBtn.active img, .cateBtnWrap .grid .cateBtn:hover img {  
   border: 1px solid var(--red); 
 }
+.cateBtnWrap.purepose .grid .cateBtn.active img, .cateBtnWrap.purepose .grid .cateBtn:hover img {  
+  border: none; 
+}
+.cateBtnWrap.purepose .grid .cateBtn.active, .cateBtnWrap.purepose .grid .cateBtn:hover {  
+  border: 1px solid var(--red);
+}
 .cateBtnWrap .grid .cateBtn:first-child.active img,.cateBtnWrap .grid .cateBtn:first-child:hover img {    
   filter: invert(26%) sepia(85%) saturate(5102%) hue-rotate(346deg) brightness(91%) contrast(106%);
 }
 .indeximgff {filter: none !important;}
 .cateBtnWrap .grid .cateBtn.active .text,.cateBtnWrap .grid .cateBtn:hover .text {
-  color:var(--red); 
+  color:var(--red);
   font-weight: bold;
 }
+
+
+.cateBtnWrap.purepose {
+  font-size: 1rem;
+  color: #333;
+
+}
+.cateBtnWrap.purepose .cateBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+}
+.cateBtnWrap.purepose .grid {
+  display: flex;
+  justify-content: space-between;
+}
+.cateBtnWrap.purepose .cateBtn p {
+  margin-top: 3px;
+}
+
+
+
+
 /* tagBtnWrap */
 .tagBtnWrap {
   max-width: 390px;
@@ -157,6 +199,21 @@ h5 {font-size: 1.6rem; font-weight: bold;}
 .product-contens.expanded .product h5 {font-size: 2rem;}
 
 
+
+/* purpose */
+.purpose_product {
+  
+}
+
+.purpose_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+
+
+
 /* ==== 납품사례 css ==== */
 .searchWrap.flex {align-items: stretch; padding:0 2rem;}
 .searchWrap .topBar_search input {border-color:var(--line-gray); border-radius: .8rem;}
@@ -227,7 +284,7 @@ body.no-scroll {
 /* 슬라이드 패널 컨텐츠 */
 .panel-content {
     display: grid;
-    grid-template-columns:  1fr 2fr;
+   :  1fr 2fr;
     height: 100vh;
   }
 

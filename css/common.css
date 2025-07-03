@@ -46,24 +46,30 @@
 .fs16 {font-size: 1.6rem;}
 .fs20 {font-size: 2rem;}
 
+
 /* font-weight */
 b {font-weight: bold;}
+.center {text-align: center;}
 
 /* margin */
 .mlAuto {margin-left: auto;}
 .ml5 {margin-left: .5rem;}
 
+.mb20 {margin-bottom: 2rem;}
 .mb30 {margin-bottom: 3rem;}
+.mb40 {margin-bottom: 4rem;}
 .mb60 {margin-bottom: 6rem;}
 /* padding */
 .py30 {padding:3rem 0;}
 .py40 {padding:4rem 0;}
-
+.p40 {padding:4rem 2rem;}
 .px20 {padding:0 2rem;}
 
 /* grid */
 .grid {display: grid; align-items: self-start; justify-content: center; text-align: center;}
 .grid.col5 {grid-template-columns: repeat(5, 1fr);}
+.grid.col6 {grid-template-columns: repeat(6, 1fr);}
+
 /* flex */
 .flex {display: flex; align-items: center;}  
 .flex.col {flex-flow: column;}
