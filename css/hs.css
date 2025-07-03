@@ -1,7 +1,19 @@
 /* font-style */
+.normal-title {font-size: 2rem; font-weight: bold;}
 h5 {font-size: 1.6rem; font-weight: bold;}
 .p-code {color:var(--pink); font-size: 1rem; font-weight: 300;}
 .textArea {font-size: 1.5rem; font-weight: 300; line-height: 150%;     word-break: keep-all;}
+
+.boxStyle {
+    background: #f5f5f5;
+    padding:1rem;
+    overflow-y: auto;
+    max-height: 70px;
+    font-size:1.2rem;
+    color:var(--gray);
+    line-height: 150%;
+    border-bottom: 1px solid var(--line-gray);
+}
 
 /* after_style */
 .side_line:after {
@@ -335,6 +347,7 @@ body.no-scroll {
     letter-spacing: -0.03rem;
     color:var(--gray);
     width: 100%;
+    line-height: 120%;
   }
   
   .select-box i {
@@ -463,3 +476,186 @@ body.no-scroll {
 .arrow-icon.rotate,.more-arrow.rotate {
   transform: rotate(180deg);
 }
+
+/* ==== 주문정보 css ==== */
+.orderWrap {padding: 0 2rem;}
+.order-Box {position:relative; padding:1.5rem 0; border-bottom: 1px solid var(--line-gray);}
+.order-Box::before,.order-Box::after{
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    width:2rem;
+    height: 1px;
+    background:var(--line-gray);
+}
+.order-Box::before{
+    left: -20px;
+}
+.order-Box::after{
+    right: -20px;
+}
+.order-Box .order-inBox.St,.payment-detail {padding:1rem; border:1px solid var(--line-gray); background:#f5f5f5;}
+.order-Box .MYP-06-radio {font-size: 1.4rem; margin:0;}
+.order-Box .MYP-06-radio span {font-size: 1.2rem;}
+.order-Box .input-group .MYP-06-radio input {width:auto;}
+.order-Box .input-group {display:flex; align-items: center; font-size: 1.4rem; gap: 1rem;}
+.order-Box .input-group > label {min-width: 70px;}
+.order-Box .input-group input {margin:0; padding:.8rem 1rem; width: 100%; border: 1px solid var(--line-gray);}
+.order-Box .input-group .flex {width:100%; height: -webkit-fill-available;}
+.order-Box .input-group .flex .select-box {max-width: 100%; width:100px; height: 100%;background: #fff;}
+.order-Box .input-group .flex-input > * {width:100%; max-width: 100%; }
+.order-Box .input-group .flex-input .select-box {width:100%;}
+.order-Box .input-group .flex-input p {width: fit-content; }
+.order-Box >*, .order-Box .order-inBox >*,.payment-detail >* {margin-bottom: 1rem;}
+.order-Box.St2 >* {margin-bottom: 2rem;}
+.order-Box >*:last-child, .order-Box.St2 >*:last-child, .order-Box .order-inBox >*:last-child, .payment-detail >*:last-child {margin-bottom: 0;}
+
+.postBtn {
+    max-width: 80px;
+    white-space: nowrap;
+    background:var(--line-gray);
+    color:var(--gray);
+    padding:.8rem 1rem;
+    height: inherit;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+}
+
+/* table */
+.tableArea {width:100%; margin-bottom: 2rem;}
+.tableArea table {width:100%; text-align: center; border-collapse: collapse; overflow: hidden; font-size: 1.4rem; line-height: 130%; display: flex; flex-flow: row; border-top:1px solid var(--line-gray); border-bottom: 1px solid var(--line-gray);}
+.tableArea thead tr {background:#f5f5f5;  border-right: 1px solid var(--line-gray);width: 100px; font-size: 1.4rem; display: flex; flex-flow: column; justify-content: center; height: 100%;}
+.tableArea tr th ,.tableArea tr td  {padding: 1rem; white-space: nowrap;}
+.tableArea tr td  {font-size: 1.2rem;}
+.tableArea tr td .caption {font-size: 1rem; color:var(--gray); font-weight: 300;}
+.tb-flex {display: flex; align-items: flex-start;}
+.tb-flex.col {flex-flow: column;}
+/* tag */
+.tag {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .3rem 1rem;
+    border: 1px solid;
+    border-radius: 50px;
+    height: fit-content;
+    white-space: nowrap;
+}
+.tag.pk {color: var(--pink); border:1px solid var(--pink); background:#FFEBF0;}
+
+/* file-upload */
+.btn-outline {font-size: 1.2rem; color:var(--gray); background:#f5f5f5; padding:.2rem .4rem; border-radius: .2rem; border:1px solid var(--line-gray);}
+#logoUpload {display: none;}
+#fileName {flex: 1; color:var(--gray);white-space: nowrap;
+  overflow: hidden;text-overflow: ellipsis; max-width: 170px;}
+
+/* checked */
+input[type="checkbox"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--gray);
+  box-sizing: border-box;
+  outline: 0;
+  border-radius: 40px;
+  margin-right: .4rem;
+}
+input[type="checkbox"]:checked {
+  border-color: var(--red);
+  background-color: var(--red);
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
+.checkSet {
+  display:flex; align-items: center; color:var(--gray); font-size: 1.2rem;}
+/* 테이블안에 체크세트 */
+.tb-flex .checkSet {margin-right:.5rem;}
+.tb-flex.col .checkSet {margin-right:0; margin-bottom: .5rem;}
+.tb-flex .checkSet:last-child, .tb-flex.col .checkSet:last-child {margin:0;}
+
+/* 결제수단 */
+.paymentBox {display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; width:100%; gap: 1rem;}
+.paymentBox .checkSet {font-size: 1.4rem; height: 22px;}
+.paymentBox .checkSet p.selected {
+    color: var(--red);
+    font-weight: bold;
+  }
+.payment-detail {overflow: hidden;
+  max-height: 0;
+  opacity: 0;transform: translateY(-20px);
+  transition: all .8s ease;}
+.payment-detail.show {
+  opacity: 1;transform: translateY(0); 
+  margin-top: 1rem;
+}
+.payment-detail .input-group > label {min-width: 50px;}
+.payment-detail .input-group input  {font-size: 1.2rem;}
+.payment-detail .input-group.col {flex-flow: column; align-items: flex-start;}
+.payment-detail .input-day input {max-width:65px;}
+.payment-detail .select-box {background: #fff; max-width: 100%;}
+.payment-detail .MYP-06-radio {white-space: nowrap;}
+.payment-detail .flex-input {display: flex; flex-flow: column; justify-content: flex-start;}
+.payment-detail .gy {color:var(--gray);}
+
+.payment-detailWrap {}
+/* 커스텀 셀렉트_드롭다운 */
+.custom-select {
+  background-color: inherit;
+  border: 1px solid var(--line-gray);
+  border-radius: 0.8rem;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  letter-spacing: -0.03rem;
+  color: var(--gray);
+  width: 100%;
+  line-height: 120%;
+  position: relative;
+}
+.custom-select .selected-option {
+  pointer-events: none;
+}
+.custom-select .options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--line-gray);
+  border-radius: 0.8rem;
+  background-color: white;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.custom-select .options li {
+  padding: 0.8rem 1.4rem;
+  font-size: 1.2rem;
+  color: var(--gray);
+  cursor: pointer;
+}
+.custom-select .options li:hover {
+  background-color: #f8f8f8;
+}
+.custom-select.open .options {
+  display: block;
+}
+.custom-select.open+i {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.txt_pk,.txt_gy {color:var(--pink); font-size: 1.2rem; font-weight: 300; line-height: 140%;}
+.txt_gy  {color:var(--gray);}
+
+/* 결제정보 payment-infoWrap */
+.payment-infoWrap >* {padding:.8rem 0;}
+.payment-infoWrap .flex {justify-content: space-between;}
+.payment-infoWrap .flex p {font-size: 1.4rem;}
+.payment-infoWrap .total {padding:1rem 0; border-top: 1px solid #f5f5f5;}
+.payment-infoWrap .total p {font-size: 1.8rem;}
+.payment-infoWrap .normal-title {color:var(--red);}
+.payment-infoWrap .normal-title span {color:var(--bl); font-size: 1.2rem; font-weight: normal;}
+
+.paynowBtn {background:var(--red); color:#fff; font-size: 1.6rem; font-weight: 600; padding: 1.2rem; border-radius: 50px; width:100%; text-align: center;}

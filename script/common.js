@@ -262,3 +262,26 @@ const swipers = document.querySelectorAll('.pd_Swiper');
     });
   });
 
+// ==== 파일업로드 ====
+function previewLogo(event) {
+    const input = event.target;
+    const file = input.files[0];
+    const fileNameText = document.getElementById("fileName");
+
+    if (file) {
+      fileNameText.textContent = file.name;
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = document.getElementById("logoPreview");
+        img.src = e.target.result;
+        img.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    } else {
+      fileNameText.textContent = "선택된 파일 없음";
+      document.getElementById("logoPreview").style.display = "none";
+    }
+  }
+
+

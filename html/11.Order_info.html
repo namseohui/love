@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>주문정보 입력</title>
+
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/hs.css">
+  <script src="../script/jquery-3.6.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+  <div class="wrap">
+    <!-- 상단바 -->
+    <div class="topBar">
+      <div class="topBar_main">
+        <a href="../html/index.html"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
+        <img src="../img/icon_basket.svg" alt="" class="mainBasket">
+        <img src="../img/icon_menu.svg" alt="" class="mainMenu">
+      </div>
+      <div class="topBar_search">
+        <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required>
+        <button type="submit" class="search-btn" aria-span="검색"><img src="../img/icon_search.svg" alt=""></button>
+      </div>
+      <div class="topBar_nav">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li class="se"><a href="#">베스트100</a></li>
+          <li><a href="#">납품사례</a></li>
+          <li><a href="#">기획전</a></li>
+          <li><a href="#">초특가</a></li>
+          <li><a href="#">상품평</a></li>
+        </ul>
+
+        <button type="button" class="nav-toggle" aria-expanded="false">
+          <img src="../img/icon_arrow-down.svg" alt="메뉴 펼치기/접기">
+        </button>
+
+        <ul class="nav-line nav-line--secondary">
+          <li><a href="#">긴급제작</a></li>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">아이디어</a></li>
+          <li><a href="#">우수사안</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 컨텐츠 -->
+    <div class="orderWrap mb60">
+      <!-- 비회원 주문 동의 -->
+      <div class="order-Box">
+        <h2 class="normal-title">비회원 주문 동의 <span class="red">*</span></h2>
+        <div class="boxStyle">
+          - 수집항목 : 이름, 핸드폰 번호 <br>
+          - 수집/이용목적 : 서비스 제공 및 계약의 이행, 구매 및 대금 결제, 물품배송 또는 청구시 발송, 불만처리 등 회원 관리 등을 위한 목적
+        </div>
+        <div class="flex">
+          <label class="MYP-06-radio gap4">
+            <input type="radio" name="option" value="option1"><span class="red">(필수)</span> 해당내용을 확인했으며 이에 동의 합니다.
+          </label>
+        </div>
+      </div>
+      <!-- 주문자 정보 -->
+      <div class="order-Box St2">
+        <h2 class="normal-title">주문자 정보 <span class="red">*</span></h2>
+
+        <div class="order-inBox">
+          <div class="input-group">
+            <label for="player-id">주문자명</label>
+            <input type="text" id="player-id" name="player-id" placeholder="" required="">
+          </div>
+          <div class="input-group">
+            <label for="player-id">휴대폰</label>
+            <div class="flex gap10">
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">추가연락처</label>
+            <div class="flex gap10">
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">이메일</label>
+            <div class="flex-input flex gap10">
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+              <p>@</p>
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">이메일</option>
+                  <option value="gmail.com">gmail.com</option>
+                  <option value="naver.com">naver.com</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 수취인 정보 -->
+      <div class="order-Box">
+        <h2 class="normal-title">수취인 정보 <span class="red">*</span></h2>
+
+        <div class="order-inBox St">
+          <div class="input-group">
+            <label for="player-id">배송정보</label>
+            <div class="flex js-start">
+              <label class="MYP-06-radio gap4">
+                <input type="radio" name="option" value="option1">주문자 정보와 동일
+              </label>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">수취인 성명</label>
+            <input type="text" id="player-id" name="player-id" placeholder="" required="">
+          </div>
+          <div class="input-group">
+            <label for="player-id">배송주소</label>
+            <div class="flex-input flex col gap10">
+              <div class="flex gap10">
+                <input type="text" id="player-id" name="player-id" placeholder="" required="">
+                <button class="postBtn">우편번호</button>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+              <input type="text" id="player-id" name="player-id" placeholder="상세주소 입력" required="">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">휴대폰</label>
+            <div class="flex gap10">
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="player-id">추가연락처</label>
+            <div class="flex gap10">
+              <div class="select-box">
+                <select id="" onchange="handleSelectChange()">
+                  <option value="선택">선택</option>
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                </select>
+                <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+              </div>
+              <input type="text" id="player-id" name="player-id" placeholder="" required="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 인쇄제작 -->
+      <div class="order-Box St2">
+        <h2 class="normal-title">인쇄제작 <span class="red">*</span></h2>
+        <div class="tableArea">
+          <table>
+            <thead>
+              <tr>
+                <th>인쇄제작 <br>첨부파일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tb-flex col">
+                  <!-- 파일 업로드 영역 -->
+                  <div class="flex gap4">
+                    <input type="file" id="logoUpload" accept="image/png" onchange="previewLogo(event)" />
+                    <button class="btn-outline gr" onclick="document.getElementById('logoUpload').click()">파일
+                      선택</button>
+                    <span id="fileName">선택된 파일 없음</span>
+                  </div>
+                  <span class="caption">*파일이 30MB이상일때 채널톡으로 보내주세요</span>
+                  <button class="tag pk" onclick="window.location.href='https://example.com';">채널톡 열기 <i
+                      class="ri-arrow-right-wide-line"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- 전화통화 선택 -->
+      <div class="order-Box St2">
+        <h2 class="normal-title">전화통화 선택 <span class="red">*</span></h2>
+        <div class="tableArea">
+          <table>
+            <thead>
+              <tr>
+                <th>전화여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tb-flex col">
+                  <div class="checkSet">
+                    <input type="checkbox" checked>
+                    <p>전화통화</p>
+                  </div>
+                  <div class="checkSet">
+                    <input type="checkbox">
+                    <p>카카오톡(담당자 선택)</p>
+                  </div>
+                  <div class="checkSet">
+                    <input type="checkbox">
+                    <p>통화 진행 담당자 모름</p>
+                  </div>
+                  <div class="checkSet">
+                    <input type="checkbox">
+                    <p>전화통화 없이 주문</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- 증빙자료 -->
+      <div class="order-Box St2">
+        <h2 class="normal-title">증빙자료 <span class="red">*</span></h2>
+        <div class="tableArea">
+          <table>
+            <thead>
+              <tr>
+                <th>증빙자료 선택</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tb-flex">
+                  <div class="checkSet">
+                    <input type="checkbox">
+                    <p>세금계산서</p>
+                  </div>
+                  <div class="checkSet">
+                    <input type="checkbox">
+                    <p>현금영수증</p>
+                  </div>
+                  <div class="checkSet">
+                    <input type="checkbox">
+                    <p>미발행</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- 결제수단 -->
+      <div class="order-Box St2">
+        <h2 class="normal-title">결제수단 <span class="red">*</span></h2>
+        <div class="paymentArea">
+          <div class="paymentBox">
+          <div class="checkSet"><input type="checkbox" class="payment-method" value="bank">
+            <p>무통장입금</p>
+          </div>
+          <div class="checkSet"><input type="checkbox" class="payment-method" value="card">
+            <p>카드결제</p>
+          </div>
+          <div class="checkSet"><input type="checkbox" class="payment-method" value="after">
+            <p>주문후 결제</p>
+          </div>
+          <div class="checkSet"><input type="checkbox" class="payment-method" value="virtual">
+            <p>가상계좌</p>
+          </div>
+          <div class="checkSet"><input type="checkbox" class="payment-method" value="corp-card">
+            <p>법인카드 수기결제 요청</p>
+          </div>
+          <div class="checkSet"><input type="checkbox" class="payment-method" value="kakaopay">
+            <p>카카오페이</p><img src="../img/kakaopay.png" alt="카카오페이" class="ml5">
+          </div>
+        </div>
+        <div class="payment-detailWrap"></div>
+        </div>
+      </div>
+      <!-- 결제정보 -->
+      <div class="order-Box St2">
+        <h2 class="normal-title">결제정보 <!--<span class="red">*</span>--></h2>
+        <div class="payment-infoWrap">
+          <div class="flex">
+            <p>구매금액</p>
+            <p><b style="color:var(--gray)">33,100원</b></p>
+          </div>
+          <div class="flex">
+            <p>배송비</p>
+            <p><b style="color:var(--gray)">3,000원</b></p>
+          </div>
+          <div class="total flex">
+            <p><b>총 금액</b></p>
+            <h1 class="normal-title">185,350 <span>원</span></h1>
+          </div>
+        </div>
+      </div>
+      <!-- 주문정보 재확인 -->
+      <div class="order-Box">
+        <h2 class="normal-title">주문정보 재확인 <span class="red">*</span></h2>
+        <div class="flex">
+          <label class="MYP-06-radio gap4">
+            <input type="radio" name="option" value="option1"><span class="red">(필수)</span> 확인했으며 결제 진행에 동의합니다.
+          </label>
+        </div>
+        <button class="paynowBtn">결제하기</button>
+      </div>
+    </div>
+
+    <!-- 하단바 -->
+    <div class="bottomBar">
+      <a href="#"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar02.svg" alt=""><img src="../img/bottomBar022.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar03.svg" alt=""><img src="../img/bottomBar033.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar04.svg" alt=""><img src="../img/bottomBar044.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar05.svg" alt=""><img src="../img/bottomBar055.svg" alt=""></a>
+    </div>
+
+    <!-- 푸터 -->
+    <!-- <footer>
+      <img src="../img/footer_logo.png" alt="">
+      <div class="footerLink">
+        <a href="#">이용약관</a> · <a href="#">개인정보취급방침</a> · <a href="#">사업자정보확인</a>
+      </div>
+      <div class="footerInfo">
+        <p>인천광역시 남동구 호구포로 50(고잔동) 엘아이지식산업센터 202호~207호</p>
+        <p>대표자 : 심선기 ㅣ 대표번호 : 1688-8744</p>
+        <p>개인정보관리책임자 : 이종후</p>
+        <p>이메일 : gift@87sarang.com</p>
+        <p>일반전화 : 032-261-2900, 032-466-0344</p>
+        <p>사업자등록번호 : 131-86-22224</p>
+        <p>통신판매업신고 : 제2010-인천남동구-0334호</p>
+      </div>
+    </footer> -->
+  </div>
+</body>
+<script src="../script/style.js"></script>
+<script  type="text/javascript" src="../script/common.js"></script>
+<script>
+  // ==== 결제수단 선택 ====
+document.addEventListener("DOMContentLoaded", function () {
+  const paymentInputs = document.querySelectorAll(".payment-method");
+  const outputBox = document.querySelector(".payment-detailWrap");
+
+  let currentType = null;
+
+  const templates = {
+    bank: `
+    <div class="payment-detail" data-type="bank">
+      <div class="input-group">
+        <label for="player-id">은행</label>
+        <div class="select-box">
+          <div class="custom-select" data-type="bank-select">
+            <div class="selected-option"><b>국민은행</b> | 164501-04-245397</div>
+            <ul class="options">
+              <li data-value="kb"><b>국민은행</b> | 164501-04-245397</li>
+              <li data-value="nh"><b>농협은행</b> | 351-0225-0359-33</li>
+              <li data-value="shinhan"><b>신한은행</b> | 140-008-942629</li>
+            </ul>
+          </div>
+          <i class="ri-arrow-down-s-line"></i>
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="player-id">예금주</label>
+        <p class="gy">판촉사랑</p>
+      </div>
+      <div class="input-group">
+        <label for="player-id">입금자</label>
+        <div class="flex-input gap10">
+          <div class="flex js-start gap10">
+            <input type="text" id="player-id" name="player-id" placeholder="입금자 성명" required="">
+            <label class="MYP-06-radio gap4">
+              <input type="radio" name="option" value="option1">주문자 정보와 동일
+            </label>
+          </div>
+          <p class="txt_pk">*정확한 입금자명이 아닌 경우 입금 확인이 안됩니다.</p>
+        </div>
+      </div>
+    </div>
+  `,
+
+    after: `
+    <div class="payment-detail" data-type="after">
+      <div class="input-group col">
+        <label for="player-id">결제 방법 선택</label>
+        <div class="flex-input gap10">
+          <div class="select-box">
+            <select id="" onchange="handleSelectChange()">
+              <option value="선택">결제 방법을 선택해 주세요.</option>
+              <option value="방법1">방법1</option>
+              <option value="방법2">방법2</option>
+            </select>
+            <i class="ri-arrow-down-s-line" id="arrowIcon"></i>
+          </div>
+          <p class="txt_pk">* ‘주문후 결제’는 담당 상담원과 사전 협의를 통하여 주문 완료 후 결제 금액의 수정이 필요한 경우에만 선택하시기 바랍니다.
+  아래 증빙 종류를 선택하신 후 해당 증빙을 위한 기본 사항은 반드시 입력해주세요.</p>            
+          <p class="txt_gy"><b>옵션추가비용</b> 등 별도협의상품의 경우 주문 후 결제만 가능하십니다.
+  주문 후 상담 직원이 총 금액 변경완료 시 고객님의 카톡으로 문자가 발송됩니다.</p>
+        </div>
+      </div>
+    </div>
+  `,
+
+    "corp-card": `
+    <div class="payment-detail" data-type="corp-card">
+      <div class="input-group">
+        <label for="player-id">카드번호</label>
+        <input type="text" id="player-id" name="player-id" placeholder="" required="">
+      </div>
+      <div class="input-group">
+        <label for="player-id">유효기간</label>
+        <div class="input-day flex gap10">
+          <input type="number" id="player-id" name="player-id" placeholder="" required="">
+          <p>월</p>
+          <input type="number" id="player-id" name="player-id" placeholder="" required="">
+          <p>년</p>
+        </div>
+      </div>  
+    </div>
+  `,
+
+    card: "",
+    virtual: "",
+    kakaopay: ""
+  };
+
+  function renderPaymentOption(type) {
+  const existingDetail = outputBox.querySelector(".payment-detail");
+  if (existingDetail) {
+    existingDetail.style.maxHeight = existingDetail.scrollHeight + "px";
+    existingDetail.style.transform = "translateY(0)";
+    requestAnimationFrame(() => {
+      existingDetail.style.maxHeight = "0px";
+      existingDetail.style.opacity = "0";
+      existingDetail.style.transform = "translateY(-20px)";
+    });
+
+    // setTimeout으로 약간 딜레이 후 삭제
+    setTimeout(() => {
+      existingDetail.remove();
+    }, 800); // CSS transition 시간과 일치
+  }
+
+  if (templates[type]) {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = templates[type];
+    const newDetail = wrapper.firstElementChild;
+    newDetail.classList.add("payment-detail");
+    newDetail.style.maxHeight = "0px";
+    newDetail.style.opacity = "0";
+    newDetail.style.transform = "translateY(20px)";
+    outputBox.appendChild(newDetail);
+
+    requestAnimationFrame(() => {
+      newDetail.classList.add("show");
+      newDetail.style.maxHeight = newDetail.scrollHeight + "px";
+      newDetail.style.opacity = "1";
+      newDetail.style.transform = "translateY(0)";
+    });
+
+    initCustomSelect();
+  }
+}
+  paymentInputs.forEach((input) => {
+    input.addEventListener("change", function () {
+      const type = this.value;
+
+      // 다른 체크 해제 및 텍스트 초기화
+      paymentInputs.forEach((el) => {
+        if (el !== this) el.checked = false;
+        el.closest(".checkSet").querySelector("p").classList.remove("selected");
+      });
+
+      const parent = this.closest(".checkSet");
+      const text = parent.querySelector("p");
+
+      if (this.checked && type !== currentType) {
+        currentType = type;
+        text.classList.add("selected");
+        renderPaymentOption(type);
+      } else {
+        this.checked = false;
+        text.classList.remove("selected");
+        currentType = null;
+        outputBox.innerHTML = "";
+      }
+    });
+  });
+});
+
+// ✅ initCustomSelect 함수 정의
+function initCustomSelect() {
+  document.querySelectorAll(".custom-select").forEach((selectBox) => {
+    const selected = selectBox.querySelector(".selected-option");
+    const options = selectBox.querySelector(".options");
+    const items = options.querySelectorAll("li");
+
+    // 드롭다운 열기/닫기
+    selectBox.addEventListener("click", function (e) {
+      e.stopPropagation();
+      closeAllCustomSelects();
+      this.classList.toggle("open");
+    });
+
+    // 옵션 클릭 시 선택
+    items.forEach((item) => {
+      item.addEventListener("click", function (e) {
+        e.stopPropagation();
+        selected.innerHTML = this.innerHTML;
+        selectBox.classList.remove("open");
+        const value = this.dataset.value;
+        console.log("선택된 은행 value:", value);
+      });
+    });
+  });
+
+  document.addEventListener("click", closeAllCustomSelects);
+}
+
+function closeAllCustomSelects() {
+  document.querySelectorAll(".custom-select").forEach((el) => {
+    el.classList.remove("open");
+  });
+}
+</script>
+</html>
