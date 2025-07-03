@@ -319,29 +319,22 @@ input[type="search"]::-ms-reveal {
   margin-top: 20px;
 }
 
+
+
+
 /* 메뉴 항목 */
-<<<<<<< HEAD
-.menuSideBarWrap .menu-item {
-=======
-/* .sidemenu-item {
->>>>>>> e734cd57196febc84337842b8776466fca6d639d
-  border-left: 4px solid transparent;
-} */
- .sidemenu-item {
+.sidemenu-item {
   margin-bottom: 20px;
- }
-
-/* 활성 메뉴(열림 or 링크 선택) */
-<<<<<<< HEAD
-.menuSideBarWrap .menu-item.active {
-  border-left-color: #e60023; /* 왼쪽 빨간 바 */
 }
-=======
-/* .sidemenu-item.active {
-  border-left-color: #e60023;
-} */
->>>>>>> e734cd57196febc84337842b8776466fca6d639d
 
+/* 메뉴 링크 강조(활성화 시) */
+.menu-link {
+  border-left: 4px solid transparent;
+  /* …기타 스타일… */
+}
+.sidemenu-item.active .menu-link {
+  border-left-color: var(--red);
+}
 /* 버튼/링크 공통 스타일 */
 .menu-link {
   display: block;
