@@ -256,7 +256,7 @@ input[type="search"]::-ms-reveal {
 .menuSideBar {
   height: 100%;
   width: 190px;
-  background-color: #fff;
+  background-color: #f5f5f5;
   margin-left: auto;
 }
 /* 스크롤 가능한 전체 메뉴 */
@@ -273,14 +273,17 @@ input[type="search"]::-ms-reveal {
 }
 
 /* 메뉴 항목 */
-.menu-item {
+/* .sidemenu-item {
   border-left: 4px solid transparent;
-}
+} */
+ .sidemenu-item {
+  margin-bottom: 20px;
+ }
 
 /* 활성 메뉴(열림 or 링크 선택) */
-.menu-item.active {
-  border-left-color: #e60023; /* 왼쪽 빨간 바 */
-}
+/* .sidemenu-item.active {
+  border-left-color: #e60023;
+} */
 
 /* 버튼/링크 공통 스타일 */
 .menu-link {
@@ -288,12 +291,15 @@ input[type="search"]::-ms-reveal {
   width: 100%;
   padding: 12px 16px;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: bold;
   color: #333;
-  background: none;
-  border: none;
   cursor: pointer;
   position: relative;
+  border-left: 4px solid transparent;
+}
+.sidemenu-item.active .menu-link {
+  border-left-color: var(--red);
 }
 
 /* 화살표 */
@@ -301,7 +307,7 @@ input[type="search"]::-ms-reveal {
   position: absolute;
   right: 16px;
   top: 50%;
-  transform: translateY(-50%) rotate(0deg);
+  transform: translateY(-50%) rotate(-45deg);
   transition: transform .3s ease;
   width: 6px;
   height: 6px;
@@ -311,29 +317,33 @@ input[type="search"]::-ms-reveal {
 }
 
 /* 펼쳐진 상태의 화살표 (▼ → ▶) */
-.menu-item.active > .menu-link .arrow {
+.sidemenu-item.active > .menu-link .arrow {
   transform: translateY(-50%) rotate(45deg);
 }
 
+.sidemenu-item.active .menu-link {color: var(--red);}
+
 /* 서브메뉴 감추기 */
-.submenu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .3s ease;
+.sidebar-menu .submenu {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 /* 펼치면 충분히 큰 높이로 설정 */
-.menu-item.active > .submenu {
-  max-height: 500px; /* 필요에 따라 조정 */
+/* active 클래스가 붙은 menu-item 직계 .submenu만 보이도록 */
+.sidebar-menu .sidemenu-item.active > .submenu {
+  display: block;
 }
+
 
 /* 서브메뉴 항목 스타일 */
 .submenu-item a {
   display: block;
-  padding: 10px 32px;
-  font-size: 1.3rem;
-  color: #666;
-  text-decoration: none;
+  padding: 5px 16px;
+  font-size: 1.4rem;
+  color: #999;
 }
 .submenu-item a:hover {
   color: #333;
