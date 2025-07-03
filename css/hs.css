@@ -677,3 +677,7 @@ input[type="checkbox"]:checked {
 }
 .request-Box .boxStyle {max-height: 120%;}
 .request-text {font-size: 1.6rem; line-height: 140%; text-align: center;}
+
+/* ==== 카테고리 ==== */
+.maintab-wrap.categoryTab .maintab {margin:0;}
+.maintab-wrap.categoryTab .tabcontents .tabcon {padding:0;}
