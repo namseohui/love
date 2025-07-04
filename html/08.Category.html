@@ -66,309 +66,218 @@
           <div class="panel-content">
             <!-- 좌측 카테고리 -->
             <div class="sidebar">
-              <div class="menu-item" onclick="showCategory('education')"><img src="../img/menu-item_img01.svg" alt="">교육
+              <div class="menu-item" onclick="showCategory('home')">가정생활용품
               </div>
-              <div class="menu-item" onclick="showCategory('welfare')"><img src="../img/menu-item_img02.svg"
-                  alt="">보건/복지
+              <div class="menu-item" onclick="showCategory('electronics')">디지털/가전
               </div>
-              <div class="menu-item" onclick="showCategory('government')"><img src="../img/menu-item_img03.svg"
-                  alt="">기관 및
-                정부</div>
-              <div class="menu-item" onclick="showCategory('organization')"><img src="../img/menu-item_img04.svg"
-                  alt="">조직
-                및 단체</div>
-              <div class="menu-item" onclick="showCategory('industry')"><img src="../img/menu-item_img05.svg" alt="">기업
-                및 산업
+              <div class="menu-item" onclick="showCategory('office')">사무/문구</div>
+              <div class="menu-item" onclick="showCategory('kitchen')">주방용품/텀블러</div>
+              <div class="menu-item" onclick="showCategory('leisure')">레저/건강/차량용품
               </div>
-              <div class="menu-item" onclick="showCategory('health')"><img src="../img/menu-item_img06.svg" alt="">의료 및
-                건강
+              <div class="menu-item" onclick="showCategory('golf')">골프용품
               </div>
-              <div class="menu-item" onclick="showCategory('culture')"><img src="../img/menu-item_img07.svg"
-                  alt="">문화/예술/취미
+              <div class="menu-item" onclick="showCategory('beauty')">화장품/미용
               </div>
-              <div class="menu-item" onclick="showCategory('tourism')"><img src="../img/menu-item_img08.svg" alt="">관광 및
-                여가
+              <div class="menu-item" onclick="showCategory('awards')">상패/휘장
               </div>
-              <div class="menu-item" onclick="showCategory('smallbiz')"><img src="../img/menu-item_img09.svg"
-                  alt="">소상공인 및
-                서비스</div>
+              <div class="menu-item" onclick="showCategory('signage')">안내판/사인물</div>
             </div>
 
             <!-- 우측 콘텐츠 영역 -->
-            <div class="subcontent">
+            <div class="subcontent catecontent">
 
-              <!-- 교육 카테고리 서브 메뉴 -->
-              <div id="education" class="submenu">
-                <a href="#" class="submenu-item">
-                  교육 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-
-                <div class="submenu-item" onclick="toggleSubMenu('edu-institutions')">
-                  교육지원청/wee센터/도서관 <span class="panel-arrow" id="arrow-edu-institutions">&#10095;</span>
+              <!-- 가정생활 카테고리 서브 메뉴 -->
+              <div id="home" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('household-goods')">
+                  가정생활용품 <span class="panel-arrow" id="arrow-household-goods">&#10095;</span>
                 </div>
-                <div id="edu-institutions" class="sub-submenu">
-                  <div class="sub-submenu-item">교육지원청/wee센터/도서관</div>
-                  <div class="sub-submenu-item">교육청/교육지원청</div>
-                  <div class="sub-submenu-item">wee센터</div>
-                  <div class="sub-submenu-item">도서관</div>
-                  <div class="sub-submenu-item">진로교육지원/진로직업체험센터</div>
-                  <div class="sub-submenu-item">평생학습관</div>
-                  <div class="sub-submenu-item">꿈의학교/꿈의대학</div>
-                  <div class="sub-submenu-item">기타 교육관련기관</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('university')">
-                  대학교/대학원 <span class="panel-arrow" id="arrow-university">&#10095;</span>
-                </div>
-                <div id="university" class="sub-submenu">
-                  <div class="sub-submenu-item">대학교</div>
-                  <div class="sub-submenu-item">대학원</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('secondary')">
-                  중/고등학교 <span class="panel-arrow" id="arrow-secondary">&#10095;</span>
-                </div>
-                <div id="secondary" class="sub-submenu">
-                  <div class="sub-submenu-item">중학교</div>
-                  <div class="sub-submenu-item">고등학교</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('elementary')">
-                  초등학교 <span class="panel-arrow" id="arrow-elementary">&#10095;</span>
-                </div>
-                <div id="elementary" class="sub-submenu">
-                  <div class="sub-submenu-item">초등학교</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('academy')">
-                  학원 <span class="panel-arrow" id="arrow-academy">&#10095;</span>
-                </div>
-                <div id="academy" class="sub-submenu">
-                  <div class="sub-submenu-item">어학원</div>
-                  <div class="sub-submenu-item">예체능 학원</div>
-                  <div class="sub-submenu-item">인강</div>
+                <div id="household-goods" class="sub-submenu">
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img02.svg" alt="">부채</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img03.svg" alt="">수건(타월)</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img04.svg" alt="">우산</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img05.svg" alt="">물티슈/손소독티슈/휴지</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img06.svg" alt="">에코백/면가방</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img07.svg" alt="">치약칫솔세트 외</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img08.svg" alt="">파우치</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img09.svg" alt="">가방/백팩</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img10.svg" alt="">방향제/디퓨저</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img11.svg" alt="">구급함/밴드/의약외품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img12.svg" alt="">손수건/스카프</div>
                 </div>
               </div>
 
-              <!-- 보건/복지 카테고리 서브 메뉴 -->
-              <div id="welfare" class="submenu">
-                <a href="#" class="submenu-item">
-                  보건/복지 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-                <div class="submenu-item" onclick="toggleSubMenu('healthcare')">
-                  보건소 / 정신건강 / 보건복지관련 <span class="panel-arrow" id="arrow-healthcare">&#10095;</span>
+              <!-- 디지털/가전 카테고리 서브 메뉴 -->
+              <div id="electronics" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('Appliances')">
+                  디지털/가전 <span class="panel-arrow" id="arrow-Appliances">&#10095;</span>
                 </div>
-                <div id="healthcare" class="sub-submenu">
-                  <div class="sub-submenu-item">보건소</div>
-                  <div class="sub-submenu-item">정신건강</div>
-                  <div class="sub-submenu-item">보건복지관련</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('welfare-org')">
-                  복지관 / 복지관련 기관 <span class="panel-arrow" id="arrow-welfare-org">&#10095;</span>
-                </div>
-                <div id="welfare-org" class="sub-submenu">
-                  <div class="sub-submenu-item">복지관</div>
-                  <div class="sub-submenu-item">사회복지시설</div>
-                  <div class="sub-submenu-item">자원봉사센터</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('welfare-other')">
-                  봉사 / 자선단체 / 사회복지기금 <span class="panel-arrow" id="arrow-welfare-other">&#10095;</span>
-                </div>
-                <div id="welfare-other" class="sub-submenu">
-                  <div class="sub-submenu-item">봉사단체</div>
-                  <div class="sub-submenu-item">자선단체</div>
-                  <div class="sub-submenu-item">사회복지기금</div>
+                <div id="Appliances" class="sub-submenu">
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img01.svg" alt="">선풍기</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img02.svg" alt="">보조배터리</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img03.svg" alt="">USB메모리</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img04.svg" alt="">무선형 충전기</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img05.svg" alt="">유선형 충전기</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img06.svg" alt="">마우스패드</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img07.svg" alt="">생활가전제품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img08.svg" alt="">스마트폰관련</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img09.svg" alt="">가습기</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img10.svg" alt="">블루투스/일반스피커</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img11.svg" alt="">이어폰/헤드셋</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img12.svg" alt="">마우스/키보드</div>
                 </div>
               </div>
-              <!-- 기관 및 정부 카테고리 서브 메뉴 -->
-              <div id="government" class="submenu">
-                <a href="#" class="submenu-item">
-                  기관 및 정부 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-                <div class="submenu-item" onclick="toggleSubMenu('local-gov')">
-                  시도군청 / 구청 / 행정복지센터 <span class="panel-arrow" id="arrow-local-gov">&#10095;</span>
+              <!-- 사무/문구 카테고리 서브 메뉴 -->
+              <div id="office" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('Office-Supplies')">
+                  사무/문구 <span class="panel-arrow" id="arrow-Office-Supplies">&#10095;</span>
                 </div>
-                <div id="local-gov" class="sub-submenu">
-                  <div class="sub-submenu-item">시청</div>
-                  <div class="sub-submenu-item">구청</div>
-                  <div class="sub-submenu-item">행정복지센터</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('public-org')">
-                  정부기관, 관공서 <span class="panel-arrow" id="arrow-public-org">&#10095;</span>
-                </div>
-                <div id="public-org" class="sub-submenu">
-                  <div class="sub-submenu-item">정부기관</div>
-                  <div class="sub-submenu-item">관공서</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('police-fire')">
-                  경찰청 / 경찰서 / 소방서 <span class="panel-arrow" id="arrow-police-fire">&#10095;</span>
-                </div>
-                <div id="police-fire" class="sub-submenu">
-                  <div class="sub-submenu-item">경찰청</div>
-                  <div class="sub-submenu-item">경찰서</div>
-                  <div class="sub-submenu-item">소방서</div>
+                <div id="Office-Supplies" class="sub-submenu">
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img01.svg" alt="">볼펜/필기류</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img02.svg" alt="">L홀더/각종화일</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img03.svg" alt="">점착메모지</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img04.svg" alt="">수첩/노트</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img05.svg" alt="">일반 메모지/메모지함</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img06.svg" alt="">인쇄물</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img07.svg" alt="">문구용품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img08.svg" alt="">필통</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img09.svg" alt="">프리젠터/포인터 (19불가)</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img10.svg" alt="">독서대/북앤드</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img11.svg" alt="">북마크/봉투칼</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-office-img12.svg" alt="">명함지갑/케이스외</div>
                 </div>
 
-                <div class="submenu-item" onclick="toggleSubMenu('military')">
-                  군부대 / 병무청 / 국방부 <span class="panel-arrow" id="arrow-military">&#10095;</span>
-                </div>
-                <div id="military" class="sub-submenu">
-                  <div class="sub-submenu-item">군부대</div>
-                  <div class="sub-submenu-item">병무청</div>
-                  <div class="sub-submenu-item">국방부</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('gov-corporation')">
-                  공단 / 공사 <span class="panel-arrow" id="arrow-gov-corporation">&#10095;</span>
-                </div>
-                <div id="gov-corporation" class="sub-submenu">
-                  <div class="sub-submenu-item">공단</div>
-                  <div class="sub-submenu-item">공사</div>
-                </div>
               </div>
-              <!-- 조직 및 단체 카테고리 서브 메뉴 -->
-              <div id="organization" class="submenu">
-                <a href="#" class="submenu-item">
-                  조직 및 단체 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-                <div class="submenu-item" onclick="toggleSubMenu('associations')">
-                  협회 / 재단 / 조합 / 단체 <span class="panel-arrow" id="arrow-associations">&#10095;</span>
+              <!-- 주방용품/텀블러 카테고리 서브 메뉴 -->
+              <div id="kitchen" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('Kitchenware')">
+                  주방용품/텀블러 <span class="panel-arrow" id="arrow-Kitchenware">&#10095;</span>
                 </div>
-                <div id="associations" class="sub-submenu">
-                  <div class="sub-submenu-item">협회</div>
-                  <div class="sub-submenu-item">재단</div>
-                  <div class="sub-submenu-item">조합</div>
-                  <div class="sub-submenu-item">단체</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('labor')">
-                  노동조합 / 노동관련 <span class="panel-arrow" id="arrow-labor">&#10095;</span>
-                </div>
-                <div id="labor" class="sub-submenu">
-                  <div class="sub-submenu-item">노동조합</div>
-                  <div class="sub-submenu-item">노동관련 법률</div>
+                <div id="Kitchenware" class="sub-submenu">
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img01.svg" alt="">텀블러/보온병</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img02.svg" alt="">머그컵/각종컵</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img03.svg" alt="">시장바구니/쇼핑백</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img04.svg" alt="">물병/보틀</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img05.svg" alt="">수저/티스푼</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img06.svg" alt="">위생장갑/위생팩외</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img07.svg" alt="">앞치마/위생복</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img08.svg" alt="">주방세제/세탁세제류</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img09.svg" alt="">냄비받침/컵받침</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img10.svg" alt="">와인악세사리</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img11.svg" alt="">행주/수세미외</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img12.svg" alt="">접시세트/식기류</div>
                 </div>
               </div>
 
-              <!-- 기업 및 산업 카테고리 서브 메뉴 -->
-              <div id="industry" class="submenu">
-                <a href="#" class="submenu-item">
-                  기업 및 산업 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-                <div class="submenu-item" onclick="toggleSubMenu('business')">
-                  일반기업 / 회사 <span class="panel-arrow" id="arrow-business">&#10095;</span>
+              <!-- 레저/건강/차량용품 카테고리 서브 메뉴 -->
+              <div id="leisure" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('leisure-health')">
+                  레저/건강/차량용품 <span class="panel-arrow" id="arrow-leisure-health">&#10095;</span>
                 </div>
-                <div id="business" class="sub-submenu">
-                  <div class="sub-submenu-item">일반기업</div>
-                  <div class="sub-submenu-item">대기업</div>
-                  <div class="sub-submenu-item">중견기업</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('manufacturing')">
-                  제조 / 생산기업 <span class="panel-arrow" id="arrow-manufacturing">&#10095;</span>
-                </div>
-                <div id="manufacturing" class="sub-submenu">
-                  <div class="sub-submenu-item">제조업체</div>
-                  <div class="sub-submenu-item">생산업체</div>
-                </div>
-              </div>
-
-              <!-- 의료 및 건강 카테고리 서브 메뉴 -->
-              <div id="health" class="submenu">
-                <a href="#" class="submenu-item">
-                  의료 및 건강 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-                <div class="submenu-item" onclick="toggleSubMenu('hospital')">
-                  병원/의료기관 <span class="panel-arrow" id="arrow-hospital">&#10095;</span>
-                </div>
-                <div id="hospital" class="sub-submenu">
-                  <div class="sub-submenu-item">병원</div>
-                  <div class="sub-submenu-item">의료기관</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('pharma')">
-                  제약/의료기기/바이오 <span class="panel-arrow" id="arrow-pharma">&#10095;</span>
-                </div>
-                <div id="pharma" class="sub-submenu">
-                  <div class="sub-submenu-item">제약</div>
-                  <div class="sub-submenu-item">의료기기</div>
-                  <div class="sub-submenu-item">바이오</div>
+                <div id="leisure-health" class="sub-submenu">
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img01.svg" alt="">보냉백</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img02.svg" alt="">스포츠/쿨타월/비치</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img03.svg" alt="">쿨토시/스카프/쿨마스크</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img04.svg" alt="">여행용관련용품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img05.svg" alt="">유마사지기/지압기</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img06.svg" alt="">단체복/의류</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img07.svg" alt="">모자/선캡</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img08.svg" alt="">돗자리/매트</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img09.svg" alt="">양말</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img10.svg" alt="">건강상품/웰빙관련</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img11.svg" alt="">아이스팩/쿨스프레이</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img12.svg" alt="">운동기구(줄넘기외)</div>
                 </div>
               </div>
 
-              <!-- 문화/예술/취미 카테고리 서브 메뉴 -->
-              <div id="culture" class="submenu">
-                <a href="#" class="submenu-item">
-                  문화/예술/취미 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-                <div class="submenu-item" onclick="toggleSubMenu('arts')">
-                  합창단/예술단/공연 <span class="panel-arrow" id="arrow-arts">&#10095;</span>
+              <!-- 골프용품 카테고리 서브 메뉴 -->
+              <div id="golf" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('golf-gear')">
+                  골프용품 <span class="panel-arrow" id="arrow-golf-gear">&#10095;</span>
                 </div>
-                <div id="arts" class="sub-submenu">
-                  <div class="sub-submenu-item">합창단</div>
-                  <div class="sub-submenu-item">예술단</div>
-                  <div class="sub-submenu-item">공연</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('hobby')">
-                  취미/여가활동 <span class="panel-arrow" id="arrow-hobby">&#10095;</span>
-                </div>
-                <div id="hobby" class="sub-submenu">
-                  <div class="sub-submenu-item">취미</div>
-                  <div class="sub-submenu-item">여가활동</div>
+                <div id="golf-gear" class="sub-submenu">
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img01.svg" alt="">골프공세트/선물세트</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img02.svg" alt="">볼마커/티/필드용품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img03.svg" alt="">골프 파우치</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img04.svg" alt="">골프장갑</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img05.svg" alt="">골프웨어/모자/양말</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img06.svg" alt="">골프우산</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img07.svg" alt="">골프가방/항공커버</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img08.svg" alt="">골프기타용품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img09.svg" alt="">주문제작상품</div>
                 </div>
               </div>
 
-              <!-- 관광 및 여가 카테고리 서브 메뉴 -->
-              <div id="tourism" class="submenu">
-                <a href="#" class="submenu-item">
-                  관광 및 여가 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-                <div class="submenu-item" onclick="toggleSubMenu('tourist-attractions')">
-                  관광지/명소 <span class="panel-arrow" id="arrow-tourist-attractions">&#10095;</span>
+              <!-- 화장품/미용 카테고리 서브 메뉴 -->
+              <div id="beauty" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('cosmetics')">
+                  화장품/미용 <span class="panel-arrow" id="arrow-cosmetics">&#10095;</span>
                 </div>
-                <div id="tourist-attractions" class="sub-submenu">
-                  <div class="sub-submenu-item">관광지</div>
-                  <div class="sub-submenu-item">명소</div>
-                </div>
-
-                <div class="submenu-item" onclick="toggleSubMenu('travel-services')">
-                  여행서비스/숙박 <span class="panel-arrow" id="arrow-travel-services">&#10095;</span>
-                </div>
-                <div id="travel-services" class="sub-submenu">
-                  <div class="sub-submenu-item">여행사</div>
-                  <div class="sub-submenu-item">숙박시설</div>
+                <div id="cosmetics" class="sub-submenu">
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img01.svg" alt="">선크림/자외선차단</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img02.svg" alt="">거울/빗</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img03.svg" alt="">핸드크림/바디로션</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img04.svg" alt="">립케어/립밤</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img05.svg" alt="">헤어&바디샴푸</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img06.svg" alt="">향수 관련제품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img07.svg" alt="">남성화장품/미용</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img08.svg" alt="">여성화장품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img09.svg" alt="">마스크팩</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img10.svg" alt="">미용소품/잡화</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img11.svg" alt="">미용기구</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img12.svg" alt="">세안/목욕용품</div>
                 </div>
               </div>
 
-              <!-- 소상공인 및 서비스 카테고리 서브 메뉴 -->
-              <div id="smallbiz" class="submenu">
-                <a href="#" class="submenu-item">
-                  소상공인 전체보기 <span class="panel-arrow">&#10095;</span>
-                </a>
-                <div class="submenu-item" onclick="toggleSubMenu('smallbiz-services')">
-                  소상공인 서비스 <span class="panel-arrow" id="arrow-smallbiz-services">&#10095;</span>
+              <!-- 상패/휘장 카테고리 서브 메뉴 -->
+              <div id="awards" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('awards-badges')">
+                  상패/휘장 <span class="panel-arrow" id="arrow-awards-badges">&#10095;</span>
                 </div>
-                <div id="smallbiz-services" class="sub-submenu">
-                  <div class="sub-submenu-item">소상공인 지원</div>
-                  <div class="sub-submenu-item">서비스업</div>
+                <div id="awards-badges" class="sub-submenu">
+                  <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img01.svg" alt="">상패/감사패/기념패</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img02.svg" alt="">트로피/우승컵</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img03.svg" alt="">신분증/사원증케이스/명찰</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img04.svg" alt="">배지/메달/캠페인버튼</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img05.svg" alt="">명패</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img06.svg" alt="">휘장/기</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img07.svg" alt="">축제용품/응원용품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img08.svg" alt="">행사/기타용품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img09.svg" alt="">공예품/기념품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img10.svg" alt="">선거/정당 관련용품</div>
                 </div>
+              </div>
 
-                <div class="submenu-item" onclick="toggleSubMenu('local-business')">
-                  지역 비즈니스 <span class="panel-arrow" id="arrow-local-business">&#10095;</span>
+              <!-- 안내판/사인물 카테고리 서브 메뉴 -->
+              <div id="signage" class="submenu">
+                <div class="submenu-item" onclick="toggleSubMenu('display-boards')">
+                  안내판/사인물 <span class="panel-arrow" id="arrow-display-boards">&#10095;</span>
                 </div>
-                <div id="local-business" class="sub-submenu">
-                  <div class="sub-submenu-item">지역 상점</div>
-                  <div class="sub-submenu-item">소규모 비즈니스</div>
+                <div id="display-boards" class="sub-submenu">
+                 <div class="sub-submenu-item"><img src="../img/cate-home-img01.svg" alt="">전체</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img01.svg" alt="">각종안내판</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img02.svg" alt="">간판</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img03.svg" alt="">인쇄물/스티커</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img04.svg" alt="">입간판/구조물</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img05.svg" alt="">유안전물품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img06.svg" alt="">안전물품</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img07.svg" alt="">게시판</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img08.svg" alt="">표시판</div>
+                  <div class="sub-submenu-item"><img src="../img/cate-elec-img09.svg" alt="">교패</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="tabcon">검색</div>
         <div class="tabcon">이벤트</div>
       </div>
@@ -376,7 +285,7 @@
 
     <!-- 하단바 -->
     <div class="bottomBar">
-      <a href="#"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
+      <a href="#"d="openCategoryTab"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
       <a href="#"><img src="../img/bottomBar02.svg" alt=""><img src="../img/bottomBar022.svg" alt=""></a>
       <a href="#"><img src="../img/bottomBar03.svg" alt=""><img src="../img/bottomBar033.svg" alt=""></a>
       <a href="#"><img src="../img/bottomBar04.svg" alt=""><img src="../img/bottomBar044.svg" alt=""></a>
