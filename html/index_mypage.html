@@ -33,7 +33,7 @@
       </div>
       <div class="topBar_nav">
         <ul>
-          <li class="active"><a href="#">홈</a></li>
+          <li class=""><a href="#">홈</a></li>
           <li class="se"><a href="#">베스트100</a></li>
           <li><a href="#">납품사례</a></li>
           <li><a href="#">기획전</a></li>
@@ -302,46 +302,8 @@
 
 
 </body>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const sidebarWrap = document.querySelector('.menuSideBarWrap');
-    const sidebar     = document.querySelector('.menuSideBar');
-    const openBtn     = document.querySelector('.menuLink');
-    const closeBtn    = sidebar?.querySelector('.sidebar-title01 img.close');
-  
-    // 만약 하나라도 없으면 아무것도 안 함
-    if (!sidebarWrap || !sidebar || !openBtn || !closeBtn) return;
-  
-    // CSS 에서 display:none; 을 이미 설정했다면, JS 에선 클래스 토글만 하면 됩니다.
-    sidebar.classList.add('sidebar-closed');
-  
-    // 열기
-    openBtn.addEventListener('click', e => {
-      e.preventDefault();
-      sidebarWrap.style.display = 'block';
-      requestAnimationFrame(() => {
-        sidebar.classList.replace('sidebar-closed', 'sidebar-open');
-      });
-    });
-  
-    // 닫기
-    closeBtn.addEventListener('click', e => {
-      e.preventDefault();
-      sidebar.classList.replace('sidebar-open', 'sidebar-closed');
-      sidebar.addEventListener('transitionend', function handler(ev) {
-        if (ev.propertyName === 'transform') {
-          sidebarWrap.style.display = 'none';
-          sidebar.removeEventListener('transitionend', handler);
-        }
-      });
-    });
-  
-    // (선택) 래퍼 클릭해도 닫기
-    sidebarWrap.addEventListener('click', e => {
-      if (e.target === sidebarWrap) closeBtn.click();
-    });
-  });
-  
-</script>
+
+
+<script src="../script/sidebarToggle.js"></script>
 
 </html>

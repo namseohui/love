@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>초특가</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hs.css">
+    <script src="../script/jquery-3.6.0.js"></script>
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>견적서요청</title>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <link rel="stylesheet" href="../css/reset.css" />
-  <link rel="stylesheet" href="../css/common.css" />
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/hs.css">
-  <script src="../script/jquery-3.6.0.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 
 </head>
 
@@ -21,6 +26,7 @@
 <body>
   <div class="wrap">
 
+    
     
       <!-- 상단바 -->
       <div class="topBar">
@@ -116,84 +122,79 @@
       </div>
       <!-- 메뉴 사이드바 끝 -->
 
-    <!-- 컨텐츠 -->
-    <div class="orderWrap mb60">
-      <div class="order-Box request-Box">
-        <p class="request-text">회원로그인시, <br>정보내역이 <b>자동입력</b>됩니다</p>
-        <div class="btnflex-box flex gap10">
-          <button class="paynowBtn">로그인</button>
-          <button class="paynowBtn sing">회원가입</button>
+
+    
+    <!-- 내용 -->
+    <div class="imgArea">
+      <img src="../img/purpose_banner.png" alt="">
+    </div>
+
+    <!-- 카테고리_버튼 -->
+    <div class="cateBtnWrap purepose">
+      <div class="grid col6">
+        <div class="cateBtn">
+          <img src="../img/purpose_category01.png" alt="" class="indeximgff">
+          <p>기획상품전</p>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/purpose_category02.png" alt="">
+          <p>행사별</p>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/purpose_category03.png" alt="">
+          <p>대상별</p>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/purpose_category04.png" alt="">
+          <p>업종별</p>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/purpose_category05.png" alt="">
+          <p>브랜드</p>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/purpose_category06.png" alt="">
+          <p>가격별</p>
         </div>
       </div>
-      <div class="order-Box request-Box">
-        <!-- <h2 class="normal-title">주문자 정보 <span class="red">*</span></h2> -->
-        <div class="order-inBox boxStyle02">
-          <div class="input-group col">
-            <label for="player-id">업체명<span class="red">*</span></label>
-            <input type="text" id="player-id" name="player-id" placeholder="업체명을 입력해주세요." required="">
-          </div>
-          <div class="input-group col">
-            <label for="player-id">담당자<span class="red">*</span></label>
-            <input type="text" id="player-id" name="player-id" placeholder="담당자 성함을 입력해주세요." required="">
-          </div>
-          <div class="input-group col">
-            <label for="player-id">이메일<span class="red">*</span></label>
-            <input type="text" id="player-id" name="player-id" placeholder="이메일을 입력해주세요." required="">
-          </div>
-          <div class="input-group col">
-            <label for="player-id">팩스</label>
-            <input type="text" id="player-id" name="player-id" placeholder="팩스번호를 입력해주세요." required="">
-          </div>
-          <div class="input-group col">
-            <label for="player-id">원단위절사<span class="red">*</span></label>
-            <div class="checkSet">
-              <input type="checkbox" checked="">
-              <p>견적서 합계금액의 원단위를 절사합니다.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 상품정보 -->
-      <div class="order-Box request-Box">
-        <h2 class="normal-title">상품정보</h2>
-        <div class="reviewBox active-review">
-          <div class="re-info">
-            <img src="../img/review_product_img01.png" alt="" class="img">
-            <div class="textBox">
-              <p>오아 UV 콘택트 드림 하드 렌즈 세척기 1P</p>
-              <div class="rating flex gap4 rel">
-                <p class="side_line">상품코드 <span class="bl">12170021</span></p>
-                <p class="side_line">구매수량 <span class="bl"><b>1</b>개</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 개인정보 수집동의 -->
-      <div class="order-Box request-Box">
-        <h2 class="normal-title">개인정보 수집동의</h2>
-        <div class="boxStyle">
-          <p class="textArea"><b>* 판촉사랑개인정보취급방침</b></p>
-          <span>개인정보관리책임자 <br>
-            판촉사랑은 정보통신부 시행 개인정보보호지침 제22조 1항에 의거 관리책임자를 아래와 같이 지정합니다. <br>
-            판촉사랑은 정보통신부 시행 개인정보보호지침 제22조 1항에 의거 관리책임자를 아래와 같이 지정합니다.
-          </span>
-        </div>
-        <div class="flex js-between">
-          <p class="textArea">위 내용에 <br>동의하시면 동의함을 선택하십시오</p>
-          <label class="MYP-06-radio gap10 gy">
-            <input type="radio" name="option" value="option1" checked>동의
-            
-            <input type="radio" name="option" value="option1">비동의
-          </label>
-        </div>
-        <div class="btnflex-box flex gap10">
-          <button class="paynowBtn save">저장</button>
-          <button class="paynowBtn">상담요청</button>
-          <button class="paynowBtn close">닫기</button>
-        </div>
+
+    </div>
+
+
+    <div class="purpose_product p40">
+      <!-- 타이틀 -->
+      <div class="re-title mb20">신규<span class="red">기획전</span> </div>
+      <p class="fs14 center mb40">#초특가 #스마트 #대량문의</p>
+      <div class="purpose_content">
+        <div class="content"><a href="#"><img src="../img/purpose_content01.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content02.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content03.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content04.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content05.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content06.png" alt=""></a></div>
       </div>
     </div>
+
+    <div class="purpose_product p40">
+      <!-- 타이틀 -->
+      <div class="re-title mb20">기획<span class="red">상품전</span> </div>
+      <p class="fs14 center mb40">#초특가 #스마트 #대량문의</p>
+      <div class="purpose_content">
+        <div class="content"><a href="#"><img src="../img/purpose_content07.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content08.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content09.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content10.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content11.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content12.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content13.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content14.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content15.png" alt=""></a></div>
+        <div class="content"><a href="#"><img src="../img/purpose_content16.png" alt=""></a></div>
+      </div>
+    </div>
+
+
+
 
     <!-- 하단바 -->
     <div class="bottomBar">
@@ -205,7 +206,7 @@
     </div>
 
     <!-- 푸터 -->
-    <!-- <footer>
+    <footer>
       <img src="../img/footer_logo.png" alt="">
       <div class="footerLink">
         <a href="#">이용약관</a> · <a href="#">개인정보취급방침</a> · <a href="#">사업자정보확인</a>
@@ -219,11 +220,13 @@
         <p>사업자등록번호 : 131-86-22224</p>
         <p>통신판매업신고 : 제2010-인천남동구-0334호</p>
       </div>
-    </footer> -->
+    </footer>
   </div>
 </body>
-<script type="text/javascript" src="../script/style.js"></script>
-<script type="text/javascript" src="../script/common.js"></script>
-
+<script src="../script/common.js"></script>
+<script src="../script/style.js"></script>
 <script src="../script/sidebarToggle.js"></script>
+
+
+
 </html>
