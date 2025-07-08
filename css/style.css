@@ -1273,7 +1273,7 @@ input[type="search"]::-ms-reveal {
 }
 
 
-
+.product {width: 380px;}
 .productContainer.main {
   padding: 2rem;
 }
@@ -1304,6 +1304,130 @@ input[type="search"]::-ms-reveal {
 
 .product-contens.expanded .pd_Swiper.imgArea.th {width:100%; max-width:390px;} 
 .product-contens.expanded .pd_Swiper.imgArea.th img {border: none;} 
+
+.product_table {
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+  margin: 10px 0;
+}
+.product_table .product_table_txt {
+  width: 100%;
+  height: auto !important;
+  font-size: 1.2rem;
+  color: #858585;
+  font-weight: normal;
+  padding: 10px 0;
+  display: flex !important;
+  justify-content: space-between;
+}
+.product_table .product_table_txt span {
+  display: inline-flex;
+}
+
+
+
+.product_table_scroll {
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch; /* iOS에서 스무스한 스크롤을 위해 */
+  white-space: nowrap; /* 내용이 줄바꿈되지 않도록 */
+
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.product_table_scroll table {
+  font-size: 1.2rem;
+  width: auto; /* 테이블이 내용에 맞게 자동으로 너비 조정 */
+  min-width: 100%; /* 최소 너비를 컨테이너에 맞춤 */
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.product_table_scroll thead {background-color: #f5f5f5;}
+
+.product_table_scroll th, .product_table_scroll td {
+  min-width: 50px; /* 셀의 최소 너비 설정 */
+  max-width: 50px;
+  height: 32px;
+  text-align: center;
+  border: 1px solid #DDDDDD;
+  font-weight: normal;
+
+  word-break: break-all;
+  box-sizing: border-box;
+}
+
+.product_table_scroll .head {
+  background-color: #2A3E65;
+  color: #fff;
+  border-color: #2A3E65;
+  font-weight: 600;
+}
+
+.product_table_scroll .head.red {
+  background-color: #ED1B23;
+  border-color: #ED1B23;
+}
+
+
+.boxBanner_pink {
+  border: 1px dotted #FF3366;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+}
+.boxBanner_pink p {
+  font-size: 1.3rem;
+  color: #999;
+  font-weight: normal;
+  height: auto !important;
+}
+.boxBanner_pink p span {
+ color: #FF3366; 
+ font-weight: bold;
+}
+.boxBanner_pink p button {
+  color: #FF3366;
+  border: 1px solid #FF3366;
+  background-color: rgba(255, 51, 102, 0.1);
+  padding: 3px 10px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
