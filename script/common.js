@@ -230,6 +230,36 @@ document.addEventListener('DOMContentLoaded', () => {
       arrow.classList.add('active'); // 화살표 회전
     }
   }
+// ==== 카테고리 ====
+const openBtn = document.getElementById('openCategoryTab');
+const categoryTab = document.querySelector('.categoryTab');
+
+openBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const isActive = categoryTab.classList.contains('active');
+
+  if (isActive) {
+    // 이미 열려 있으면 닫기
+    categoryTab.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+  } else {
+    // 열기
+    categoryTab.classList.add('active');
+    document.body.classList.add('no-scroll');
+  }
+});
+
+// 바깥 클릭 시 닫기
+document.addEventListener('click', function (e) {
+  const isClickInside = categoryTab.contains(e.target) || openBtn.contains(e.target);
+
+  if (!isClickInside) {
+    categoryTab.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+  }
+});
+
 
 // ==== 납품사례 이미지 슬라이드 ====
 const swipers = document.querySelectorAll('.pd_Swiper');
