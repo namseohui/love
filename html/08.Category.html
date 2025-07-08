@@ -278,7 +278,85 @@
           </div>
         </div>
 
-        <div class="tabcon">검색</div>
+        <div class="tabcon">
+          
+          <!-- 인기 카테고리 -->
+<div class="proDet_popcat_popcat">
+  <!-- 선택된 필터 -->
+  <div class="proDet_popcat_filter">
+    <span class="proDet_popcat_filter-item">
+      가방
+      <button type="button" class="proDet_popcat_filter-remove" aria-label="가방 제거">×</button>
+    </span>
+    <span class="proDet_popcat_filter-item">
+      우산
+      <button type="button" class="proDet_popcat_filter-remove" aria-label="우산 제거">×</button>
+    </span>
+    <span class="proDet_popcat_filter-item">
+      물티슈
+      <button type="button" class="proDet_popcat_filter-remove" aria-label="물티슈 제거">×</button>
+    </span>
+    <span class="proDet_popcat_filter-item">
+      텀블러
+      <button type="button" class="proDet_popcat_filter-remove" aria-label="텀블러 제거">×</button>
+    </span>
+    <span class="proDet_popcat_filter-item">
+      볼펜
+      <button type="button" class="proDet_popcat_filter-remove" aria-label="볼펜 제거">×</button>
+    </span>
+  </div>
+
+  <!-- 리스트 제목 -->
+  <h3 class="proDet_popcat_list-title">인기 카테고리</h3>
+
+  <!-- 카테고리 리스트 -->
+  <ul class="proDet_popcat_list">
+    <li class="proDet_popcat_list-item active">
+      <span class="proDet_popcat_list-num">01</span>
+      <span class="proDet_popcat_list-text">리유저블백</span>
+    </li>
+    <li class="proDet_popcat_list-item active">
+      <span class="proDet_popcat_list-num">02</span>
+      <span class="proDet_popcat_list-text">보온보냉백</span>
+    </li>
+    <li class="proDet_popcat_list-item active">
+      <span class="proDet_popcat_list-num">03</span>
+      <span class="proDet_popcat_list-text">우산</span>
+    </li>
+    <li class="proDet_popcat_list-item disabled">
+      <span class="proDet_popcat_list-num">04</span>
+      <span class="proDet_popcat_list-text">텀블러</span>
+    </li>
+    <li class="proDet_popcat_list-item disabled">
+      <span class="proDet_popcat_list-num">05</span>
+      <span class="proDet_popcat_list-text">물티슈</span>
+    </li>
+    <li class="proDet_popcat_list-item">
+      <span class="proDet_popcat_list-num">06</span>
+      <span class="proDet_popcat_list-text">보조배터리</span>
+    </li>
+    <li class="proDet_popcat_list-item">
+      <span class="proDet_popcat_list-num">07</span>
+      <span class="proDet_popcat_list-text">볼펜</span>
+    </li>
+    <li class="proDet_popcat_list-item">
+      <span class="proDet_popcat_list-num">08</span>
+      <span class="proDet_popcat_list-text">에코백</span>
+    </li>
+    <li class="proDet_popcat_list-item">
+      <span class="proDet_popcat_list-num">09</span>
+      <span class="proDet_popcat_list-text">수건/타올</span>
+    </li>
+    <li class="proDet_popcat_list-item">
+      <span class="proDet_popcat_list-num">10</span>
+      <span class="proDet_popcat_list-text">USB메모리</span>
+    </li>
+  </ul>
+</div>
+
+
+        </div>
+
         <div class="tabcon event">
           <img src="../img/eventTab01.png" alt="">
           <img src="../img/eventTab02.png" alt="">
@@ -375,6 +453,21 @@
       // btn.textContent = isOpen ? '이벤트 더보기' : '이벤트 접기';
     });
   });
+  
+
+
+
+  // 필터 태그 제거 기능
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.proDet_popcat_filter-remove').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.proDet_popcat_filter-item').remove();
+    });
+  });
+});
+
+
+
   
 </script>
 

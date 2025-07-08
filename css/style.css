@@ -1841,7 +1841,7 @@ input[type="search"]::-ms-reveal {
 .tabcon.event.more {
   display: none;
   
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .tabcon.event button {
   width: 100%;
@@ -1853,6 +1853,90 @@ input[type="search"]::-ms-reveal {
   padding: 8px 0;
 }
 
+
+
+
+
+
+/* 7. 판촉사랑 모바일 - 검색 수정 */
+/* 인기 카테고리 */
+.proDet_popcat_popcat {
+  max-width: 360px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+/* 선택된 필터 */
+.proDet_popcat_filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.proDet_popcat_filter-item {
+  display: inline-flex;
+  align-items: center;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+}
+.proDet_popcat_filter-remove {
+  background: none;
+  border: none;
+  margin-left: 4px;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #999;
+}
+
+/* 리스트 제목 */
+.proDet_popcat_list-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ed1b23;
+  margin-bottom: 8px;
+}
+
+/* 카테고리 리스트 */
+.proDet_popcat_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.proDet_popcat_list-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #333;
+}
+.proDet_popcat_list-item:first-child { border-top: none; }
+
+.proDet_popcat_list-num {
+  width: 2ch;
+  margin-right: 8px;
+  color: #999;
+}
+.proDet_popcat_list-text {
+  flex: 1;
+}
+
+/* 활성(인기) 항목 */
+.proDet_popcat_list-item.active .proDet_popcat_list-num,
+.proDet_popcat_list-item.active .proDet_popcat_list-text {
+  color: #ed1b23;
+  font-weight: bold;
+}
+
+/* 비활성(회색) 항목 */
+.proDet_popcat_list-item.disabled .proDet_popcat_list-num,
+.proDet_popcat_list-item.disabled .proDet_popcat_list-text {
+  color: #ccc;
+}
 
 
 
