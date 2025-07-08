@@ -1862,31 +1862,32 @@ input[type="search"]::-ms-reveal {
 /* 인기 카테고리 */
 .proDet_popcat_popcat {
   max-width: 360px;
-  margin: 0 auto;
-  font-family: sans-serif;
+  padding: 20px;
+  margin-bottom: 64px;
 }
 
 /* 선택된 필터 */
 .proDet_popcat_filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
+  gap: 4px;
+  margin-bottom: 10px;
 }
 .proDet_popcat_filter-item {
   display: inline-flex;
   align-items: center;
-  background: #f5f5f5;
   border: 1px solid #ddd;
-  border-radius: 16px;
-  padding: 4px 8px;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  padding: 3px 6px;
+  font-size: 1.4rem;
+  color: #999;
 }
 .proDet_popcat_filter-remove {
   background: none;
   border: none;
   margin-left: 4px;
-  font-size: 1rem;
+  font-size: 1.8rem;
+  font-weight: 200;
   line-height: 1;
   cursor: pointer;
   color: #999;
@@ -1894,10 +1895,14 @@ input[type="search"]::-ms-reveal {
 
 /* 리스트 제목 */
 .proDet_popcat_list-title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #ed1b23;
+  display: inline-block;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ED1B23;
   margin-bottom: 8px;
+  font-size: 1.4rem;
+  padding: 8px 15px;
+  border-radius: 34px;
 }
 
 /* 카테고리 리스트 */
@@ -1905,38 +1910,35 @@ input[type="search"]::-ms-reveal {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 10px;
 }
 .proDet_popcat_list-item {
   display: flex;
   align-items: center;
-  padding: 8px 0;
+  padding: 12px 0;
   border-top: 1px solid #eee;
-  font-size: 0.95rem;
-  color: #333;
+
 }
 .proDet_popcat_list-item:first-child { border-top: none; }
 
 .proDet_popcat_list-num {
-  width: 2ch;
-  margin-right: 8px;
+  font-size: 1.4rem;
+  margin-right: 20px;
   color: #999;
+  font-weight: 500;
 }
 .proDet_popcat_list-text {
   flex: 1;
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: normal;
 }
 
 /* 활성(인기) 항목 */
-.proDet_popcat_list-item.active .proDet_popcat_list-num,
-.proDet_popcat_list-item.active .proDet_popcat_list-text {
+.proDet_popcat_list-item.active .proDet_popcat_list-num {
   color: #ed1b23;
-  font-weight: bold;
 }
 
-/* 비활성(회색) 항목 */
-.proDet_popcat_list-item.disabled .proDet_popcat_list-num,
-.proDet_popcat_list-item.disabled .proDet_popcat_list-text {
-  color: #ccc;
-}
 
 
 
