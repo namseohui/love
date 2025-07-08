@@ -370,6 +370,13 @@ body.no-scroll {
     transform: rotate(90deg);
   }
 
+
+
+
+  
+
+
+
 /* 상품 이미지 슬라이드 */
 .pd_Swiper.imgArea {width:105px;} 
 .pd_Swiper.imgArea.rel::before,.product .imgArea.rel::after {z-index: 3;}
