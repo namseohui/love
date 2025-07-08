@@ -631,9 +631,6 @@ input[type="search"]::-ms-reveal {
 
 
 
-
-
-
 /* 마이페이지 */
 /* 1. 상단 헤더 */
 
@@ -1297,8 +1294,16 @@ input[type="search"]::-ms-reveal {
 }
 
 
+.productContainer_cate {
+  padding: 20px 0 10px 0;
+}
+.productContainer_cate .pd_title {
+  color: #999;
+  gap: 5px;
+}
 
-
+.product-contens.expanded .pd_Swiper.imgArea.th {width:100%; max-width:390px;} 
+.product-contens.expanded .pd_Swiper.imgArea.th img {border: none;} 
 
 
 
