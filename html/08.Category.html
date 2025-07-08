@@ -279,7 +279,26 @@
         </div>
 
         <div class="tabcon">검색</div>
-        <div class="tabcon">이벤트</div>
+        <div class="tabcon event">
+          <img src="../img/eventTab01.png" alt="">
+          <img src="../img/eventTab02.png" alt="">
+          <img src="../img/eventTab03.png" alt="">
+          <img src="../img/eventTab04.png" alt="">
+          <img src="../img/eventTab05.png" alt="">
+
+          <div class="tabcon event more">
+            <img src="../img/eventTab01.png" alt="">
+            <img src="../img/eventTab02.png" alt="">
+            <img src="../img/eventTab03.png" alt="">
+            <img src="../img/eventTab04.png" alt="">
+            <img src="../img/eventTab05.png" alt="">
+          </div>
+          <button>
+            이벤트 더보기 <img src="../img/review_more_arrow.svg" alt="">
+          </button>
+
+        </div>
+        
       </div>
     </article>
 
@@ -334,6 +353,26 @@
       //Click Tab, Tab Con Active
       $(this).addClass('active');
       tabConBox.eq(current).addClass('active');
+    });
+  });
+  
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1) 이벤트 탭 컨테이너 중 "more" 가 없는 것
+    const container = document.querySelector('.tabcon.event:not(.more)');
+    if (!container) return;
+  
+    // 2) 그 안의 more 박스와 버튼
+    const moreBox = container.querySelector('.tabcon.event.more');
+    const btn     = container.querySelector('button');
+  
+    // 3) 버튼 클릭 시 보여주기/숨기기
+    btn.addEventListener('click', () => {
+      const isOpen = getComputedStyle(moreBox).display !== 'none';
+      moreBox.style.display = isOpen ? 'none' : 'block';
+      // 필요하면 버튼 텍스트도 토글 가능
+      // btn.textContent = isOpen ? '이벤트 더보기' : '이벤트 접기';
     });
   });
   

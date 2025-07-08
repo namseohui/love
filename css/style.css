@@ -1827,6 +1827,42 @@ input[type="search"]::-ms-reveal {
 
 
 
+/* 15. 판촉사랑 모바일 - 이벤트 */
+.tabcon.event {
+  margin-bottom: 64px;
+}
+.tabcon.event img {
+  margin-bottom: 10px;
+}
+.tabcon.event img:last-child {
+  margin-bottom: 0;
+}
+
+.tabcon.event.more {
+  display: none;
+  
+  margin-bottom: 0;
+}
+.tabcon.event button {
+  width: 100%;
+  font-size: 1.4rem;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
