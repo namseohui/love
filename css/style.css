@@ -1400,13 +1400,83 @@ input[type="search"]::-ms-reveal {
 }
 
 
+.spacing {width: 100%; height: 8px; background-color: #EFEFEF;}
+
+
+.maintab.detail > li a {
+  font-size: 1.2rem !important;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.maintab.detail > li a span {
+  font-size: .8rem;
+  margin-top: .5rem;
+}
+
+
+.panel-detailInfo {
+
+}
 
 
 
+/* 상세보기 탭 09.product_detail.html */
+/* CSS */
+.panel-detail-wrapper {
+  padding: 40px 20px 30px 20px;
+  background: #fff;
+  font-size: 1rem;
+  color: #333;
+}
 
+.panel-detail-table-wrap {
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+}
 
+.panel-detail-table {
+  width: 100%;   /* 필요에 따라 조절 */
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}
 
+.panel-detail-table th,
+.panel-detail-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
 
+.panel-detail-table th {
+  width: 30%;
+  text-align: center;
+  font-weight: normal;
+  color: #333;
+  background-color: #f5f5f5;
+  white-space: pre-line;  /* 줄바꿈 허용 */
+}
+
+.panel-detail-notice-title {
+  padding: 0.75rem;
+  background: #fafafa;
+  text-align: center;
+  color: #ed1b23;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+
+.panel-detail-notice-list {
+  margin: 0.75rem 0 0 1.25rem;  /* 좌측 들여쓰기 */
+  list-style: disc;
+}
+
+.panel-detail-notice-list li {
+  margin-bottom: 0.5rem;
+  color: #ed1b23;
+  line-height: 1.4;
+}
 
 
 
