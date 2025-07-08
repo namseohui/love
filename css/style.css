@@ -1492,6 +1492,95 @@ input[type="search"]::-ms-reveal {
 
 
 
+/* header */
+.prd-review__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  padding: 10px 20px;
+}
+.prd-review__Box {display: flex; align-items: center;}
+
+.prd-review__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.prd-review__count {
+  font-size: 1.2rem;
+  font-weight: normal;
+
+}
+
+/* tabs */
+.prd-review__tabs ul {
+  display: flex;
+  align-items: center;
+  
+}
+.prd-review__tabs ul div {
+  width: 1px;
+  height: 10px;
+  background-color: #999;
+}
+.prd-review__tabs button {
+  background: none;
+  border: none;
+  padding: 0.25rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #999;
+  /* border-right: 1px solid #999; */
+}
+
+.prd-review__tabs .active button {
+  font-weight: bold;
+  color: #333;
+}
+
+/* sort */
+.prd-review__sort {
+  position: relative;
+}
+
+.sort-toggle {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 2px 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #999;
+}
+
+.sort-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-top: 0.25rem;
+  
+}
+
+.sort-list.show { display: block; }
+.sort-list li button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #999;
+}
 
 
 
@@ -1501,10 +1590,87 @@ input[type="search"]::-ms-reveal {
 
 
 
+.review.det {padding: 15px 20px;}
+.reply.det {padding: 15px 20px;}
+.re-text.det b {font-size: 1.5rem; font-weight: 500;}
+.star.det i {width: 14px;}
+
+.tabcon_overView {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  font-size: 1.4rem;
+  padding: 8px 0;
+
+  cursor: pointer;
+}
+.more-arrow {
+  transition: transform 0.3s ease;
+}
+.more-arrow.rotated {
+  transform: rotate(180deg);
+}
 
 
 
 
+
+
+
+
+/* CSS 제품안내 안내박스 >  */
+.proDet_info_accordion {
+  width: 100%;
+  padding: 20px;
+}
+
+.proDet_info_accordion-item + .proDet_info_accordion-item {
+  margin-top: 8px;
+}
+
+.proDet_info_accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  user-select: none;
+}
+
+.proDet_info_label {
+  font-size: 1.4rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+.proDet_info_label img {
+  margin-right: 5px;
+}
+
+.proDet_info_icon-arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* 열림 상태에서 화살표 위로 회전 */
+.proDet_info_accordion-header.active .proDet_info_icon-arrow {
+  transform: rotate(180deg);
+}
+
+.proDet_info_accordion-content {
+  display: none;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #ddd;
+  border-top: none;
+  background: #fff;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
 
 
 
@@ -1669,21 +1835,42 @@ input[type="search"]::-ms-reveal {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 하단바 위 마진값 */
+.tabcontents.det {
+  margin-bottom: 30px;
+}
+/* 하단 장바구니/주문하기바 */
+/* 흰색 하트가 기본 */
+.proDet_info_heart-btn {
+  width: 20px;
+  
+  background: url('../img/heart-white.svg') no-repeat center/contain;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  
+}
+/* active 시 빨간 하트로 변경 */
+.proDet_info_heart-btn.active {
+  background-image: url('../img/heart-red.svg');
+}
+.proDet_info_cart-btn, .proDet_info_order-btn {
+  width: 150px;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  color: #999;
+  border-radius: 30px;
+  border: 1px solid #999;
+}
+.proDet_info_order-btn {
+  width: 156px;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #ED1B23;
+  border-radius: 30px;
+  border: 1px solid #ED1B23;
+}
 
 
 

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../css/common.css" />
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/hs.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
   <script src="../script/jquery-3.6.0.js"></script>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -242,7 +243,7 @@
       </ul>
 
       <!-- 탭 -->
-      <div class="tabcontents">
+      <div class="tabcontents det">
         <div class="tabcon active">
           <!-- 슬라이드 패널 컨텐츠 -->
           <div class="panel-detailInfo">
@@ -318,17 +319,33 @@
             <div class="tabcontents">
               
               <!-- 1. 제목 + 개수 + 필터 -->
-            <h2 class="product-review-title">
-                상품평 <span class="review-count">(3건)</span>
-              <div class="review-filter">
-                  <input type="radio" id="f-all"   name="review-filter" value="all"   checked>
-                  <label for="f-all">전체</label>
-                  <input type="radio" id="f-star"  name="review-filter" value="star">
-                  <label for="f-star">별점리뷰</label>
-                  <input type="radio" id="f-photo" name="review-filter" value="photo">
-                  <label for="f-photo">포토리뷰</label>
+              <div class="prd-review__header">
+                <h2 class="prd-review__title">
+                  상품평 <span class="prd-review__count">(3건)</span>
+                </h2>
+            
+                <div class="prd-review__Box">
+                  <nav class="prd-review__tabs">
+                    <ul>
+                      <li class="active"><button type="button">전체</button></li>
+                      <div></div>
+                      <li><button type="button">별점리뷰</button></li>
+                      <div></div>
+                      <li><button type="button">포토리뷰</button></li>
+                    </ul>
+                  </nav>
+              
+                  <div class="prd-review__sort">
+                    <button type="button" class="sort-toggle">
+                      최신순 <span class="icon icon--arrow-down"></span>
+                    </button>
+                    <ul class="sort-list">
+                      <li><button type="button">최신순</button></li>
+                      <li><button type="button">과거순</button></li>
+                    </ul>
+                  </div>
                 </div>
-            </h2>
+              </div>
 
               <div class="tabcon active">
 
@@ -337,12 +354,14 @@
                   <div class="re-info">
                   </div>
                   <!-- 리뷰 -->
-                  <div class="review">
+                  <div class="review det">
                     <div class="top flex js-between">
                       <div class="left">
-                        <div class="star">
-                          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <div class="star det">
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
                           <i class="ri-star-fill"></i>
                         </div>
                         <div class="rating flex gap4 rel">
@@ -356,7 +375,7 @@
                       </div>
                     </div>
     
-                    <div class="re-text collapsed">
+                    <div class="re-text collapsed det">
                       <b>빠르고 정확한 배송 감사합니다!</b>
                       <p class="textArea">
                         김현임 주임님께서 상담 및 배송 진행 도와주셨습니다. 내부 사정으로 급하게 주문을 드렸던 상황인데, 일정 확인해주시고 정말 빠르게 진행해주셨습니다. ㅠㅠ 이렇게 빠르게 처리가 된
@@ -372,7 +391,7 @@
                     </div>
                   </div>
                   <!-- 답글 -->
-                  <div class="reply hidden">
+                  <div class="reply hidden det">
                     <div class="flex js-between">
                       <h5 class="red flex"><img src="../img/reply_icon.svg" alt=""> <span>판촉사랑</span></h5>
                       <div class="rating flex gap4 rel">
@@ -387,18 +406,19 @@
                     </p>
                   </div>
                 </div>
-
                 <!-- 리뷰2 -->
                 <div class="reviewBox">
                   <div class="re-info">
                   </div>
                   <!-- 리뷰 -->
-                  <div class="review">
+                  <div class="review det">
                     <div class="top flex js-between">
                       <div class="left">
-                        <div class="star">
-                          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <div class="star det">
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
                           <i class="ri-star-fill"></i>
                         </div>
                         <div class="rating flex gap4 rel">
@@ -412,7 +432,7 @@
                       </div>
                     </div>
     
-                    <div class="re-text collapsed">
+                    <div class="re-text collapsed det">
                       <b>여름 행사의 탁월한 선택!</b>
                       <p class="textArea">
                         안녕하세요~
@@ -430,7 +450,7 @@
                     </div>
                   </div>
                   <!-- 답글 -->
-                  <div class="reply hidden">
+                  <div class="reply hidden det">
                     <div class="flex js-between">
                       <h5 class="red flex"><img src="../img/reply_icon.svg" alt=""> <span>판촉사랑</span></h5>
                       <div class="rating flex gap4 rel">
@@ -452,12 +472,14 @@
                   <div class="re-info">
                   </div>
                   <!-- 리뷰 -->
-                  <div class="review">
+                  <div class="review det">
                     <div class="top flex js-between">
                       <div class="left">
-                        <div class="star">
-                          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
-                          <i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <div class="star det">
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
+                          <i class="ri-star-fill"></i>
                           <i class="ri-star-fill"></i>
                         </div>
                         <div class="rating flex gap4 rel">
@@ -471,7 +493,7 @@
                       </div>
                     </div>
     
-                    <div class="re-text collapsed">
+                    <div class="re-text collapsed det">
                       <b>빠르고 정확한 배송 감사합니다!</b>
                       <p class="textArea">
                         김현임 주임님께서 상담 및 배송 진행 도와주셨습니다. 내부 사정으로 급하게 주문을 드렸던 상황인데, 일정 확인해주시고 정말 빠르게 진행해주셨습니다. ㅠㅠ 이렇게 빠르게 처리가 된
@@ -487,7 +509,7 @@
                     </div>
                   </div>
                   <!-- 답글 -->
-                  <div class="reply hidden">
+                  <div class="reply hidden det">
                     <div class="flex js-between">
                       <h5 class="red flex"><img src="../img/reply_icon.svg" alt=""> <span>판촉사랑</span></h5>
                       <div class="rating flex gap4 rel">
@@ -502,23 +524,90 @@
                     </p>
                   </div>
                 </div>
+                <!-- 더보기 -->
+                <div class="tabcon_overView">상품평 더보기 <img src="../img/review_more_arrow.svg" alt="" class="more-arrow"></div>
               </div>
             </div>
+
+            <div class="spacing"></div>
+
+            <!-- 제품안내 안내박스 -->
+            <div class="proDet_info_accordion">
+              <div class="proDet_info_accordion-item">
+                <div class="proDet_info_accordion-header">
+                  <span class="proDet_info_label"><img src="../img/proDet_info_label01.svg" alt="">제품안내</span>
+                  <span class="proDet_info_icon-arrow">▾</span>
+                </div>
+                <div class="proDet_info_accordion-content">
+                  <p>여기에 제품 안내 상세 텍스트가 들어갑니다.</p>
+                </div>
+              </div>
+
+              <div class="proDet_info_accordion-item">
+                <div class="proDet_info_accordion-header">
+                  <span class="proDet_info_label"><img src="../img/proDet_info_label02.svg" alt="">배송안내</span>
+                  <span class="proDet_info_icon-arrow">▾</span>
+                </div>
+                <div class="proDet_info_accordion-content">
+                  <p>여기에 배송 안내 상세 텍스트가 들어갑니다.</p>
+                </div>
+              </div>
+
+              <div class="proDet_info_accordion-item">
+                <div class="proDet_info_accordion-header">
+                  <span class="proDet_info_label"><img src="../img/proDet_info_label03.svg" alt="">결제안내</span>
+                  <span class="proDet_info_icon-arrow">▾</span>
+                </div>
+                <div class="proDet_info_accordion-content">
+                  <p>여기에 결제 안내 상세 텍스트가 들어갑니다.</p>
+                </div>
+              </div>
+
+              <div class="proDet_info_accordion-item">
+                <div class="proDet_info_accordion-header">
+                  <span class="proDet_info_label"><img src="../img/proDet_info_label04.svg" alt="">반품/교환 환불안내</span>
+                  <span class="proDet_info_icon-arrow">▾</span>
+                </div>
+                <div class="proDet_info_accordion-content">
+                  <p>여기에 반품/교환·환불 안내 상세 텍스트가 들어갑니다.</p>
+                </div>
+              </div>
+            </div>
+
             
           </div>
         </div>
 
         <div class="tabcon">
-          <!-- 슬라이드 패널 컨텐츠 -->
-          <div class="panel-">
-            
+           <!-- 슬라이드 패널 컨텐츠 -->
+           <div class="panel-detailInfo">
+            기본정보 탭입니다.
           </div>
         </div>
-        <div class="tabcon">이벤트</div>
-        <div class="tabcon">이벤트</div>
-        <div class="tabcon">이벤트</div>
-        <div class="tabcon">추가하는데 안 보임</div>
-        <div class="tabcon">관련상품</div>
+        <div class="tabcon">
+          <!-- 슬라이드 패널 컨텐츠 -->
+          <div class="panel-detailInfo">
+            인쇄사례 탭입니다.
+          </div>
+        </div>
+        <div class="tabcon">
+          <!-- 슬라이드 패널 컨텐츠 -->
+          <div class="panel-detailInfo">
+            케이스/포장 탭입니다.
+          </div>
+        </div>
+        <div class="tabcon">
+          <!-- 슬라이드 패널 컨텐츠 -->
+          <div class="panel-detailInfo">
+            상품평 탭입니다.
+          </div>
+        </div>
+        <div class="tabcon">
+          <!-- 슬라이드 패널 컨텐츠 -->
+          <div class="panel-detailInfo">
+            관련상품 탭입니다.
+          </div>
+        </div>
       </div>
 
     </div>
@@ -531,22 +620,39 @@
 
 
 
+    <!-- 하단 장바구니/주문하기바 -->
+    <!-- 하단 액션 바 -->
+    <div class="proDet_info_action-bar bottomBar">
+      <!-- 관심상품 버튼 -->
+      <button type="button" class="proDet_info_heart-btn" aria-label="관심상품">
+        <!-- <img src="../img/heart-white.svg" alt="관심상품" /> -->
+      </button>
 
+      <!-- 장바구니 버튼 -->
+      <button type="button" class="proDet_info_cart-btn" aria-label="장바구니 담기">
+        <span class="proDet_info_cart-label">장바구니</span>
+      </button>
+
+      <!-- 주문하기 버튼 -->
+      <button type="button" class="proDet_info_order-btn" aria-label="주문하기">
+        <span class="proDet_info_order-label">주문하기</span>
+      </button>
+    </div>
 
 
 
 
     <!-- 하단바 -->
-    <div class="bottomBar">
+    <!-- <div class="bottomBar">
       <a href="#"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
       <a href="#"><img src="../img/bottomBar02.svg" alt=""><img src="../img/bottomBar022.svg" alt=""></a>
       <a href="#"><img src="../img/bottomBar03.svg" alt=""><img src="../img/bottomBar033.svg" alt=""></a>
       <a href="#"><img src="../img/bottomBar04.svg" alt=""><img src="../img/bottomBar044.svg" alt=""></a>
       <a href="#"><img src="../img/bottomBar05.svg" alt=""><img src="../img/bottomBar055.svg" alt=""></a>
-    </div>
+    </div> -->
 
     <!-- 푸터 -->
-    <footer>
+    <!-- <footer>
       <img src="../img/footer_logo.png" alt="">
       <div class="footerLink">
         <a href="#">이용약관</a> · <a href="#">개인정보취급방침</a> · <a href="#">사업자정보확인</a>
@@ -560,7 +666,7 @@
         <p>사업자등록번호 : 131-86-22224</p>
         <p>통신판매업신고 : 제2010-인천남동구-0334호</p>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </body>
 <script src="../script/common.js"></script>
@@ -692,6 +798,135 @@
     reply.classList.remove('hidden');
     arrowIcon?.classList.add('rotate');
   });
+
+
+
+
+  // review-sort.js
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.sort-toggle');
+    const sortList  = document.querySelector('.sort-list');
+    const sortItems = sortList.querySelectorAll('li button');
+  
+    // 1) 정렬 드롭다운 토글
+    toggleBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      sortList.classList.toggle('show');
+    });
+    sortList.addEventListener('click', e => {
+      e.stopPropagation();
+      sortList.classList.remove('show');
+    });
+    document.addEventListener('click', () => {
+      sortList.classList.remove('show');
+    });
+  
+    // 2) 정렬 항목 선택 → 버튼 라벨 교체
+    sortItems.forEach(item => {
+      item.addEventListener('click', e => {
+        e.stopPropagation();
+        const txt = e.target.textContent.trim();
+        toggleBtn.innerHTML = `${txt} <span class="icon icon--arrow-down"></span>`;
+        sortList.classList.remove('show');
+        // TODO: sortReviewsBy(txt);
+      });
+    });
+  
+    // 3) 리뷰 탭 클릭 → active 토글
+    const tabButtons = document.querySelectorAll('.prd-review__tabs button');
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.closest('li').classList.remove('active'));
+        btn.closest('li').classList.add('active');
+        // TODO: filterReviewsBy(btn.textContent.trim());
+      });
+    });
+  });
+  
+  
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const activeTabCon = document.querySelector('.tabcon.active');
+    if (!activeTabCon) return;
+  
+    const reviewBoxes = Array.from(activeTabCon.querySelectorAll('.reviewBox'));
+    const toggleBtn    = activeTabCon.querySelector('.tabcon_overView');
+    const icon         = toggleBtn.querySelector('.more-arrow');
+    let expanded = false;
+  
+    // 초기: 첫 리뷰만 보이고 나머지는 숨김
+    reviewBoxes.forEach((box, idx) => {
+      if (idx > 0) box.style.display = 'none';
+    });
+  
+    // 버튼에 커서 표시
+    toggleBtn.style.cursor = 'pointer';
+  
+    toggleBtn.addEventListener('click', () => {
+      expanded = !expanded;
+  
+      // 2번째 리뷰부터 토글
+      reviewBoxes.forEach((box, idx) => {
+        if (idx > 0) box.style.display = expanded ? 'block' : 'none';
+      });
+  
+      // 텍스트 노드만 골라서 교체 (이미지나 다른 엘리먼트에는 영향 없음)
+      toggleBtn.childNodes.forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          node.textContent = expanded ? '리뷰 접기 ' : '상품평 더보기 ';
+        }
+      });
+  
+      // 아이콘 회전 클래스 토글
+      icon.classList.toggle('rotated', expanded);
+    });
+  });
+  
+
+
+
+
+  // accordion.js
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.proDet_info_accordion-item');
+
+  items.forEach(item => {
+    const header  = item.querySelector('.proDet_info_accordion-header');
+    const content = item.querySelector('.proDet_info_accordion-content');
+
+    header.addEventListener('click', () => {
+      const isActive = header.classList.contains('active');
+
+      // (옵션) 하나만 열고 싶으면 아래 주석 해제
+      // items.forEach(i => {
+      //   i.querySelector('.proDet_info_accordion-header').classList.remove('active');
+      //   i.querySelector('.proDet_info_accordion-content').style.display = 'none';
+      // });
+
+      if (isActive) {
+        header.classList.remove('active');
+        content.style.display = 'none';
+      } else {
+        header.classList.add('active');
+        content.style.display = 'block';
+      }
+    });
+  });
+});
+
+
+$(function(){
+  $('.proDet_info_heart-btn').on('click', function(){
+    $(this).toggleClass('active');
+  });
+});
+
+  
+  
+
+
+
 </script>
 
 
