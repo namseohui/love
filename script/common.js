@@ -262,7 +262,8 @@ document.addEventListener('click', function (e) {
 
 
 // ==== 납품사례 이미지 슬라이드 ====
-const swipers = document.querySelectorAll('.pd_Swiper');
+document.addEventListener('DOMContentLoaded', () => {
+  const swipers = document.querySelectorAll('.pd_Swiper');
 
   swipers.forEach((el) => {
     new Swiper(el, {
@@ -273,6 +274,7 @@ const swipers = document.querySelectorAll('.pd_Swiper');
       }
     });
   });
+});
 
 // ==== 파일업로드 ====
 function previewLogo(event) {
