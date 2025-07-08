@@ -218,7 +218,7 @@ h5 {font-size: 1.6rem; font-weight: bold;}
 .searchWrap.flex {align-items: stretch;}
 .searchWrap .topBar_search input {border-color:var(--line-gray); border-radius: .8rem;}
 .sch_btn {background: var(--gray); color:#fff; white-space: nowrap;
-font-size: 1.6rem; padding: .8rem 1.5rem; border-radius: .8rem;}ㄴ
+font-size: 1.6rem; padding: .8rem 1.5rem; border-radius: .8rem;}
 /* business-view */
 .business-view {
   position: absolute;
@@ -282,8 +282,8 @@ body.no-scroll {
 
 /* 슬라이드 패널 컨텐츠 */
 .panel-content {
-    display: grid;
-   :  1fr 2fr;
+  display: grid;
+  grid-template-columns:  1fr 2fr;
     height: 100vh;
   }
 

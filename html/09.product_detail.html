@@ -137,7 +137,7 @@
           </div>
           <!-- 상품 리스트 -->
           <div class="product-contens expanded">
-            <div class="product">
+            <div class="product St01">
               <div class="swiper pd_Swiper imgArea th">
                 <div class="swiper-wrapper ">
                   <div class="swiper-slide">
@@ -306,6 +306,7 @@
                   <li>제품의 포장 디자인은 예고없이 변경될 수 있습니다.</li>
                 </ul>
               </div>
+              <div></div>
             </div>
 
 
@@ -323,8 +324,8 @@
         <div class="tabcon">이벤트</div>
         <div class="tabcon">이벤트</div>
         <div class="tabcon">이벤트</div>
-        <div class="tabcon">이벤트</div>
-        <div class="tabcon">이벤트</div>
+        <div class="tabcon">추가하는데 안 보임</div>
+        <div class="tabcon">관련상품</div>
       </div>
 
     </div>
@@ -398,7 +399,19 @@
       tabConBox.eq(current).addClass('active');
     });
   });
-  
+  document.addEventListener('DOMContentLoaded', () => {
+  const swipers = document.querySelectorAll('.pd_Swiper');
+
+  swipers.forEach((el) => {
+    new Swiper(el, {
+      loop: false,
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true,
+      }
+    });
+  });
+});
 </script>
 
 

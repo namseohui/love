@@ -427,7 +427,7 @@
       <!-- 메뉴 사이드바 끝 -->
 
     <!-- 납품사례 검색 -->
-    <div class="searchWrap flex gap4">
+    <div class="searchWrap flex gap4 px20">
       <div class="topBar_search">
         <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required="">
         <button type="submit" class="search-btn" aria-span="검색"><img src="../img/icon_search_g.svg" alt=""></button>
@@ -614,4 +614,19 @@
 <script src="../script/common.js"></script>
 
 <script src="../script/sidebarToggle.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const swipers = document.querySelectorAll('.pd_Swiper');
+
+  swipers.forEach((el) => {
+    new Swiper(el, {
+      loop: false,
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true,
+      }
+    });
+  });
+});
+</script>
 </html>
