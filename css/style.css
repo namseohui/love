@@ -1426,7 +1426,7 @@ input[type="search"]::-ms-reveal {
 .panel-detail-wrapper {
   padding: 40px 20px 30px 20px;
   background: #fff;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #333;
 }
 
@@ -1446,7 +1446,7 @@ input[type="search"]::-ms-reveal {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #ddd;
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .panel-detail-table th {
@@ -1457,26 +1457,41 @@ input[type="search"]::-ms-reveal {
   background-color: #f5f5f5;
   white-space: pre-line;  /* 줄바꿈 허용 */
 }
-
+.panel-detail-notice {
+  border-bottom: 1px solid #ddd;
+}
 .panel-detail-notice-title {
   padding: 0.75rem;
   background: #fafafa;
   text-align: center;
-  color: #ed1b23;
-  font-weight: bold;
-  border-bottom: 1px solid #eee;
+  color: #FF3366;
+  border-bottom: 1px solid #ddd;
 }
 
 .panel-detail-notice-list {
-  margin: 0.75rem 0 0 1.25rem;  /* 좌측 들여쓰기 */
+  margin: 1rem 0 1rem .8rem;  /* 좌측 들여쓰기 */
   list-style: disc;
 }
 
 .panel-detail-notice-list li {
   margin-bottom: 0.5rem;
-  color: #ed1b23;
+  color: #333;
   line-height: 1.4;
 }
+.panel-detail-notice-list li.pink {
+  color: #FF3366;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
