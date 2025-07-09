@@ -1415,8 +1415,9 @@ input[type="search"]::-ms-reveal {
 }
 
 
-.panel-detailInfo {
-
+.panel-detailInfo.plus {
+  width: 100%;
+  padding: 2rem;
 }
 
 
@@ -1952,6 +1953,195 @@ input[type="search"]::-ms-reveal {
 
 
 
+/* 9. 판촉사랑 모바일 - 상품상세(2)수정 */
+/* 3. CSS 스타일 */
+.order_page_overlay {
+  display: none;
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 50;
+}
+
+.order_page_bottom-sheet {
+  position: fixed;
+  max-width: 390px;
+  width: 100%;
+  left: 50%;
+    transform: translateX(-50%);
+  right: 0;
+  bottom: -120%;
+  margin-bottom: 75px;
+  
+  background: #fff;
+  border-radius: 12px 12px 0 0;
+  transition: bottom 0.3s;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+}
+
+.order_page_sheet-header,
+.order_page_sheet-footer {
+  padding: 20px;
+  /* border-bottom: 1px solid #eee; */
+}
+
+.order_page_sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order_page_sheet-body {
+  padding: 0 20px 20px 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* show 클래스 적용 시 활성화 */
+.order_page_overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+.order_page_bottom-sheet.show {
+  bottom: 0;
+}
+
+.basketAdd-controls-row.order_page_quantity {
+  justify-content: flex-start;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.basketAdd-controls-row.order_page_quantity .order_page_sample-order {
+  margin-left: auto;
+  font-size: 1.2rem;
+  color: #FF3366;
+  border: 1px solid #FF3366;
+  padding: 6px 4px;
+  border-radius: 2px;
+}
+
+.order_page_options {margin-bottom: 20px;}
+.order_page_section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.order_page_option-select {
+  width: 230px;
+  height: 32px;
+  border-color: #ddd;
+  border-radius: 8px;
+  color: #999;        /* 선택된 옵션 텍스트 색 */
+  font-size: 1.2rem;    /* 선택된 옵션 폰트 크기 */
+  margin-right: 10px;
+}
+.order_page_option-select:invalid {
+  color: #999;        /* 플레이스홀더 텍스트 색 */
+  font-size: 1.2rem;    /* 플레이스홀더 폰트 크기 */
+  
+}
+
+
+
+.order_page_option-row {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.order_page_option-row .order_page_option-label {
+  width: 60px;
+  font-size: 1.4rem;
+}
+
+.order_page_option-extra {
+  width: 50px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  padding: 2px 0;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+/* 금액 */
+.order_page_price-line {
+  display: flex;
+}
+.order_page_price-line>span {
+  width: 55px;
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+.order_page_price-value {
+  font-size: 1.4rem;
+  color: #999;
+  font-weight: 600;
+  width: 60px;
+}
+.order_page_price-note {
+  color: #999;
+
+}
+.order_page_shipping-note {
+  font-size: .8rem;
+  color: #999;
+  margin-top: 3px;
+  line-height: 1.2;
+}
+
+.order_page_discount {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EFEFEF;
+  margin-bottom: 20px;
+}
+.order_page_discount .countPlus {
+  font-size: 1.4rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.order_page_discount .countPlus .order_page_discount-note {
+  color: #FF3366;
+  font-size: 1rem;
+  background-color: #FFF5EA;
+  text-align: center;
+}
+.order_page_discount-group {
+  display: flex;
+  gap: 20px;
+}
+.order_page_discount-group label {
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-size: 1.4rem;
+}
+
+.order_page_discount-group input[type="radio"] {
+  /* 원하는 색상 코드로 변경하세요 */
+  accent-color: #FF3366;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+.order_page_total-amount {font-weight: bold;}
+
+
+
+
+
+
 
 
 
@@ -2006,10 +2196,13 @@ input[type="search"]::-ms-reveal {
     width: 100%;
     position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     background-color: #fff;
+    z-index: 100;
 }
 /* 기존 .bottomBar 그대로 두시고, 아래만 추가하세요 */
 

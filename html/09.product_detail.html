@@ -32,7 +32,7 @@
     <div class="topBar">
       <div class="topBar_main">
         <a href="../html/index.html" class="mainLink"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
-        <a href="#" class="basketLink"><img src="../img/icon_basket.svg" alt="" class="mainBasket"></a>
+        <a href="../html/12.basket.html" class="basketLink"><img src="../img/icon_basket.svg" alt="" class="mainBasket"></a>
         <a href="#" class="menuLink"><img src="../img/icon_menu.svg" alt="" class="mainMenu"></a>
       </div>
       <div class="topBar_search">
@@ -69,12 +69,12 @@
         <div class="sidebar-title">
           <div class="sidebar-title01">
             <h2>전체메뉴</h2>
-            <a href="#"><img src="../img/bottomBar03.svg" alt=""></a>
+            <a href="../html/index.html"><img src="../img/bottomBar03.svg" alt=""></a>
             <img src="../img/icon_X.svg" alt="" class="close">
           </div>
           <div class="sidebar-title02">
-            <button class="log">로그인</button>
-            <button class="in">회원가입</button>
+            <button class="log"><a href="../html/index_login.html">로그인</a></button>
+            <button class="in"><a href="../html/index_login.html">회원가입</a></button>
           </div>
           <div class="sidebar-title03"></div>
         </div>
@@ -580,31 +580,31 @@
 
         <div class="tabcon">
            <!-- 슬라이드 패널 컨텐츠 -->
-           <div class="panel-detailInfo">
+           <div class="panel-detailInfo plus">
             기본정보 탭입니다.
           </div>
         </div>
         <div class="tabcon">
           <!-- 슬라이드 패널 컨텐츠 -->
-          <div class="panel-detailInfo">
+          <div class="panel-detailInfo plus">
             인쇄사례 탭입니다.
           </div>
         </div>
         <div class="tabcon">
           <!-- 슬라이드 패널 컨텐츠 -->
-          <div class="panel-detailInfo">
+          <div class="panel-detailInfo plus">
             케이스/포장 탭입니다.
           </div>
         </div>
         <div class="tabcon">
           <!-- 슬라이드 패널 컨텐츠 -->
-          <div class="panel-detailInfo">
+          <div class="panel-detailInfo plus">
             상품평 탭입니다.
           </div>
         </div>
         <div class="tabcon">
           <!-- 슬라이드 패널 컨텐츠 -->
-          <div class="panel-detailInfo">
+          <div class="panel-detailInfo plus">
             관련상품 탭입니다.
           </div>
         </div>
@@ -634,10 +634,142 @@
       </button>
 
       <!-- 주문하기 버튼 -->
-      <button type="button" class="proDet_info_order-btn" aria-label="주문하기">
+      <button type="button" id="orderBtn" class="proDet_info_order-btn" aria-label="주문하기">
         <span class="proDet_info_order-label">주문하기</span>
       </button>
     </div>
+
+    <!-- 2. 바텀 시트 & 오버레이 -->
+    <!-- 오버레이 -->
+<div class="order_page_overlay"></div>
+
+<!-- 바텀 시트 -->
+<div class="order_page_bottom-sheet">
+  <!-- 헤더 -->
+  <div class="order_page_sheet-header flex js-between ai-center">
+    <h4></h4>
+    <button type="button" class="order_page_sheet-close" aria-label="닫기">✕</button>
+  </div>
+
+  <!-- 본문 -->
+  <div class="order_page_sheet-body">
+    <!-- 1. 구매수량 -->
+     <!-- row5: 수량 & 수정 버튼 -->
+     <div class="basketAdd-controls-row order_page_quantity">
+      <h2>구매수량</h2>
+      <div class="basketAddBox">
+        <div class="basketAdd-minus" id="minus">-</div>
+        <div class="basketAdd-count" id="count">1</div>
+        <div class="basketAdd-plus" id="plus">+</div>
+      </div>
+      <!-- <div class="basketAdd-modify" id="modify">수정</div> -->
+      <button type="button" class="order_page_sample-order">샘플주문</button>
+    </div>
+
+    <!-- 2. 옵션 -->
+    <div class="order_page_options">
+      <h5 class="order_page_section-title">옵션</h5>
+      <!-- 옵션 로우 -->
+      <div class="order_page_option-row">
+        <label for="opt_print" class="order_page_option-label">인쇄</label>
+        <div class="flex ai-center gap8">
+          <select id="opt_print" class="order_page_option-select" required>
+            <option value="">옵션1</option>
+            <option value="">옵션2</option>
+            <option value="">옵션3</option>
+            <!-- ... -->
+          </select>
+          <button type="button" class="order_page_option-extra">인쇄방법</button>
+        </div>
+      </div>
+      <div class="order_page_option-row">
+        <label for="opt_sticker" class="order_page_option-label">스티커</label>
+        <select id="opt_sticker" class="order_page_option-select" required>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+          <option value="">옵션3</option>
+        </select>
+      </div>
+      <div class="order_page_option-row">
+        <label for="opt_case" class="order_page_option-label">케이스</label>
+        <div class="flex ai-center gap8">
+          <select id="opt_case" class="order_page_option-select" required>
+            <option value="">옵션1</option>
+            <option value="">옵션2</option>
+            <option value="">옵션3</option>
+          </select>
+          <button type="button" class="order_page_option-extra">예시</button>
+        </div>
+      </div>
+      <div class="order_page_option-row">
+        <label for="opt_gift" class="order_page_option-label">선물포장</label>
+        <div class="flex ai-center gap8">
+          <select id="opt_gift" class="order_page_option-select" required>
+            <option value="">옵션1</option>
+            <option value="">옵션2</option>
+            <option value="">옵션3</option>
+          </select>
+          <button type="button" class="order_page_option-extra">예시</button>
+        </div>
+      </div>
+      <div class="order_page_option-row">
+        <label for="opt_color" class="order_page_option-label">색상</label>
+        <select id="opt_color" class="order_page_option-select" required>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+          <option value="">옵션3</option>
+        </select>
+      </div>
+      <div class="order_page_option-row flex">
+        <label for="opt_type" class="order_page_option-label">타입</label>
+        <select id="opt_type" class="order_page_option-select" required>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+          <option value="">옵션3</option>
+        </select>
+      </div>
+    </div>
+    
+
+    <!-- 3. 금액 -->
+    <div class="order_page_price-details mb16">
+      <h5 class="order_page_section-title">금액</h5>
+      <div class="order_page_price-line mb10">
+        <span>구매금액</span>
+        <div class="flex ai-center gap4">
+          <span class="order_page_price-value">33,100원</span>
+          <span class="order_page_price-note fs12">(부가세 별도)</span>
+        </div>
+      </div>
+      <div class="order_page_price-line">
+        <span>배송비</span>
+        <div class="flex ai-center gap4">
+          <span class="order_page_price-value">3,000원</span>
+          <span class="order_page_price-note fs12">(부가세 별도)</span>
+        </div>
+      </div>
+      <p class="order_page_shipping-note fs12 mb10">
+        배송비는 택배발송 기준이며 대량주문시에 퀵,용달 비용이 택배비보다 더 저렴할 수 도 있습니다.<br>단, 도서산간 지역은 배송비가 추가될 수 있습니다.
+      </p>
+      <div class="order_page_discount flex">
+        <span class="countPlus">할인·적립<span class="order_page_discount-note">회원가입시</span></span>
+        <div class="order_page_discount-group">
+          <label><input type="radio" name="discount" value="none" checked> 적용안함</label>
+          <label><input type="radio" name="discount" value="instant"> 3% 즉시할인</label>
+          <label><input type="radio" name="discount" value="point"> 3% 적립</label>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 4. 총 금액 -->
+    <div class="order_page_total flex js-between">
+      <span class="fs16">총 금액</span>
+      <span class="order_page_total-amount fs20 red">185,350원</span>
+    </div>
+  </div>
+
+</div>
 
 
 
@@ -923,6 +1055,51 @@ $(function(){
 });
 
   
+
+
+$(function() {
+  // 열기
+  $('#orderBtn').on('click', function() {
+    $('.order_page_overlay, .order_page_bottom-sheet').addClass('show');
+  });
+  // 닫기 (오버레이 또는 × 버튼)
+  $('.order_page_overlay, .order_page_sheet-close').on('click', function() {
+    $('.order_page_overlay, .order_page_bottom-sheet').removeClass('show');
+  });
+});
+
+
+
+  // ─── 5) 장바구니 체크박스 on/off ─────────────────────────────────
+  document.querySelectorAll('.basketAdd-checkbox').forEach(cb => {
+    cb.addEventListener('click', () => {
+      cb.classList.toggle('basketAdd-checked');
+    });
+  });
+
+  // ─── 6) 장바구니 수량 & 수정 컨트롤 ───────────────────────────────
+  document.querySelectorAll('.basketAdd-controls-row').forEach(row => {
+    const minusBtn  = row.querySelector('.basketAdd-minus');
+    const plusBtn   = row.querySelector('.basketAdd-plus');
+    const countEl   = row.querySelector('.basketAdd-count');
+    const modifyBtn = row.querySelector('.basketAdd-modify');
+
+    minusBtn.addEventListener('click', () => {
+      let v = parseInt(countEl.textContent, 10);
+      if (v > 0) countEl.textContent = v - 1;
+    });
+    plusBtn.addEventListener('click', () => {
+      let v = parseInt(countEl.textContent, 10);
+      countEl.textContent = v + 1;
+    });
+    modifyBtn.addEventListener('click', () => {
+      let v = parseInt(countEl.textContent, 10);
+      alert(`수량이 ${v}로 수정되었습니다.`);
+      minusBtn.classList.add('basketAdd-disabled');
+      plusBtn.classList.add('basketAdd-disabled');
+      modifyBtn.classList.add('basketAdd-disabled');
+    });
+  });
   
 
 
