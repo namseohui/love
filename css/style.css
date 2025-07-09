@@ -1962,6 +1962,7 @@ input[type="search"]::-ms-reveal {
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s;
   z-index: 50;
 }
@@ -2006,6 +2007,7 @@ input[type="search"]::-ms-reveal {
 .order_page_overlay.show {
   display: block;
   opacity: 1;
+  pointer-events: auto;
 }
 
 .order_page_bottom-sheet.show {
@@ -2192,7 +2194,7 @@ input[type="search"]::-ms-reveal {
 
 /* 하단바 */
 .bottomBar {
-    max-width: 390px;
+    max-width: 410px;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -2200,9 +2202,9 @@ input[type="search"]::-ms-reveal {
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 2rem 2.2rem;
     background-color: #fff;
-    z-index: 100;
+    z-index: 200;
 }
 /* 기존 .bottomBar 그대로 두시고, 아래만 추가하세요 */
 

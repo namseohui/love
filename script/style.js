@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── 2) 하단바 클릭 active 처리 ─────────────────────────────────
   document.querySelectorAll('.bottomBar a').forEach(link => {
     link.addEventListener('click', e => {
-      e.preventDefault();
+      // e.preventDefault();
       document.querySelectorAll('.bottomBar a').forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     });
